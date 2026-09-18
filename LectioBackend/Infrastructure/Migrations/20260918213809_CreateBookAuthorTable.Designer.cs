@@ -3,6 +3,7 @@ using System;
 using Lectio.Api.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace LectioBackend.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260918213809_CreateBookAuthorTable")]
+    partial class CreateBookAuthorTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -111,6 +114,41 @@ namespace LectioBackend.Migrations
                         .HasDatabaseName("IX_Book_Title");
 
                     b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("Lectio.Api.Domain.Entities.BookAuthor", b =>
+                {
+                    b.Property<int>("BookId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("BookId", "AuthorId");
+
+                    b.HasIndex("AuthorId")
+                        .HasDatabaseName("IX_BookAuthor_AuthorId");
+
+                    b.ToTable("BookAuthors");
+                });
+
+            modelBuilder.Entity("Lectio.Api.Domain.Entities.BookAuthor", b =>
+                {
+                    b.HasOne("Lectio.Api.Domain.Entities.Author", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Lectio.Api.Domain.Entities.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Book");
                 });
 #pragma warning restore 612, 618
         }
