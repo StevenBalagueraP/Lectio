@@ -66,3 +66,14 @@ Lectio.Api/
     └── ExternalServices/
         └── GoogleBooksApiClient.cs  
 ```
+
+
+## Migrations
+
+```bash
+dotnet ef migrations add CreateCategoryTable -o Infrastructure/Migrations
+```
+
+```bash
+dotnet ef database update
+```
