@@ -1,0 +1,6 @@
+@LectioBackend_HostAddress = http://localhost:5031
+
+GET {{LectioBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
