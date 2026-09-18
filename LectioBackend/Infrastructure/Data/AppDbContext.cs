@@ -12,6 +12,9 @@ public class AppDbContext : DbContext
     public DbSet<BookAuthor> BookAuthors => Set<BookAuthor>();
     public DbSet<Category> Categories => Set<Category>();
     public DbSet<BookCategory> BookCategories => Set<BookCategory>();
+    public DbSet<User> Users => Set<User>();
+    public DbSet<Loan> Loans => Set<Loan>();
+    public DbSet<Rating> Ratings => Set<Rating>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
