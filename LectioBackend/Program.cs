@@ -10,6 +10,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddHttpClient<GoogleBooksSeederService>();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -21,10 +22,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapPost("/api/seed/books", async (GoogleBooksSeederService seeder) =>
-{
-    var count = await seeder.SeedAsync(booksPerCategory: 5);
-    return Results.Ok(new { inserted = count });
-});
+app.MapControllers();
 
 app.Run();
