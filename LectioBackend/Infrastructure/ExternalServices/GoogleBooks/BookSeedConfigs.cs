@@ -113,25 +113,77 @@ public static class BookSeedConfigs
         ["Historia"] = new(
             new[]
             {
+                // Generales
                 "historia", "historia universal", "historia de Colombia", "historia latinoamericana",
                 "historia antigua", "historia medieval", "historia moderna", "historia contemporánea",
-                "segunda guerra mundial", "primera guerra mundial", "historia militar", "historia política",
-                "revoluciones históricas", "historia del arte", "historia económica", "historia social",
+                "historia militar", "historia política", "historia del arte", "historia económica",
+                "historia social", "historia de la ciencia", "historia de la cultura",
+
+                // Guerras y conflictos
+                "segunda guerra mundial", "primera guerra mundial", "guerra civil", "guerra fría",
+                "guerra de Vietnam", "guerra civil española", "guerras napoleónicas",
+                "conflicto armado colombiano", "cruzadas", "guerra de los cien años",
+
+                // Civilizaciones y épocas
                 "civilizaciones antiguas", "imperio romano", "grecia antigua", "edad media",
-                "colonización americana", "independencia latinoamericana", "guerra civil",
-                "historia de la ciencia", "historia de la cultura"
+                "antiguo Egipto", "mesopotamia", "imperio bizantino", "imperio otomano",
+                "imperio mongol", "vikingos", "civilización maya", "civilización azteca",
+                "civilización inca", "China antigua", "Japón feudal", "renacimiento",
+                "ilustración", "revolución industrial", "prehistoria",
+
+                // América
+                "colonización americana", "independencia latinoamericana", "revoluciones históricas",
+                "revolución francesa", "revolución rusa", "revolución mexicana", "revolución cubana",
+                "independencia de Colombia", "Simón Bolívar", "historia de Estados Unidos",
+                "pueblos indígenas de América", "conquista de América",
+
+                // Temas y personajes
+                "biografías históricas", "historia de las religiones", "historia de la filosofía",
+                "historia de la medicina", "historia de la tecnología", "historia del cristianismo",
+                "historia de los judíos", "historia de España", "historia de Europa",
+                "historia de África", "historia de Asia", "historia de Oriente Medio",
+                "holocausto", "nazismo", "dictaduras del siglo XX", "imperialismo y colonialismo",
+                "esclavitud", "historia de la mujer", "historia del comercio", "arqueología",
+                "mitología e historia", "historia de la exploración", "piratas y corsarios"
             },
             500, 2000
         ),
         ["Ciencia"] = new(
             new[]
             {
-                "ciencia", "divulgación científica", "física", "química", "biología",
-                "astronomía", "matemáticas", "ciencia y tecnología", "neurociencia", "genética",
-                "ecología", "medio ambiente", "cambio climático", "ciencia de datos",
-                "inteligencia artificial", "robótica", "medicina", "psicología científica",
-                "geología", "paleontología", "universo y cosmología", "energía y sostenibilidad",
-                "ciencia para niños", "historia de la ciencia", "biotecnología"
+                // Generales
+                "ciencia", "divulgación científica", "ciencia y tecnología", "ciencia para niños",
+                "historia de la ciencia", "filosofía de la ciencia", "método científico",
+
+                // Ciencias naturales
+                "física", "química", "biología", "astronomía", "matemáticas", "geología",
+                "paleontología", "universo y cosmología", "física cuántica", "relatividad",
+                "astrofísica", "agujeros negros", "sistema solar", "exploración espacial",
+                "química orgánica", "termodinámica", "óptica", "electromagnetismo",
+                "mecánica clásica", "teoría de cuerdas", "partículas elementales",
+
+                // Vida y medio ambiente
+                "neurociencia", "genética", "ecología", "medio ambiente", "cambio climático",
+                "energía y sostenibilidad", "biotecnología", "evolución", "Darwin",
+                "microbiología", "botánica", "zoología", "biología marina", "etología",
+                "conservación de la biodiversidad", "meteorología", "oceanografía",
+                "energías renovables", "virus y pandemias", "ADN y genoma",
+
+                // Salud y mente
+                "medicina", "psicología científica", "nutrición y ciencia", "anatomía humana",
+                "inmunología", "farmacología", "neuropsicología", "ciencias cognitivas",
+                "sueño y cerebro", "salud pública", "longevidad y envejecimiento",
+
+                // Tecnología y computación
+                "ciencia de datos", "inteligencia artificial", "robótica", "aprendizaje automático",
+                "computación cuántica", "ciberseguridad", "historia de la computación",
+                "nanotecnología", "ingeniería", "ingeniería genética", "internet de las cosas",
+
+                // Matemáticas y otros
+                "estadística", "probabilidad", "álgebra", "cálculo", "geometría",
+                "teoría de números", "lógica matemática", "teoría del caos", "divulgación matemática",
+                "ciencia ficción y ciencia", "científicos famosos", "biografías de científicos",
+                "Einstein", "Stephen Hawking", "Carl Sagan", "curiosidades científicas"
             },
             500, 2000
         )
