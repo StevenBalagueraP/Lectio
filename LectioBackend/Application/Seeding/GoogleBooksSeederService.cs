@@ -45,143 +45,143 @@ public class GoogleBooksSeederService
         string groupKey,
         Dictionary<string, BookSeedCategoryConfig> categoryConfig)
     {
-        var archivoEstado = $"seed-progress-{groupKey}.json";
+        var stateFile = $"seed-progress-{groupKey}.json";
 
-        var categorias = new Dictionary<string, Category>();
+        var categories = new Dictionary<string, Category>();
         var maxTargets = new Dictionary<string, int>();
         var minTargets = new Dictionary<string, int>();
-        var insertadosCategoria = new Dictionary<string, int>();
+        var insertedPerCategory = new Dictionary<string, int>();
 
         foreach (var (categoryName, config) in categoryConfig)
         {
             var category = await GetOrCreateCategoryAsync(categoryName);
-            categorias[categoryName] = category;
+            categories[categoryName] = category;
             maxTargets[categoryName] = config.MaxTarget;
             minTargets[categoryName] = config.MinTarget;
-            insertadosCategoria[categoryName] = await _context.BookCategories
+            insertedPerCategory[categoryName] = await _context.BookCategories
                 .CountAsync(bc => bc.CategoryId == category.CategoryId);
         }
 
-        var librosPorIsbn = await _context.Books
+        var booksByIsbn = await _context.Books
             .Where(b => b.Isbn != null)
             .ToDictionaryAsync(b => b.Isbn!, b => b);
 
-        var categoriaLinksExistentes = new HashSet<string>(
+        var existingCategoryLinks = new HashSet<string>(
             await _context.BookCategories.Select(bc => bc.BookId + "|" + bc.CategoryId).ToListAsync());
 
-        var estados = _progressStore.CargarOCrear(archivoEstado, categoryConfig);
-        bool cuotaAgotada = false;
+        var states = _progressStore.LoadOrCreate(stateFile, categoryConfig);
+        bool quotaExhausted = false;
 
-        while (!cuotaAgotada)
+        while (!quotaExhausted)
         {
-            bool avanzoAlgo = false;
+            bool madeProgress = false;
 
             foreach (var categoryName in categoryConfig.Keys)
             {
-                if (insertadosCategoria[categoryName] >= maxTargets[categoryName]) continue;
+                if (insertedPerCategory[categoryName] >= maxTargets[categoryName]) continue;
 
-                var siguiente = estados.FirstOrDefault(e => e.CategoryName == categoryName && !e.Exhausted);
-                if (siguiente is null) continue;
+                var next = states.FirstOrDefault(s => s.CategoryName == categoryName && !s.Exhausted);
+                if (next is null) continue;
 
-                avanzoAlgo = true;
-                var contador = new ContadorDescartes();
+                madeProgress = true;
+                var counter = new DiscardCounter();
 
                 GoogleBooksResponse? response;
                 try
                 {
-                    response = await _apiClient.BuscarAsync(siguiente.Query, siguiente.StartIndex, PageSize);
+                    response = await _apiClient.SearchAsync(next.Query, next.StartIndex, PageSize);
                 }
                 catch (GoogleBooksQuotaExceededException ex)
                 {
-                    Console.WriteLine($"[CUOTA AGOTADA] {ex.Message} Guardando progreso para mañana.");
-                    cuotaAgotada = true;
+                    Console.WriteLine($"[QUOTA EXHAUSTED] {ex.Message} Saving progress for tomorrow.");
+                    quotaExhausted = true;
                     break;
                 }
                 catch (HttpRequestException ex)
                 {
-                    Console.WriteLine($"[ERROR PERSISTENTE] {ex.StatusCode} en '{siguiente.Query}' ({categoryName}) tras varios reintentos. Guardando progreso, corre el endpoint de nuevo más tarde.");
-                    cuotaAgotada = true;
+                    Console.WriteLine($"[PERSISTENT ERROR] {ex.StatusCode} on '{next.Query}' ({categoryName}) after several retries. Saving progress, run the endpoint again later.");
+                    quotaExhausted = true;
                     break;
                 }
 
                 if (response?.Items is null || response.Items.Count == 0)
                 {
-                    siguiente.Exhausted = true;
-                    Console.WriteLine($"[{categoryName} / \"{siguiente.Query}\"] agotada de forma natural en startIndex {siguiente.StartIndex}.");
+                    next.Exhausted = true;
+                    Console.WriteLine($"[{categoryName} / \"{next.Query}\"] naturally exhausted at startIndex {next.StartIndex}.");
                     continue;
                 }
 
-                var candidatosNuevos = new List<(Book Libro, List<string> Autores)>();
-                var relacionesExistentes = new List<Book>();
-                var isbnsEnEstaPagina = new HashSet<string>();
-                var category = categorias[categoryName];
+                var newCandidates = new List<(Book NewBook, List<string> Authors)>();
+                var existingBooks = new List<Book>();
+                var isbnsInThisPage = new HashSet<string>();
+                var category = categories[categoryName];
 
                 foreach (var item in response.Items)
                 {
-                    if (insertadosCategoria[categoryName] + candidatosNuevos.Count + relacionesExistentes.Count >= maxTargets[categoryName])
+                    if (insertedPerCategory[categoryName] + newCandidates.Count + existingBooks.Count >= maxTargets[categoryName])
                         break;
 
-                    var resultado = VolumeItemProcessor.Procesar(item, librosPorIsbn, categoriaLinksExistentes, isbnsEnEstaPagina, category, contador);
-                    if (resultado is null) continue;
+                    var result = VolumeItemProcessor.Process(item, booksByIsbn, existingCategoryLinks, isbnsInThisPage, category, counter);
+                    if (result is null) continue;
 
-                    if (resultado.NuevoLibro is not null)
-                        candidatosNuevos.Add((resultado.NuevoLibro, resultado.AutoresNuevoLibro!));
+                    if (result.NewBook is not null)
+                        newCandidates.Add((result.NewBook, result.NewBookAuthors!));
                     else
-                        relacionesExistentes.Add(resultado.LibroExistente!);
+                        existingBooks.Add(result.ExistingBook!);
                 }
 
-                if (candidatosNuevos.Count > 0)
+                if (newCandidates.Count > 0)
                 {
-                    _context.Books.AddRange(candidatosNuevos.Select(c => c.Libro));
+                    _context.Books.AddRange(newCandidates.Select(c => c.NewBook));
                     await _context.SaveChangesAsync();
 
-                    foreach (var (libro, autores) in candidatosNuevos)
+                    foreach (var (book, authors) in newCandidates)
                     {
-                        _context.BookCategories.Add(new BookCategory { BookId = libro.BookId, CategoryId = category.CategoryId });
-                        categoriaLinksExistentes.Add($"{libro.BookId}|{category.CategoryId}");
-                        librosPorIsbn[libro.Isbn!] = libro;
+                        _context.BookCategories.Add(new BookCategory { BookId = book.BookId, CategoryId = category.CategoryId });
+                        existingCategoryLinks.Add($"{book.BookId}|{category.CategoryId}");
+                        booksByIsbn[book.Isbn!] = book;
 
-                        foreach (var authorName in autores)
+                        foreach (var authorName in authors)
                         {
                             var author = await GetOrCreateAuthorAsync(authorName);
-                            _context.BookAuthors.Add(new BookAuthor { BookId = libro.BookId, AuthorId = author.AuthorId });
+                            _context.BookAuthors.Add(new BookAuthor { BookId = book.BookId, AuthorId = author.AuthorId });
                         }
                     }
                 }
 
-                foreach (var libroExistente in relacionesExistentes)
+                foreach (var existingBook in existingBooks)
                 {
-                    _context.BookCategories.Add(new BookCategory { BookId = libroExistente.BookId, CategoryId = category.CategoryId });
+                    _context.BookCategories.Add(new BookCategory { BookId = existingBook.BookId, CategoryId = category.CategoryId });
                 }
 
-                if (candidatosNuevos.Count > 0 || relacionesExistentes.Count > 0)
+                if (newCandidates.Count > 0 || existingBooks.Count > 0)
                 {
                     await _context.SaveChangesAsync();
-                    insertadosCategoria[categoryName] += candidatosNuevos.Count + relacionesExistentes.Count;
+                    insertedPerCategory[categoryName] += newCandidates.Count + existingBooks.Count;
                 }
 
-                siguiente.StartIndex += PageSize;
-                if (siguiente.StartIndex / PageSize >= MaxPagesPerSubquery) siguiente.Exhausted = true;
+                next.StartIndex += PageSize;
+                if (next.StartIndex / PageSize >= MaxPagesPerSubquery) next.Exhausted = true;
 
-                Console.WriteLine($"[{categoryName} / \"{siguiente.Query}\"] revisados: {contador.Revisados}, " +
-                    $"nuevos: {candidatosNuevos.Count}, categoría sumada a existente: {relacionesExistentes.Count}, " +
-                    $"descartes -> idioma: {contador.Idioma}, sin páginas: {contador.SinPaginas}, sin imagen: {contador.SinImagen}, " +
-                    $"sin ISBN: {contador.SinIsbn}, duplicados: {contador.Duplicado}. Total {categoryName}: {insertadosCategoria[categoryName]}");
+                Console.WriteLine($"[{categoryName} / \"{next.Query}\"] reviewed: {counter.Reviewed}, " +
+                    $"new: {newCandidates.Count}, category added to existing: {existingBooks.Count}, " +
+                    $"discarded -> language: {counter.Language}, no pages: {counter.NoPages}, no image: {counter.NoImage}, " +
+                    $"no ISBN: {counter.NoIsbn}, duplicates: {counter.Duplicate}. Total {categoryName}: {insertedPerCategory[categoryName]}");
             }
 
-            if (cuotaAgotada) break;
-            if (!avanzoAlgo) break;
+            if (quotaExhausted) break;
+            if (!madeProgress) break;
         }
 
-        _progressStore.Guardar(archivoEstado, estados);
+        _progressStore.Save(stateFile, states);
 
         foreach (var categoryName in categoryConfig.Keys)
         {
-            if (insertadosCategoria[categoryName] < minTargets[categoryName])
-                Console.WriteLine($"[ADVERTENCIA] '{categoryName}' tiene {insertadosCategoria[categoryName]} libros (mínimo {minTargets[categoryName]}). Corre el endpoint otra vez cuando se renueve la cuota.");
+            if (insertedPerCategory[categoryName] < minTargets[categoryName])
+                Console.WriteLine($"[WARNING] '{categoryName}' has {insertedPerCategory[categoryName]} books (minimum {minTargets[categoryName]}). Run the endpoint again when the quota renews.");
         }
 
-        return insertadosCategoria;
+        return insertedPerCategory;
     }
 
     private async Task<Category> GetOrCreateCategoryAsync(string name)

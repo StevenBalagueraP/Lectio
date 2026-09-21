@@ -5,44 +5,44 @@ namespace Lectio.Api.Application.Seeding;
 
 public static class VolumeItemProcessor
 {
-    public static ResultadoLibro? Procesar(
+    public static BookResult? Process(
         VolumeItem item,
-        Dictionary<string, Book> librosPorIsbn,
-        HashSet<string> categoriaLinksExistentes,
-        HashSet<string> isbnsEnEstaPagina,
+        Dictionary<string, Book> booksByIsbn,
+        HashSet<string> existingCategoryLinks,
+        HashSet<string> isbnsInThisPage,
         Category category,
-        ContadorDescartes contador)
+        DiscardCounter counter)
     {
-        contador.Revisados++;
+        counter.Reviewed++;
         var info = item.VolumeInfo;
 
-        if (info.Language != "es") { contador.Idioma++; return null; }
-        if (info.PageCount is null) { contador.SinPaginas++; return null; }
-        if (string.IsNullOrWhiteSpace(info.ImageLinks?.Thumbnail)) { contador.SinImagen++; return null; }
+        if (info.Language != "es") { counter.Language++; return null; }
+        if (info.PageCount is null) { counter.NoPages++; return null; }
+        if (string.IsNullOrWhiteSpace(info.ImageLinks?.Thumbnail)) { counter.NoImage++; return null; }
 
         var isbn13 = info.IndustryIdentifiers?.FirstOrDefault(i => i.Type == "ISBN_13")?.Identifier;
-        if (string.IsNullOrWhiteSpace(isbn13)) { contador.SinIsbn++; return null; }
+        if (string.IsNullOrWhiteSpace(isbn13)) { counter.NoIsbn++; return null; }
 
-        if (!isbnsEnEstaPagina.Add(isbn13))
+        if (!isbnsInThisPage.Add(isbn13))
         {
-            contador.Duplicado++;
+            counter.Duplicate++;
             return null;
         }
 
-        if (librosPorIsbn.TryGetValue(isbn13, out var libroExistente))
+        if (booksByIsbn.TryGetValue(isbn13, out var existingBook))
         {
-            var linkKey = $"{libroExistente.BookId}|{category.CategoryId}";
-            if (!categoriaLinksExistentes.Add(linkKey))
+            var linkKey = $"{existingBook.BookId}|{category.CategoryId}";
+            if (!existingCategoryLinks.Add(linkKey))
             {
-                contador.Duplicado++;
+                counter.Duplicate++;
                 return null;
             }
 
-            contador.CategoriaAgregada++;
-            return new ResultadoLibro(null, null, libroExistente);
+            counter.CategoryAdded++;
+            return new BookResult(null, null, existingBook);
         }
 
-        var libro = new Book
+        var book = new Book
         {
             Title = info.Title,
             PublisherName = info.Publisher,
@@ -55,7 +55,7 @@ public static class VolumeItemProcessor
             IsAvailable = true
         };
 
-        return new ResultadoLibro(libro, info.Authors ?? new List<string>(), null);
+        return new BookResult(book, info.Authors ?? new List<string>(), null);
     }
 
     private static DateOnly? ParsePublishedDate(string? raw)
@@ -67,15 +67,15 @@ public static class VolumeItemProcessor
     }
 }
 
-public record ResultadoLibro(Book? NuevoLibro, List<string>? AutoresNuevoLibro, Book? LibroExistente);
+public record BookResult(Book? NewBook, List<string>? NewBookAuthors, Book? ExistingBook);
 
-public class ContadorDescartes
+public class DiscardCounter
 {
-    public int Revisados { get; set; }
-    public int Idioma { get; set; }
-    public int SinPaginas { get; set; }
-    public int SinImagen { get; set; }
-    public int SinIsbn { get; set; }
-    public int Duplicado { get; set; }
-    public int CategoriaAgregada { get; set; }
+    public int Reviewed { get; set; }
+    public int Language { get; set; }
+    public int NoPages { get; set; }
+    public int NoImage { get; set; }
+    public int NoIsbn { get; set; }
+    public int Duplicate { get; set; }
+    public int CategoryAdded { get; set; }
 }

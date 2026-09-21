@@ -5,39 +5,39 @@ namespace Lectio.Api.Infrastructure.ExternalServices.SeedState;
 
 public class SeedProgressStore
 {
-    public List<QueryState> CargarOCrear(
-        string archivoEstado,
+    public List<QueryState> LoadOrCreate(
+        string stateFile,
         Dictionary<string, BookSeedCategoryConfig> categoryConfig)
     {
-        List<QueryState> estados;
+        List<QueryState> states;
 
-        if (File.Exists(archivoEstado))
+        if (File.Exists(stateFile))
         {
-            var json = File.ReadAllText(archivoEstado);
-            estados = JsonSerializer.Deserialize<List<QueryState>>(json) ?? new List<QueryState>();
+            var json = File.ReadAllText(stateFile);
+            states = JsonSerializer.Deserialize<List<QueryState>>(json) ?? new List<QueryState>();
         }
         else
         {
-            estados = new List<QueryState>();
+            states = new List<QueryState>();
         }
 
         foreach (var (categoryName, config) in categoryConfig)
         {
             foreach (var query in config.Subqueries)
             {
-                if (!estados.Any(e => e.CategoryName == categoryName && e.Query == query))
+                if (!states.Any(s => s.CategoryName == categoryName && s.Query == query))
                 {
-                    estados.Add(new QueryState { CategoryName = categoryName, Query = query, StartIndex = 0, Exhausted = false });
+                    states.Add(new QueryState { CategoryName = categoryName, Query = query, StartIndex = 0, Exhausted = false });
                 }
             }
         }
 
-        return estados;
+        return states;
     }
 
-    public void Guardar(string archivoEstado, List<QueryState> estados)
+    public void Save(string stateFile, List<QueryState> states)
     {
-        var json = JsonSerializer.Serialize(estados, new JsonSerializerOptions { WriteIndented = true });
-        File.WriteAllText(archivoEstado, json);
+        var json = JsonSerializer.Serialize(states, new JsonSerializerOptions { WriteIndented = true });
+        File.WriteAllText(stateFile, json);
     }
 }
