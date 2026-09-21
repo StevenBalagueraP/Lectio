@@ -13,5 +13,9 @@ public class AuthorConfiguration : IEntityTypeConfiguration<Author>
         builder.Property(b => b.AuthorName)
             .IsRequired()
             .HasMaxLength(255);
+
+        builder.HasIndex(b => b.AuthorName)
+            .IsUnique()
+            .HasDatabaseName("IX_Author_AuthorName");
     }
 }

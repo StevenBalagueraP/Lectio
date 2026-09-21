@@ -37,6 +37,10 @@ namespace LectioBackend.Migrations
 
                     b.HasKey("AuthorId");
 
+                    b.HasIndex("AuthorName")
+                        .IsUnique()
+                        .HasDatabaseName("IX_Author_AuthorName");
+
                     b.ToTable("Authors");
                 });
 
