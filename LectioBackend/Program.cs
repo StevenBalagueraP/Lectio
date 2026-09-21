@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Lectio.Api.Infrastructure.ExternalServices.GoogleBooks;
 using Lectio.Api.Infrastructure.ExternalServices.SeedState;
 using Lectio.Api.Application.Seeding;
+using Lectio.Api.Application.Seeding.UserSeed;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,8 +12,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddHttpClient<GoogleBooksApiClient>();
+
+
 builder.Services.AddScoped<SeedProgressStore>();
 builder.Services.AddScoped<GoogleBooksSeederService>();
+builder.Services.AddScoped<UserDataGenerator>();
+builder.Services.AddScoped<UserSeederService>();
+
 builder.Services.AddControllers();
 
 var app = builder.Build();

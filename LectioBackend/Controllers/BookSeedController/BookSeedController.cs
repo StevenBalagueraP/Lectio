@@ -1,10 +1,11 @@
 using Lectio.Api.Application.Seeding;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Lectio.Api.Controllers;
+namespace Lectio.Api.Controllers.BookSeed;
 
 [ApiController]
 [Route("api/seed")]
+[Tags("BookSeed")]
 public class SeedController : ControllerBase
 {
     private readonly GoogleBooksSeederService _seeder;
