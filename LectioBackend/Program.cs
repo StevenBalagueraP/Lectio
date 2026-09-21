@@ -5,6 +5,7 @@ using Lectio.Api.Infrastructure.ExternalServices.SeedState;
 using Lectio.Api.Application.Seeding;
 using Lectio.Api.Application.Seeding.UserSeed;
 using Lectio.Api.Application.Seeding.LoanSeed;
+using Lectio.Api.Application.Seeding.RatingSeed;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,8 @@ builder.Services.AddScoped<UserDataGenerator>();
 builder.Services.AddScoped<UserSeederService>();
 builder.Services.AddScoped<LoanDataGenerator>();
 builder.Services.AddScoped<LoanSeederService>();
+builder.Services.AddScoped<RatingDataGenerator>();
+builder.Services.AddScoped<RatingSeederService>();
 
 builder.Services.AddControllers();
 

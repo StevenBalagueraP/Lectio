@@ -43,7 +43,6 @@ public class LoanSeederService
             select new { bc.CategoryId, Book = b }
         ).ToListAsync(cancellationToken);
 
-        // Orden fijo por BookId para que la selección sea reproducible entre corridas
         var booksByCategory = categoryBookPairs
             .GroupBy(x => x.CategoryId)
             .ToDictionary(
@@ -65,7 +64,7 @@ public class LoanSeederService
             var slotsRemaining = BooksPerCategory - alreadyLoanedInCategory;
 
             if (slotsRemaining <= 0)
-                continue; // esta categoría ya tiene sus 10 libros prestados
+                continue; 
 
             var candidateBooks = books
                 .Where(b => !bookIdsWithLoans.Contains(b.BookId))

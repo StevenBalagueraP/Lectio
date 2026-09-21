@@ -1,7 +1,7 @@
 using Lectio.Api.Application.Seeding.LoanSeed;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Lectio.Api.Controllers.Loan;
+namespace Lectio.Api.Controllers.LoanSeed;
 
 [ApiController]
 [Route("api/seed")]
