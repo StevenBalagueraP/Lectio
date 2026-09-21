@@ -1,4 +1,4 @@
-using Lectio.Api.Infrastructure.ExternalServices;
+using Lectio.Api.Application.Seeding;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lectio.Api.Controllers;
@@ -32,6 +32,27 @@ public class SeedController : ControllerBase
     public async Task<IActionResult> SeedMisterioYAventura()
     {
         var resultados = await _seeder.SeedMysteryAndAdventureAsync();
+        return Ok(resultados);
+    }
+
+    [HttpPost("historia-ciencia")]
+    public async Task<IActionResult> SeedHistoriaYCiencia()
+    {
+        var resultados = await _seeder.SeedHistoryAndScienceAsync();
+        return Ok(resultados);
+    }
+
+    [HttpPost("biografia-poesia")]
+    public async Task<IActionResult> SeedBiografiaYPoesia()
+    {
+        var resultados = await _seeder.SeedBiographyAndPoetryAsync();
+        return Ok(resultados);
+    }
+
+    [HttpPost("autoayuda")]
+    public async Task<IActionResult> SeedAutoayuda()
+    {
+        var resultados = await _seeder.SeedSelfHelpAsync();
         return Ok(resultados);
     }
 }
