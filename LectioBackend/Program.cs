@@ -4,6 +4,7 @@ using Lectio.Api.Infrastructure.ExternalServices.GoogleBooks;
 using Lectio.Api.Infrastructure.ExternalServices.SeedState;
 using Lectio.Api.Application.Seeding;
 using Lectio.Api.Application.Seeding.UserSeed;
+using Lectio.Api.Application.Seeding.LoanSeed;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,8 @@ builder.Services.AddScoped<SeedProgressStore>();
 builder.Services.AddScoped<GoogleBooksSeederService>();
 builder.Services.AddScoped<UserDataGenerator>();
 builder.Services.AddScoped<UserSeederService>();
+builder.Services.AddScoped<LoanDataGenerator>();
+builder.Services.AddScoped<LoanSeederService>();
 
 builder.Services.AddControllers();
 
