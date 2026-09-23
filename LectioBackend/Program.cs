@@ -6,6 +6,9 @@ using Lectio.Api.Application.Seeding;
 using Lectio.Api.Application.Seeding.UserSeed;
 using Lectio.Api.Application.Seeding.LoanSeed;
 using Lectio.Api.Application.Seeding.RatingSeed;
+using Lectio.Api.Application.Books.TopRatedBooks;
+using Lectio.Api.Middlewares;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +27,7 @@ builder.Services.AddScoped<LoanDataGenerator>();
 builder.Services.AddScoped<LoanSeederService>();
 builder.Services.AddScoped<RatingDataGenerator>();
 builder.Services.AddScoped<RatingSeederService>();
+builder.Services.AddScoped<ITopRatedBooksService, TopRatedBooksService>();
 
 builder.Services.AddControllers();
 
@@ -35,6 +39,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseExceptionHandling(); 
 app.UseHttpsRedirection();
 
 app.MapControllers();
