@@ -41,6 +41,23 @@ public class GoogleBooksSeederService
 
     public Task<Dictionary<string, int>> SeedSelfHelpAsync() =>
         SeedGroupAsync("autoayuda", BookSeedConfigs.Autoayuda);
+    
+    public Task<Dictionary<string, int>> SeedEssayAndPhilosophyAsync() =>
+        SeedGroupAsync("ensayo-filosofia", BookSeedConfigs.EnsayoFilosofia);
+
+    public Task<Dictionary<string, int>> SeedComicsAndChildrenAsync() =>
+        SeedGroupAsync("comics-infantil", BookSeedConfigs.ComicsInfantil
+        );
+ 
+    public Task<Dictionary<string, int>> SeedTravelAndFoodAsync() =>
+        SeedGroupAsync("viajes-gastronomia", BookSeedConfigs.ViajesGastronomia
+        );
+    public Task<Dictionary<string, int>> SeedBusinessAndTechAsync() =>
+        SeedGroupAsync("negocios-tecnologia", BookSeedConfigs.NegociosTecnologia
+        ); 
+    
+    public Task<Dictionary<string, int>> SeedPopularesAsync() =>
+    SeedGroupAsync("populares", BookSeedConfigs.Populares);
 
     private async Task<Dictionary<string, int>> SeedGroupAsync(
         string groupKey,

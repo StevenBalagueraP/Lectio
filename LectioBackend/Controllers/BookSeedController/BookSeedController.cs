@@ -56,4 +56,39 @@ public class SeedController : ControllerBase
         var resultados = await _seeder.SeedSelfHelpAsync();
         return Ok(resultados);
     }
+
+    [HttpPost("ensayo-filosofia")]
+    public async Task<IActionResult> SeedEnsayoYFilosofia()
+    {
+        var resultados = await _seeder.SeedEssayAndPhilosophyAsync();
+        return Ok(resultados);
+    }
+
+    [HttpPost("comics-infantil")]
+    public async Task<IActionResult> SeedComicsYInfantil()
+    {
+        var resultados = await _seeder.SeedComicsAndChildrenAsync();
+        return Ok(resultados);
+    }
+
+    [HttpPost("viajes-gastronomia")]
+    public async Task<IActionResult> SeedViajesYGastronomia()
+    {
+        var resultados = await _seeder.SeedTravelAndFoodAsync();
+        return Ok(resultados);
+    }
+
+    [HttpPost("negocios-tecnologia")]
+    public async Task<IActionResult> SeedNegociosYTecnologia()
+    {
+        var resultados = await _seeder.SeedBusinessAndTechAsync();
+        return Ok(resultados);
+    }
+
+    [HttpPost("populares")]
+    public async Task<IActionResult> SeedPopulares()
+    {
+        var resultados = await _seeder.SeedPopularesAsync();
+        return Ok(resultados);
+    }
 }
