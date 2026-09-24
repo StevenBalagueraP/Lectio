@@ -90,7 +90,9 @@ public class BrowseBooksService : IBrowseBooksService
 
     private IQueryable<Book> BuildFilteredQuery(string? search, int? categoryId)
     {
-        var query = _context.Books.AsNoTracking();
+        var query = _context.Books
+            .AsNoTracking()
+            .Where(book => book.IsAvailable);
 
         if (!string.IsNullOrWhiteSpace(search))
         {
