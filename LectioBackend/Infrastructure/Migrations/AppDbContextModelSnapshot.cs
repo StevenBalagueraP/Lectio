@@ -286,6 +286,13 @@ namespace LectioBackend.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("character varying(20)");
 
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)")
+                        .HasDefaultValue("user");
+
                     b.HasKey("UserId");
 
                     b.HasIndex("Email")
