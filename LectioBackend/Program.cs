@@ -10,6 +10,7 @@ using Lectio.Api.Application.Books.TopRatedBooks;
 using Lectio.Api.Application.Categories;
 using Lectio.Api.Application.Books.BrowseBooks;
 using Lectio.Api.Application.Books.BookDetails;
+using Lectio.Api.Application.Books.BookRatings;
 using Lectio.Api.Middlewares;
 
 
@@ -34,6 +35,7 @@ builder.Services.AddScoped<ITopRatedBooksService, TopRatedBooksService>();
 builder.Services.AddScoped<ICategoriesService, CategoriesService>();
 builder.Services.AddScoped<IBrowseBooksService, BrowseBooksService>();
 builder.Services.AddScoped<IBookDetailService, BookDetailService>();
+builder.Services.AddScoped<IBookRatingsService, BookRatingsService>();
 
 builder.Services.AddControllers();
 
