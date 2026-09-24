@@ -1,4 +1,3 @@
-// Controllers/CategoriesController/CategoriesController.cs
 using Lectio.Api.Application.Categories;
 using Lectio.Api.Application.Categories.Dtos;
 using Microsoft.AspNetCore.Mvc;

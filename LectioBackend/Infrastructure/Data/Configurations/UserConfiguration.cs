@@ -20,10 +20,15 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(u => u.Password)
             .IsRequired()
-            .HasMaxLength(255); 
+            .HasMaxLength(255);
 
         builder.Property(u => u.Phone)
             .HasMaxLength(20);
+
+        builder.Property(u => u.Role)
+            .IsRequired()
+            .HasMaxLength(20)
+            .HasDefaultValue("user");
 
         builder.HasIndex(u => u.Email)
             .IsUnique()

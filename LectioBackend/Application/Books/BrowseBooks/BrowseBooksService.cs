@@ -18,21 +18,23 @@ public class BrowseBooksService : IBrowseBooksService
         _context = context;
     }
 
-        public async Task<BrowseBooksResponseDto> GetBooksAsync(
+    public async Task<BrowseBooksResponseDto> GetBooksAsync(
         string? search,
-        int? categoryId,
+        IReadOnlyCollection<int>? categoryIds,
         int page,
         int pageSize,
         CancellationToken cancellationToken)
     {
         ValidatePaging(page, pageSize);
 
-        if (categoryId.HasValue)
+        var normalizedCategoryIds = NormalizeCategoryIds(categoryIds);
+
+        if (normalizedCategoryIds.Count > 0)
         {
-            await EnsureCategoryExistsAsync(categoryId.Value, cancellationToken);
+            await EnsureCategoriesExistAsync(normalizedCategoryIds, cancellationToken);
         }
 
-        var query = BuildFilteredQuery(search, categoryId);
+        var query = BuildFilteredQuery(search, normalizedCategoryIds);
 
         var totalCount = await query.CountAsync(cancellationToken);
 
@@ -76,19 +78,40 @@ public class BrowseBooksService : IBrowseBooksService
         }
     }
 
-    private async Task EnsureCategoryExistsAsync(int categoryId, CancellationToken cancellationToken)
+    private static List<int> NormalizeCategoryIds(IReadOnlyCollection<int>? categoryIds)
     {
-        var categoryExists = await _context.Categories
-            .AsNoTracking()
-            .AnyAsync(category => category.CategoryId == categoryId, cancellationToken);
-
-        if (!categoryExists)
+        if (categoryIds is null || categoryIds.Count == 0)
         {
-            throw new NotFoundException(nameof(Category), categoryId);
+            return new List<int>();
+        }
+
+        var normalized = categoryIds.Distinct().ToList();
+
+        if (normalized.Any(categoryId => categoryId <= 0))
+        {
+            throw new BadRequestException("categoryIds must contain only positive integers.");
+        }
+
+        return normalized;
+    }
+
+    private async Task EnsureCategoriesExistAsync(List<int> categoryIds, CancellationToken cancellationToken)
+    {
+        var existingIds = await _context.Categories
+            .AsNoTracking()
+            .Where(category => categoryIds.Contains(category.CategoryId))
+            .Select(category => category.CategoryId)
+            .ToListAsync(cancellationToken);
+
+        var missingIds = categoryIds.Except(existingIds).ToList();
+
+        if (missingIds.Count > 0)
+        {
+            throw new NotFoundException(nameof(Category), missingIds.First());
         }
     }
 
-    private IQueryable<Book> BuildFilteredQuery(string? search, int? categoryId)
+    private IQueryable<Book> BuildFilteredQuery(string? search, IReadOnlyCollection<int> categoryIds)
     {
         var query = _context.Books
             .AsNoTracking()
@@ -99,16 +122,16 @@ public class BrowseBooksService : IBrowseBooksService
             query = query.Where(book => EF.Functions.ILike(book.Title, $"%{search}%"));
         }
 
-        if (categoryId.HasValue)
+        if (categoryIds.Count > 0)
         {
             query = query.Where(book => _context.BookCategories
-                .Any(bookCategory => bookCategory.BookId == book.BookId && bookCategory.CategoryId == categoryId.Value));
+                .Any(bookCategory => bookCategory.BookId == book.BookId && categoryIds.Contains(bookCategory.CategoryId)));
         }
 
         return query;
     }
 
-        private async Task<Dictionary<int, List<BookCategorySummaryDto>>> GetCategoriesByBookIdAsync(
+    private async Task<Dictionary<int, List<BookCategorySummaryDto>>> GetCategoriesByBookIdAsync(
         IReadOnlyCollection<int> bookIds,
         CancellationToken cancellationToken)
     {
@@ -131,25 +154,6 @@ public class BrowseBooksService : IBrowseBooksService
                 group => group
                     .Select(bookCategory => new BookCategorySummaryDto { Id = bookCategory.CategoryId, Name = bookCategory.CategoryName })
                     .ToList());
-    }
-
-    private static BookSummaryDto MapToDto(
-        Book book,
-        IReadOnlyDictionary<int, List<BookAuthorSummaryDto>> authorsByBookId,
-        IReadOnlyDictionary<int, List<BookCategorySummaryDto>> categoriesByBookId)
-    {
-        authorsByBookId.TryGetValue(book.BookId, out var authors);
-        categoriesByBookId.TryGetValue(book.BookId, out var categories);
-
-        return new BookSummaryDto
-        {
-            Id = book.BookId,
-            Title = book.Title,
-            ImageUrl = book.ImageLink,
-            Rating = new BookRatingDto { Stars = book.AverageRating },
-            Authors = authors ?? new List<BookAuthorSummaryDto>(),
-            Categories = categories ?? new List<BookCategorySummaryDto>()
-        };
     }
 
     private async Task<Dictionary<int, List<BookAuthorSummaryDto>>> GetAuthorsByBookIdAsync(
@@ -177,9 +181,13 @@ public class BrowseBooksService : IBrowseBooksService
                     .ToList());
     }
 
-    private static BookSummaryDto MapToDto(Book book, IReadOnlyDictionary<int, List<BookAuthorSummaryDto>> authorsByBookId)
+    private static BookSummaryDto MapToDto(
+        Book book,
+        IReadOnlyDictionary<int, List<BookAuthorSummaryDto>> authorsByBookId,
+        IReadOnlyDictionary<int, List<BookCategorySummaryDto>> categoriesByBookId)
     {
         authorsByBookId.TryGetValue(book.BookId, out var authors);
+        categoriesByBookId.TryGetValue(book.BookId, out var categories);
 
         return new BookSummaryDto
         {
@@ -187,7 +195,8 @@ public class BrowseBooksService : IBrowseBooksService
             Title = book.Title,
             ImageUrl = book.ImageLink,
             Rating = new BookRatingDto { Stars = book.AverageRating },
-            Authors = authors ?? new List<BookAuthorSummaryDto>()
+            Authors = authors ?? new List<BookAuthorSummaryDto>(),
+            Categories = categories ?? new List<BookCategorySummaryDto>()
         };
     }
 }
