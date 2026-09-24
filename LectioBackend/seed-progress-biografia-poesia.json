@@ -1,0 +1,710 @@
+[
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "autobiograf\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "memorias",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa hist\u00F3rica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de cient\u00EDficos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de artistas",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de escritores",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de l\u00EDderes pol\u00EDticos",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de m\u00FAsicos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de deportistas",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "memorias de guerra",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "memorias personales",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa empresarial",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de mujeres destacadas",
+    "StartIndex": 240,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa latinoamericana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de fil\u00F3sofos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de exploradores",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de actores",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "vidas ejemplares",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa no autorizada",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa novelada",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "diarios personales",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "cartas y correspondencia",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de activistas",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa contempor\u00E1nea",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de presidentes",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de reyes y reinas",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de m\u00E9dicos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de inventores",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de pintores",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de cineastas",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de cantantes",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de futbolistas",
+    "StartIndex": 240,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de premios nobel",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de militares",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de revolucionarios",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de matem\u00E1ticos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de arquitectos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de periodistas",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de pensadores",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de l\u00EDderes religiosos",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de santos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de mujeres cient\u00EDficas",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa colombiana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa mexicana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa argentina",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa espa\u00F1ola",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa juvenil",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa infantil",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "memorias de infancia",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "memorias de exilio",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "autobiograf\u00EDa de superaci\u00F3n",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "testimonios de vida",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "vida y obra",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa del siglo XX",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de Sim\u00F3n Bol\u00EDvar",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de Gabriel Garc\u00EDa M\u00E1rquez",
+    "StartIndex": 240,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de Frida Kahlo",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Biograf\u00EDa",
+    "Query": "biograf\u00EDa de Che Guevara",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa contempor\u00E1nea",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa cl\u00E1sica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa latinoamericana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa espa\u00F1ola",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa colombiana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa de amor",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa rom\u00E1ntica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa social",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa existencial",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa surrealista",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa modernista",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa del siglo XX",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa del siglo XIX",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "antolog\u00EDa po\u00E9tica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa juvenil",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa m\u00EDstica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa \u00E9pica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "sonetos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "haiku",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa beat",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa feminista",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa experimental",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa y m\u00FAsica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa visual",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa chilena",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa mexicana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa argentina",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa peruana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa cubana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa del Siglo de Oro",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa barroca",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa medieval",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "generaci\u00F3n del 27",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa vanguardista",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa posmoderna",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa er\u00F3tica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa de desamor",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa filos\u00F3fica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa religiosa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa pol\u00EDtica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa de la naturaleza",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa urbana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa infantil",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa en prosa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poemas cortos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "obra po\u00E9tica completa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "antolog\u00EDa de poes\u00EDa hispanoamericana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa ind\u00EDgena",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "poes\u00EDa escrita por mujeres",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "slam y poes\u00EDa oral",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "romancero",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "d\u00E9cimas",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "pablo neruda poemas",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "federico garc\u00EDa lorca poes\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "gabriela mistral poemas",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "mario benedetti poes\u00EDa",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "octavio paz poes\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Poes\u00EDa",
+    "Query": "alejandra pizarnik",
+    "StartIndex": 320,
+    "Exhausted": true
+  }
+]

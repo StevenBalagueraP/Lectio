@@ -15,6 +15,7 @@ public class GoogleBooksSeederService
 
     private const int PageSize = 40;
     private const int MaxPagesPerSubquery = 24;
+    private const int AuthorNameMaxLength = 255;
 
     public GoogleBooksSeederService(AppDbContext context, GoogleBooksApiClient apiClient, SeedProgressStore progressStore)
     {
@@ -40,6 +41,23 @@ public class GoogleBooksSeederService
 
     public Task<Dictionary<string, int>> SeedSelfHelpAsync() =>
         SeedGroupAsync("autoayuda", BookSeedConfigs.Autoayuda);
+    
+    public Task<Dictionary<string, int>> SeedEssayAndPhilosophyAsync() =>
+        SeedGroupAsync("ensayo-filosofia", BookSeedConfigs.EnsayoFilosofia);
+
+    public Task<Dictionary<string, int>> SeedComicsAndChildrenAsync() =>
+        SeedGroupAsync("comics-infantil", BookSeedConfigs.ComicsInfantil
+        );
+ 
+    public Task<Dictionary<string, int>> SeedTravelAndFoodAsync() =>
+        SeedGroupAsync("viajes-gastronomia", BookSeedConfigs.ViajesGastronomia
+        );
+    public Task<Dictionary<string, int>> SeedBusinessAndTechAsync() =>
+        SeedGroupAsync("negocios-tecnologia", BookSeedConfigs.NegociosTecnologia
+        ); 
+    
+    public Task<Dictionary<string, int>> SeedPopularesAsync() =>
+    SeedGroupAsync("populares", BookSeedConfigs.Populares);
 
     private async Task<Dictionary<string, int>> SeedGroupAsync(
         string groupKey,
@@ -144,6 +162,8 @@ public class GoogleBooksSeederService
                         foreach (var authorName in authors)
                         {
                             var author = await GetOrCreateAuthorAsync(authorName);
+                            if (author is null) continue;
+
                             _context.BookAuthors.Add(new BookAuthor { BookId = book.BookId, AuthorId = author.AuthorId });
                         }
                     }
@@ -166,7 +186,7 @@ public class GoogleBooksSeederService
                 Console.WriteLine($"[{categoryName} / \"{next.Query}\"] reviewed: {counter.Reviewed}, " +
                     $"new: {newCandidates.Count}, category added to existing: {existingBooks.Count}, " +
                     $"discarded -> language: {counter.Language}, no pages: {counter.NoPages}, no image: {counter.NoImage}, " +
-                    $"no ISBN: {counter.NoIsbn}, duplicates: {counter.Duplicate}. Total {categoryName}: {insertedPerCategory[categoryName]}");
+                    $"no ISBN: {counter.NoIsbn}, no authors: {counter.NoAuthors}, duplicates: {counter.Duplicate}. Total {categoryName}: {insertedPerCategory[categoryName]}");
             }
 
             if (quotaExhausted) break;
@@ -195,9 +215,17 @@ public class GoogleBooksSeederService
         return category;
     }
 
-    private async Task<Author> GetOrCreateAuthorAsync(string name)
+    private async Task<Author?> GetOrCreateAuthorAsync(string name)
     {
-        var trimmed = name.Trim();
+        var trimmed = name?.Trim();
+        if (string.IsNullOrEmpty(trimmed)) return null;
+
+        if (trimmed.Length > AuthorNameMaxLength)
+        {
+            Console.WriteLine($"[WARNING] Author name too long ({trimmed.Length} chars), truncated to {AuthorNameMaxLength}: \"{trimmed}\"");
+            trimmed = trimmed[..AuthorNameMaxLength].TrimEnd();
+        }
+
         var existing = await _context.Authors.FirstOrDefaultAsync(a => a.AuthorName == trimmed);
         if (existing is not null) return existing;
 
