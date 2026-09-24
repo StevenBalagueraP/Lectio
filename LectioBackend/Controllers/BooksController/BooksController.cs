@@ -1,3 +1,5 @@
+using Lectio.Api.Application.Books.BrowseBooks;
+using Lectio.Api.Application.Books.BrowseBooks.Dtos;
 using Lectio.Api.Application.Books.TopRatedBooks;
 using Lectio.Api.Application.Books.TopRatedBooks.Dtos;
 using Microsoft.AspNetCore.Mvc;
@@ -9,16 +11,29 @@ namespace Lectio.Api.Controllers.BooksController;
 public class BooksController : ControllerBase
 {
     private readonly ITopRatedBooksService _topRatedBooksService;
+    private readonly IBrowseBooksService _browseBooksService;
 
-    public BooksController(ITopRatedBooksService topRatedBooksService)
+    public BooksController(ITopRatedBooksService topRatedBooksService, IBrowseBooksService browseBooksService)
     {
         _topRatedBooksService = topRatedBooksService;
+        _browseBooksService = browseBooksService;
     }
 
-    /// <summary>
-    /// Returns the top 5 highest rated books. If categoryId is provided,
-    /// the ranking is scoped to that category; otherwise it covers the whole catalog.
-    /// </summary>
+    [HttpGet]
+    [ProducesResponseType(typeof(BrowseBooksResponseDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<BrowseBooksResponseDto>> GetBooks(
+        [FromQuery] string? search,
+        [FromQuery] int? categoryId,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 10,
+        CancellationToken cancellationToken = default)
+    {
+        var response = await _browseBooksService.GetBooksAsync(search, categoryId, page, pageSize, cancellationToken);
+        return Ok(response);
+    }
+
     [HttpGet("top-rated")]
     [ProducesResponseType(typeof(TopRatedBooksResponseDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
