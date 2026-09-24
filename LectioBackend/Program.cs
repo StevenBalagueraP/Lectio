@@ -7,6 +7,7 @@ using Lectio.Api.Application.Seeding.UserSeed;
 using Lectio.Api.Application.Seeding.LoanSeed;
 using Lectio.Api.Application.Seeding.RatingSeed;
 using Lectio.Api.Application.Books.TopRatedBooks;
+using Lectio.Api.Application.Categories;
 using Lectio.Api.Middlewares;
 
 
@@ -28,6 +29,7 @@ builder.Services.AddScoped<LoanSeederService>();
 builder.Services.AddScoped<RatingDataGenerator>();
 builder.Services.AddScoped<RatingSeederService>();
 builder.Services.AddScoped<ITopRatedBooksService, TopRatedBooksService>();
+builder.Services.AddScoped<ICategoriesService, CategoriesService>();
 
 builder.Services.AddControllers();
 
