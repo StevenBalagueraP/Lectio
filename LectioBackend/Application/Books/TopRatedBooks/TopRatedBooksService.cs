@@ -69,7 +69,9 @@ public class TopRatedBooksService : ITopRatedBooksService
     // for the category filter, both already defined on the schema.
     private IQueryable<Book> BuildTopRatedBooksQuery(int? categoryId)
     {
-        var query = _context.Books.AsNoTracking();
+        var query = _context.Books
+            .AsNoTracking()
+            .Where(book => book.IsAvailable);
 
         if (categoryId.HasValue)
         {
