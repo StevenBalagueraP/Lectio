@@ -6,7 +6,7 @@ public interface IBrowseBooksService
 {
     Task<BrowseBooksResponseDto> GetBooksAsync(
         string? search,
-        int? categoryId,
+        IReadOnlyCollection<int>? categoryIds,
         int page,
         int pageSize,
         CancellationToken cancellationToken);
