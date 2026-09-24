@@ -42,7 +42,6 @@ public static class VolumeItemProcessor
             return new BookResult(null, null, existingBook);
         }
 
-        // Un libro nuevo sin autores válidos no se inserta (evita libros huérfanos en BookAuthors).
         var authors = info.Authors?
             .Where(a => !string.IsNullOrWhiteSpace(a))
             .Select(a => a.Trim())

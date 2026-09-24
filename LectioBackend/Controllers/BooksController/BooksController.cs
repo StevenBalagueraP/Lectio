@@ -37,12 +37,12 @@ public class BooksController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<BrowseBooksResponseDto>> GetBooks(
         [FromQuery] string? search,
-        [FromQuery] int? categoryId,
+        [FromQuery] int[]? categoryIds,
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 10,
         CancellationToken cancellationToken = default)
     {
-        var response = await _browseBooksService.GetBooksAsync(search, categoryId, page, pageSize, cancellationToken);
+        var response = await _browseBooksService.GetBooksAsync(search, categoryIds, page, pageSize, cancellationToken);
         return Ok(response);
     }
 
