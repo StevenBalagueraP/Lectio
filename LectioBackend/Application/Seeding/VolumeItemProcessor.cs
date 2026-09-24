@@ -42,6 +42,18 @@ public static class VolumeItemProcessor
             return new BookResult(null, null, existingBook);
         }
 
+        // Un libro nuevo sin autores válidos no se inserta (evita libros huérfanos en BookAuthors).
+        var authors = info.Authors?
+            .Where(a => !string.IsNullOrWhiteSpace(a))
+            .Select(a => a.Trim())
+            .ToList();
+
+        if (authors is null || authors.Count == 0)
+        {
+            counter.NoAuthors++;
+            return null;
+        }
+
         var book = new Book
         {
             Title = info.Title,
@@ -55,7 +67,7 @@ public static class VolumeItemProcessor
             IsAvailable = true
         };
 
-        return new BookResult(book, info.Authors ?? new List<string>(), null);
+        return new BookResult(book, authors, null);
     }
 
     private static DateOnly? ParsePublishedDate(string? raw)
@@ -76,6 +88,7 @@ public class DiscardCounter
     public int NoPages { get; set; }
     public int NoImage { get; set; }
     public int NoIsbn { get; set; }
+    public int NoAuthors { get; set; }
     public int Duplicate { get; set; }
     public int CategoryAdded { get; set; }
 }
