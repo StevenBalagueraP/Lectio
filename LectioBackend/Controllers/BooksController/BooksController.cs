@@ -1,3 +1,5 @@
+using Lectio.Api.Application.Books.BookDetails;
+using Lectio.Api.Application.Books.BookDetails.Dtos;
 using Lectio.Api.Application.Books.BrowseBooks;
 using Lectio.Api.Application.Books.BrowseBooks.Dtos;
 using Lectio.Api.Application.Books.TopRatedBooks;
@@ -12,11 +14,16 @@ public class BooksController : ControllerBase
 {
     private readonly ITopRatedBooksService _topRatedBooksService;
     private readonly IBrowseBooksService _browseBooksService;
+    private readonly IBookDetailService _bookDetailService;
 
-    public BooksController(ITopRatedBooksService topRatedBooksService, IBrowseBooksService browseBooksService)
+    public BooksController(
+        ITopRatedBooksService topRatedBooksService,
+        IBrowseBooksService browseBooksService,
+        IBookDetailService bookDetailService)
     {
         _topRatedBooksService = topRatedBooksService;
         _browseBooksService = browseBooksService;
+        _bookDetailService = bookDetailService;
     }
 
     [HttpGet]
@@ -43,6 +50,15 @@ public class BooksController : ControllerBase
         CancellationToken cancellationToken)
     {
         var response = await _topRatedBooksService.GetTopRatedBooksAsync(categoryId, cancellationToken);
+        return Ok(response);
+    }
+
+    [HttpGet("{id:int}")]
+    [ProducesResponseType(typeof(BookDetailDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<BookDetailDto>> GetBookById(int id, CancellationToken cancellationToken)
+    {
+        var response = await _bookDetailService.GetBookDetailAsync(id, cancellationToken);
         return Ok(response);
     }
 }
