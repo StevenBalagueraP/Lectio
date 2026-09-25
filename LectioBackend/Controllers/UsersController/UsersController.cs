@@ -1,6 +1,8 @@
 using System.Security.Claims;
 using Lectio.Api.Application.Loans.CreateLoan;
 using Lectio.Api.Application.Loans.CreateLoan.Dtos;
+using Lectio.Api.Application.Loans.ReturnLoan;
+using Lectio.Api.Application.Loans.ReturnLoan.Dtos;
 using Lectio.Api.Application.Loans.UserLoans;
 using Lectio.Api.Application.Loans.UserLoans.Dtos;
 using Microsoft.AspNetCore.Authorization;
@@ -16,11 +18,16 @@ public class UsersController : ControllerBase
 {
     private readonly IUserLoansService _userLoansService;
     private readonly ICreateLoanService _createLoanService;
+    private readonly IReturnLoanService _returnLoanService;
 
-    public UsersController(IUserLoansService userLoansService, ICreateLoanService createLoanService)
+    public UsersController(
+        IUserLoansService userLoansService,
+        ICreateLoanService createLoanService,
+        IReturnLoanService returnLoanService)
     {
         _userLoansService = userLoansService;
         _createLoanService = createLoanService;
+        _returnLoanService = returnLoanService;
     }
 
     [HttpGet("{userId:int}/loans")]
@@ -63,6 +70,26 @@ public class UsersController : ControllerBase
 
         var response = await _createLoanService.CreateLoanAsync(userId, request, cancellationToken);
         return StatusCode(StatusCodes.Status201Created, response);
+    }
+
+    [HttpPost("{userId:int}/loans/{bookId:int}/return")]
+    [ProducesResponseType(typeof(ReturnLoanResponseDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<ReturnLoanResponseDto>> ReturnLoan(
+        int userId,
+        int bookId,
+        CancellationToken cancellationToken)
+    {
+        if (!IsSelfOrAdmin(userId))
+        {
+            return Forbid();
+        }
+
+        var response = await _returnLoanService.ReturnLoanAsync(userId, bookId, cancellationToken);
+        return Ok(response);
     }
 
     private bool IsSelfOrAdmin(int userId)
