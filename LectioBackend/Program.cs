@@ -12,6 +12,7 @@ using Lectio.Api.Application.Books.BrowseBooks;
 using Lectio.Api.Application.Books.BookDetails;
 using Lectio.Api.Application.Books.BookRatings;
 using Lectio.Api.Application.Loans.UserLoans;
+using Lectio.Api.Application.Loans.CreateLoan;
 using Lectio.Api.Middlewares;
 using Lectio.Api.Application.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -95,6 +96,7 @@ builder.Services.AddScoped<IBookRatingsService, BookRatingsService>();
 builder.Services.AddSingleton<ITokenService, TokenService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserLoansService, UserLoansService>();
+builder.Services.AddScoped<ICreateLoanService, CreateLoanService>();
 
 builder.Services.AddControllers();
 
