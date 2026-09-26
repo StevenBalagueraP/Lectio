@@ -1,10 +1,12 @@
 using Lectio.Api.Application.Seeding.LoanSeed;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lectio.Api.Controllers.LoanSeed;
 
 [ApiController]
 [Route("api/seed")]
+[Authorize(Roles = "admin")]
 public class LoanSeedController : ControllerBase
 {
     private readonly LoanSeederService _loanSeederService;

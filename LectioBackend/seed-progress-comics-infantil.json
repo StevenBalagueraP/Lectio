@@ -1,0 +1,332 @@
+[
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "novela gr\u00E1fica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "manga",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic de superh\u00E9roes",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic independiente",
+    "StartIndex": 240,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic espa\u00F1ol",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic latinoamericano",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "novela gr\u00E1fica autobiogr\u00E1fica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "webc\u00F3mic",
+    "StartIndex": 240,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic de humor",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic hist\u00F3rico",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic b\u00E9lico",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "novela gr\u00E1fica de no ficci\u00F3n",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic de terror",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic de ciencia ficci\u00F3n",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic de fantas\u00EDa",
+    "StartIndex": 280,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic underground",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "manhwa",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "manhua",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic infantil",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "tira c\u00F3mica",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "novela gr\u00E1fica juvenil",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic experimental",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "antolog\u00EDa de c\u00F3mics",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic de aventuras",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "novela gr\u00E1fica premiada",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic noir",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "C\u00F3mics",
+    "Query": "c\u00F3mic polic\u00EDaco",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "cuentos infantiles",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "literatura infantil",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libro ilustrado",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "cuentos para dormir",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros para primeros lectores",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles educativos",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles de aventuras",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "cuentos cl\u00E1sicos infantiles",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles ilustrados",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles de animales",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "cuentos con valores",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libro \u00E1lbum",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles de fantas\u00EDa",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "poes\u00EDa infantil",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros para colorear",
+    "StartIndex": 120,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "cuentos populares",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "f\u00E1bulas infantiles",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles de humor",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles sobre emociones",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "cuentos de hadas infantiles",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles biling\u00FCes",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles de ciencia",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "primeras lecturas",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles interactivos",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "cuentos tradicionales",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Infantil",
+    "Query": "libros infantiles latinoamericanos",
+    "StartIndex": 0,
+    "Exhausted": false
+  }
+]
