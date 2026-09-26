@@ -1,0 +1,326 @@
+[
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "novela",
+    "StartIndex": 40,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "ficci\u00F3n literaria",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "cuentos",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "relatos cortos",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "ciencia ficci\u00F3n",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "ciencia ficci\u00F3n espacial",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "fantas\u00EDa \u00E9pica",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "fantas\u00EDa oscura",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "aventuras",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "novela de aventuras",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "realismo m\u00E1gico",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "distop\u00EDa",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "ficci\u00F3n dist\u00F3pica juvenil",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "terror",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "cuentos de terror",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "misterio",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "novela negra",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "thriller",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "literatura latinoamericana",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "literatura colombiana",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "literatura espa\u00F1ola",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "literatura contempor\u00E1nea",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "cl\u00E1sicos de la literatura",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "novela hist\u00F3rica",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "literatura juvenil",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "saga fant\u00E1stica",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "ucron\u00EDa",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "ficci\u00F3n especulativa",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "steampunk",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Ficci\u00F3n",
+    "Query": "literatura fant\u00E1stica",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "novela rom\u00E1ntica",
+    "StartIndex": 40,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance contempor\u00E1neo",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance hist\u00F3rico",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance de \u00E9poca",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance victoriano",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "amor",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "amor prohibido",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "amor de verano",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "comedia rom\u00E1ntica",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance juvenil",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance adolescente",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance new adult",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance paranormal",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance fant\u00E1stico",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "suspenso rom\u00E1ntico",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance polic\u00EDaco",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "enemigos a amantes",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "segunda oportunidad amor",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "tri\u00E1ngulo amoroso",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance navide\u00F1o",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance en la playa",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "romance millonario",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "bodas novela",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Romance",
+    "Query": "chica busca chico",
+    "StartIndex": 0,
+    "Exhausted": false
+  }
+]
