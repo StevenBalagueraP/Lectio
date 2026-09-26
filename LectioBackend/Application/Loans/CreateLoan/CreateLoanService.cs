@@ -60,7 +60,6 @@ public class CreateLoanService : ICreateLoanService
         }
         catch (DbUpdateException)
         {
-            // A concurrent request won the race for this book's active-loan unique index (IX_Loan_BookId_Active).
             throw new ConflictException("This book is currently on loan and is not available until it is returned.");
         }
 

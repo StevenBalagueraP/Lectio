@@ -5,6 +5,8 @@ using Lectio.Api.Application.Loans.ReturnLoan;
 using Lectio.Api.Application.Loans.ReturnLoan.Dtos;
 using Lectio.Api.Application.Loans.UserLoans;
 using Lectio.Api.Application.Loans.UserLoans.Dtos;
+using Lectio.Api.Application.Ratings.UpsertRating;
+using Lectio.Api.Application.Ratings.UpsertRating.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.JsonWebTokens;
@@ -19,15 +21,18 @@ public class UsersController : ControllerBase
     private readonly IUserLoansService _userLoansService;
     private readonly ICreateLoanService _createLoanService;
     private readonly IReturnLoanService _returnLoanService;
+    private readonly IUpsertRatingService _upsertRatingService;
 
     public UsersController(
         IUserLoansService userLoansService,
         ICreateLoanService createLoanService,
-        IReturnLoanService returnLoanService)
+        IReturnLoanService returnLoanService,
+        IUpsertRatingService upsertRatingService)
     {
         _userLoansService = userLoansService;
         _createLoanService = createLoanService;
         _returnLoanService = returnLoanService;
+        _upsertRatingService = upsertRatingService;
     }
 
     [HttpGet("{userId:int}/loans")]
@@ -89,6 +94,26 @@ public class UsersController : ControllerBase
         }
 
         var response = await _returnLoanService.ReturnLoanAsync(userId, bookId, cancellationToken);
+        return Ok(response);
+    }
+    [HttpPost("{userId:int}/ratings")]
+    [ProducesResponseType(typeof(RatingResponseDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status409Conflict)]
+    public async Task<ActionResult<RatingResponseDto>> UpsertRating(
+        int userId,
+        [FromBody] UpsertRatingRequestDto request,
+        CancellationToken cancellationToken)
+    {
+        if (!IsSelfOrAdmin(userId))
+        {
+            return Forbid();
+        }
+
+        var response = await _upsertRatingService.UpsertRatingAsync(userId, request, cancellationToken);
         return Ok(response);
     }
 
