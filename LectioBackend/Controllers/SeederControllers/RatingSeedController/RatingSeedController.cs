@@ -1,10 +1,12 @@
 using Lectio.Api.Application.Seeding.RatingSeed;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lectio.Api.Controllers.RatingSeed;
 
 [ApiController]
 [Route("api/seed")]
+[Authorize(Roles = "admin")]
 public class RatingSeedController : ControllerBase
 {
     private readonly RatingSeederService _ratingSeederService;

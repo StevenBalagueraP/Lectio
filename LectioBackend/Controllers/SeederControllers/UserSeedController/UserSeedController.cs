@@ -1,4 +1,5 @@
 using Lectio.Api.Application.Seeding.UserSeed;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lectio.Api.Controllers.UserSeed;
@@ -6,6 +7,7 @@ namespace Lectio.Api.Controllers.UserSeed;
 [ApiController]
 [Route("api/seed")]
 [Tags("UserSeed")]
+[Authorize(Roles = "admin")]
 public class UserSeedController : ControllerBase
 {
     private readonly UserSeederService _userSeederService;
