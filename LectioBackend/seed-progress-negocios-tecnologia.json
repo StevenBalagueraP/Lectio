@@ -1,0 +1,320 @@
+[
+  {
+    "CategoryName": "Negocios",
+    "Query": "negocios",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "emprendimiento",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "finanzas",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "econom\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "liderazgo empresarial",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "marketing",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "management",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "estrategia empresarial",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "startups",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "inversi\u00F3n",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "finanzas personales",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "negocios internacionales",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "econom\u00EDa pol\u00EDtica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "innovaci\u00F3n empresarial",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "modelos de negocio",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "ventas",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "negociaci\u00F3n",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "gesti\u00F3n de proyectos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "recursos humanos",
+    "StartIndex": 40,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "econom\u00EDa digital",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "emprendimiento social",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "finanzas corporativas",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "historia econ\u00F3mica empresarial",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "biograf\u00EDas de empresarios",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "productividad laboral",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "transformaci\u00F3n digital",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Negocios",
+    "Query": "econom\u00EDa conductual",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "tecnolog\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "programaci\u00F3n",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "inteligencia artificial",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "desarrollo de software",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "historia de la tecnolog\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "internet y sociedad",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "ciberseguridad",
+    "StartIndex": 240,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "big data",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "rob\u00F3tica",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "transformaci\u00F3n digital",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "startups tecnol\u00F3gicas",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "innovaci\u00F3n tecnol\u00F3gica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "computaci\u00F3n",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "redes y telecomunicaciones",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "tecnolog\u00EDa y sociedad",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "hardware y electr\u00F3nica",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "biograf\u00EDas de tecnolog\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "\u00E9tica de la inteligencia artificial",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "futuro de la tecnolog\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "tecnolog\u00EDa educativa",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "videojuegos y tecnolog\u00EDa",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "blockchain",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "realidad virtual",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "internet de las cosas",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "inform\u00E1tica",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Tecnolog\u00EDa",
+    "Query": "divulgaci\u00F3n tecnol\u00F3gica",
+    "StartIndex": 0,
+    "Exhausted": false
+  }
+]

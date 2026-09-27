@@ -1,0 +1,55 @@
+:root {
+  /* === PRIMARIO === */
+  --color-primary: #236A34;
+  --color-primary-hover: #1B4F27;
+  --color-primary-light: #E3F0E6;
+
+  /* === SECUNDARIO === */
+  --color-secondary: #F3F02B;
+  --color-secondary-hover: #D6D323;
+
+  /* === NEUTRALES === */
+  --color-bg: #FFFFFF;
+  --color-surface: #F9FAFE;
+  --color-border: #747474;
+  --color-text: #000000;
+  --color-text-muted: #6B7280;
+  --color-disabled: #E0E0E0;
+
+  /* === ESTADOS === */
+  --color-success: #236A34;
+  --color-error: #FF1226;
+  --color-warning: #F59E0B;
+  --color-info: #3B82F6;
+
+  /* === TIPOGRAFÍA === */
+  --font-family-base: 'Poppins', sans-serif;
+
+  /* === PESOS DE FUENTE === */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* === TAMAÑOS (mobile / base) === */
+  --font-size-xs: 13px;
+  --font-size-sm: 15px;
+  --font-size-md: 17px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 28px;
+  --font-size-3xl: 36px;
+}
+
+/* === DESKTOP === */
+@media (min-width: 1024px) {
+  :root {
+    --font-size-xs: 14px;
+    --font-size-sm: 16px;
+    --font-size-md: 20px;
+    --font-size-lg: 24px;
+    --font-size-xl: 32px;
+    --font-size-2xl: 40px;
+    --font-size-3xl: 48px;
+  }
+}

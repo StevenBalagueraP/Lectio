@@ -1,0 +1,326 @@
+[
+  {
+    "CategoryName": "Viajes",
+    "Query": "libros de viajes",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "cr\u00F3nicas de viaje",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "diario de viaje",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "gu\u00EDas de viaje",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "relatos de viaje",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes por Latinoam\u00E9rica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes por Europa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes por Asia",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "mochileros",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "turismo de aventura",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes en tren",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes en carretera",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "expediciones y viajes",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes hist\u00F3ricos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes literarios",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "narrativa de viajes",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes en bicicleta",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes por \u00C1frica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes solitarios",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "cr\u00F3nicas de exploradores",
+    "StartIndex": 280,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viaje interior",
+    "StartIndex": 360,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "turismo cultural",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes gastron\u00F3micos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes de mochila",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "camino de Santiago",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "vuelta al mundo",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Viajes",
+    "Query": "viajes extremos",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "gastronom\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "libros de cocina",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "recetas de cocina",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina latinoamericana",
+    "StartIndex": 240,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina espa\u00F1ola",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina internacional",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina vegetariana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina vegana",
+    "StartIndex": 240,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "reposter\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "panader\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "historia de la gastronom\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cultura culinaria",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina tradicional",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina de autor",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "enolog\u00EDa",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "vinos y maridajes",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina saludable",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina r\u00E1pida",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina de calle",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cr\u00F3nicas gastron\u00F3micas",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "memorias culinarias",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina mexicana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina colombiana",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina asi\u00E1tica",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "cocina mediterr\u00E1nea",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "chefs y cocina",
+    "StartIndex": 320,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Gastronom\u00EDa",
+    "Query": "gastronom\u00EDa y viajes",
+    "StartIndex": 320,
+    "Exhausted": true
+  }
+]
