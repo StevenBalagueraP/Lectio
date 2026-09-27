@@ -92,80 +92,80 @@
   {
     "CategoryName": "C\u00F3mics",
     "Query": "c\u00F3mic de fantas\u00EDa",
-    "StartIndex": 280,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "c\u00F3mic underground",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "manhwa",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "manhua",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "c\u00F3mic infantil",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 280,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "tira c\u00F3mica",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "novela gr\u00E1fica juvenil",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 280,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "c\u00F3mic experimental",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "antolog\u00EDa de c\u00F3mics",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 280,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "c\u00F3mic de aventuras",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "novela gr\u00E1fica premiada",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "c\u00F3mic noir",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 280,
+    "Exhausted": true
   },
   {
     "CategoryName": "C\u00F3mics",
     "Query": "c\u00F3mic polic\u00EDaco",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
@@ -260,73 +260,73 @@
   {
     "CategoryName": "Infantil",
     "Query": "libros para colorear",
-    "StartIndex": 120,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
     "Query": "cuentos populares",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
     "Query": "f\u00E1bulas infantiles",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
     "Query": "libros infantiles de humor",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
     "Query": "libros infantiles sobre emociones",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 160,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
     "Query": "cuentos de hadas infantiles",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
     "Query": "libros infantiles biling\u00FCes",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
     "Query": "libros infantiles de ciencia",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 280,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
     "Query": "primeras lecturas",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
     "Query": "libros infantiles interactivos",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 120,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
     "Query": "cuentos tradicionales",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 320,
+    "Exhausted": true
   },
   {
     "CategoryName": "Infantil",
     "Query": "libros infantiles latinoamericanos",
-    "StartIndex": 0,
-    "Exhausted": false
+    "StartIndex": 160,
+    "Exhausted": true
   }
 ]
