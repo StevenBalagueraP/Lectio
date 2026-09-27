@@ -1,0 +1,5948 @@
+[
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cien a\u00F1os de soledad\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El amor en los tiempos del c\u00F3lera\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El oto\u00F1o del patriarca\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cr\u00F3nica de una muerte anunciada\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El coronel no tiene quien le escriba\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La hojarasca\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La mala hora\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los funerales de la Mam\u00E1 Grande\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La incre\u00EDble y triste historia de la c\u00E1ndida Er\u00E9ndira y de su abuela desalmada\u0022",
+    "StartIndex": 0,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ojos de perro azul\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Relato de un n\u00E1ufrago\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El general en su laberinto\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Del amor y otros demonios\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Noticia de un secuestro\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Vivir para contarla\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Memoria de mis putas tristes\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Doce cuentos peregrinos\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Yo no vengo a decir un discurso\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Diatriba de amor contra un hombre sentado\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La aventura de Miguel Litt\u00EDn clandestino en Chile\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Don Quijote de la Mancha\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Novelas ejemplares\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La Galatea\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los trabajos de Persiles y Sigismunda\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Viaje del Parnaso\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ocho comedias y ocho entremeses nuevos nunca representados\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El cerco de Numancia\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El trato de Argel\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El gallardo espa\u00F1ol\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La casa de los celos\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los ba\u00F1os de Argel\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El rufi\u00E1n dichoso\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La gran sultana do\u00F1a Catalina de Oviedo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El laberinto de amor\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La entretenida\u0022",
+    "StartIndex": 0,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pedro de Urdemalas\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El juez de los divorcios\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El retablo de las maravillas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cueva de Salamanca\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El viejo celoso\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La ciudad y los perros\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La casa verde\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Conversaci\u00F3n en La Catedral\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pantale\u00F3n y las visitadoras\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La t\u00EDa Julia y el escribidor\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La guerra del fin del mundo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Historia de Mayta\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00BFQui\u00E9n mat\u00F3 a Palomino Molero?\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El hablador\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Elogio de la madrastra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Lituma en los Andes\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los cuadernos de don Rigoberto\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La Fiesta del Chivo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El Para\u00EDso en la otra esquina\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Travesuras de la ni\u00F1a mala\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El sue\u00F1o del celta\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El h\u00E9roe discreto\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cinco esquinas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tiempos recios\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Le dedico mi silencio\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Rayuela\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los premios\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u002262/Modelo para armar\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Libro de Manuel\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Divertimento\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El examen\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Bestiario\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Final del juego\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las armas secretas\u0022",
+    "StartIndex": 0,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Todos los fuegos el fuego\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Octaedro\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Alguien que anda por ah\u00ED\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Queremos tanto a Glenda\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Deshoras\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Historias de cronopios y de famas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Un tal Lucas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La vuelta al d\u00EDa en ochenta mundos\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00DAltimo round\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Prosa del oto\u00F1o\u0022",
+    "StartIndex": 0,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Clases de literatura\u0022",
+    "StartIndex": 0,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ficciones\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El Aleph\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El libro de arena\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El hacedor\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Historia universal de la infamia\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Historia de la eternidad\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Otras inquisiciones\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El informe de Brodie\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La memoria de Shakespeare\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Discusi\u00F3n\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El idioma de los argentinos\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Evaristo Carriego\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Siete noches\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Atlas\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nueve ensayos dantescos\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cifra\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los conjurados\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Borges oral\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pr\u00F3logos con un pr\u00F3logo de pr\u00F3logos\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Inquisiciones\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La casa de los esp\u00EDritus\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022De amor y de sombra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Eva Luna\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuentos de Eva Luna\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El plan infinito\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Paula\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Hija de la fortuna\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Retrato en sepia\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La ciudad de las bestias\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El reino del drag\u00F3n de oro\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El bosque de los pigmeos\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Zorro\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022In\u00E9s del alma m\u00EDa\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La isla bajo el mar\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El cuaderno de Maya\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El juego de Ripper\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022M\u00E1s all\u00E1 del invierno\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Largo p\u00E9talo de mar\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Violeta\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El viento conoce mi nombre\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Veinte poemas de amor y una canci\u00F3n desesperada\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Residencia en la tierra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Canto general\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los versos del capit\u00E1n\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Odas elementales\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nuevas odas elementales\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tercer libro de las odas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Estravagario\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cien sonetos de amor\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Memorial de Isla Negra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La barcarola\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Plenos poderes\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Fin de mundo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La espada encendida\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las piedras de Chile\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Espa\u00F1a en el coraz\u00F3n\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tentativa del hombre infinito\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Crepusculario\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El hondero entusiasta\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Confieso que he vivido\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Romancero gitano\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poeta en Nueva York\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poema del cante jondo\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Llanto por Ignacio S\u00E1nchez Mej\u00EDas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Div\u00E1n del Tamarit\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Libro de poemas\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sonetos del amor oscuro\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Primer romancero gitano\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Impresiones y paisajes\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Bodas de sangre\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Yerma\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La casa de Bernarda Alba\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mariana Pineda\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Do\u00F1a Rosita la soltera\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El p\u00FAblico\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022As\u00ED que pasen cinco a\u00F1os\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Comedia sin t\u00EDtulo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Retablillo de Don Crist\u00F3bal\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El maleficio de la mariposa\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Viaje a la luna\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La regi\u00F3n m\u00E1s transparente\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La muerte de Artemio Cruz\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Aura\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cambio de piel\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Zona sagrada\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Terra Nostra\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Gringo viejo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Crist\u00F3bal Nonato\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los a\u00F1os con Laura D\u00EDaz\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La silla del \u00E1guila\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La voluntad y la fortuna\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ad\u00E1n en Ed\u00E9n\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Federico en su balc\u00F3n\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Todas las familias felices\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cabeza de la hidra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Diana o la cazadora solitaria\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Instinto de Inez\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Constancia y otras novelas para v\u00EDrgenes\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Agua quemada\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Inquieta compa\u00F1\u00EDa\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El laberinto de la soledad\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El arco y la lira\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Libertad bajo palabra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Piedra de sol\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00BF\u00C1guila o sol?\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Salamandra\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La estaci\u00F3n violenta\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Blanco\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ladera este\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Toponemas\u0022",
+    "StartIndex": 0,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los hijos del limo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sor Juana In\u00E9s de la Cruz o Las trampas de la fe\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El mono gram\u00E1tico\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Conjunciones y disyunciones\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Posdata\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Corriente alterna\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Puertas al campo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuadrivio\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pasi\u00F3n cr\u00EDtica\u0022",
+    "StartIndex": 0,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La llama doble\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La pista de hielo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La literatura nazi en Am\u00E9rica\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Estrella distante\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los detectives salvajes\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Amuleto\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Monsieur Pain\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nocturno de Chile\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Amberes\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Una novelita lumpen\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u00222666\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El Tercer Reich\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El gaucho insufrible\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Putas asesinas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Llamadas telef\u00F3nicas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tres\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los perros rom\u00E1nticos\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La Universidad Desconocida\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Consejos de un disc\u00EDpulo de Morrison a un fan\u00E1tico de Joyce\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El secreto del mal\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El esp\u00EDritu de la ciencia-ficci\u00F3n\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Levantado del suelo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Memorial del convento\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El a\u00F1o de la muerte de Ricardo Reis\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La balsa de piedra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Historia del cerco de Lisboa\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El Evangelio seg\u00FAn Jesucristo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ensayo sobre la ceguera\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Todos los nombres\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La caverna\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El hombre duplicado\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ensayo sobre la lucidez\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las intermitencias de la muerte\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las peque\u00F1as memorias\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El viaje del elefante\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ca\u00EDn\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Claraboya\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Alzado del suelo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Manual de pintura y caligraf\u00EDa\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La viuda\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Hijo de un hijo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las cerezas del cementerio\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nuestro Padre San Daniel\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El obispo leproso\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El humo dormido\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Figuras de la Pasi\u00F3n del Se\u00F1or\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022A\u00F1os y leguas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El abuelo del rey\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La novela de mi amigo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La mujer de Ojeda\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022N\u00F3mada\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Del vivir\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La palma rota\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Amores de Ant\u00F3n Hernando\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Dentro del cercado\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Corpus y otros cuentos\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Hilv\u00E1n de escenas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cruz del cementerio\u0022",
+    "StartIndex": 0,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El libro de Sig\u00FCenza\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sig\u00FCenza y el Mirador Azul\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los amigos, los amantes y la muerte\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Fortunata y Jacinta\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Episodios nacionales\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Do\u00F1a Perfecta\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Marianela\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Misericordia\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nazar\u00EDn\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Torquemada en la hoguera\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Torquemada en el purgatorio\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Torquemada y San Pedro\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Torquemada y la Cruz\u0022",
+    "StartIndex": 0,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La desheredada\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El amigo Manso\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La de Bringas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Miau\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tristana\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Lo prohibido\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La inc\u00F3gnita\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Realidad\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00C1ngel Guerra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Halma\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Fuenteovejuna\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El perro del hortelano\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La dama boba\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El caballero de Olmedo\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Perib\u00E1\u00F1ez y el comendador de Oca\u00F1a\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El castigo sin venganza\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La discreta enamorada\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El villano en su rinc\u00F3n\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La moza de c\u00E1ntaro\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La noche de San Juan\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los melindres de Belisa\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El acero de Madrid\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El mejor alcalde, el rey\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La hermosa fea\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La doncella Teodor\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El r\u00FAstico del cielo\u0022",
+    "StartIndex": 0,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El sembrar en buena tierra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El anzuelo de Fenisa\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Arte nuevo de hacer comedias\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La vida es sue\u00F1o\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El alcalde de Zalamea\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El gran teatro del mundo\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El m\u00E9dico de su honra\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El pr\u00EDncipe constante\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La dama duende\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Casa con dos puertas, mala es de guardar\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El mayor monstruo del mundo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El pintor de su deshonra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022A secreto agravio, secreta venganza\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La hija del aire\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El m\u00E1gico prodigioso\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Eco y Narciso\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La devoci\u00F3n de la cruz\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cisma de Inglaterra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El astr\u00F3logo fingido\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022No hay burlas con el amor\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los empe\u00F1os de un acaso\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El gal\u00E1n fantasma\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El escondido y la tapada\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Rimas\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Leyendas\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cartas desde mi celda\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Historia de los templos de Espa\u00F1a\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El caudillo de las manos rojas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cruz del diablo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El monte de las \u00E1nimas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los ojos verdes\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Maese P\u00E9rez el organista\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El rayo de luna\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La ajorca de oro\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El beso\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La corza blanca\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El miserere\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La promesa\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cueva de la mora\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El gnomo\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La rosa de pasi\u00F3n\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tres fechas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Es raro\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Soledades\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Soledades, galer\u00EDas y otros poemas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Campos de Castilla\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nuevas canciones\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Juan de Mairena\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Abel Mart\u00EDn\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La guerra\u0022",
+    "StartIndex": 160,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poes\u00EDas completas\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Proverbios y cantares\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Canciones\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Galer\u00EDas\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los complementarios\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Desdichas de la fortuna o Julianillo Valc\u00E1rcel\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La duquesa de Benamej\u00ED\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las adelfas\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La Lola se va a los puertos\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La prima Fernanda\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El hombre que muri\u00F3 en la guerra\u0022",
+    "StartIndex": 40,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Despertad, muchachos\u0022",
+    "StartIndex": 0,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Apuntes\u0022",
+    "StartIndex": 200,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Niebla\u0022",
+    "StartIndex": 120,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022San Manuel Bueno, m\u00E1rtir\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Abel S\u00E1nchez\u0022",
+    "StartIndex": 80,
+    "Exhausted": true
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La t\u00EDa Tula\u0022",
+    "StartIndex": 40,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Amor y pedagog\u00EDa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Paz en la guerra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tres novelas ejemplares y un pr\u00F3logo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Del sentimiento tr\u00E1gico de la vida\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La agon\u00EDa del cristianismo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Vida de Don Quijote y Sancho\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022En torno al casticismo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022C\u00F3mo se hace una novela\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El espejo de la muerte\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Soliloquios y conversaciones\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Andanzas y visiones espa\u00F1olas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Por tierras de Portugal y Espa\u00F1a\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La dignidad humana\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Recuerdos de ni\u00F1ez y mocedad\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Rosario de sonetos l\u00EDricos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El Cristo de Vel\u00E1zquez\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La familia de Pascual Duarte\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La colmena\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Viaje a la Alcarria\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pabell\u00F3n de reposo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mrs Caldwell habla con su hijo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La catira\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022San Camilo, 1936\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Oficio de tinieblas 5\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mazurca para dos muertos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cristo versus Arizona\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El asesinato del perdedor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cruz de San Andr\u00E9s\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Madera de boj\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cuca\u00F1a\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Caf\u00E9 de artistas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El gallego y su cuadrilla\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El ciudadano Iscariote Recl\u00FAs\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nuevo retablo de Don Cristobita\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tobog\u00E1n de hambrientos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Jud\u00EDos, moros y cristianos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El h\u00FAsar\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El maestro de esgrima\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La tabla de Flandes\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El club Dumas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La sombra del \u00E1guila\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Territorio comanche\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El capit\u00E1n Alatriste\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Limpieza de sangre\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El sol de Breda\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El oro del rey\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El caballero del jub\u00F3n amarillo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Corsarios de Levante\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El puente de los asesinos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El tango de la Guardia Vieja\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El francotirador paciente\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Hombres buenos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Falc\u00F3\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Eva\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sabotaje\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Revoluci\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El siglo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El hombre sentimental\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El siglo de las luces\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Todas las almas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Coraz\u00F3n tan blanco\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ma\u00F1ana en la batalla piensa en m\u00ED\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Negra espalda del tiempo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tu rostro ma\u00F1ana\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los enamoramientos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022As\u00ED empieza lo malo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Berta Isla\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tom\u00E1s Nevinson\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El hombre que parec\u00EDa no querer nada\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Vidas escritas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pasiones pasadas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Literatura y fantasma\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Donde todo ha sucedido\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mientras ellas duermen\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Juro no decir nunca la verdad\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pedro P\u00E1ramo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El llano en llamas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El gallo de oro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00A1Diles que no me maten!\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Luvina\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022No oyes ladrar los perros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Talpa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Macario\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Es que somos muy pobres\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La noche que lo dejaron solo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Anacleto Morones\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Paso del Norte\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Acu\u00E9rdate\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cuesta de las comadres\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022En la madrugada\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nos han dado la tierra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El hombre\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La herencia de Matilde Arc\u00E1ngel\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El d\u00EDa del derrumbe\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La vida no es muy seria en sus cosas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Como agua para chocolate\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La ley del amor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00CDntimas suculencias\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tan veloz como el deseo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Malinche\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Lupita\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022A Lupita le gustaba planchar\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El diario de Tita\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mi negro pasado\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pierde peso, gana salud\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Escribiendo la nueva historia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El libro de las emociones\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00CDntimas suculencias: tratado filos\u00F3fico de cocina\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La ley del amor: novela\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Como agua para chocolate: edici\u00F3n ilustrada\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Malinche: edici\u00F3n especial\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El diario de Tita: novela\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mi negro pasado: novela\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Lupita: novela\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tan veloz como el deseo: novela\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Bal\u00FAn Can\u00E1n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Oficio de tinieblas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ciudad Real\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los convidados de agosto\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00C1lbum de familia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mujer que sabe lat\u00EDn...\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poes\u00EDa no eres t\u00FA\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Trayectoria del polvo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022De la vigilia est\u00E9ril\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El rescate del mundo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Apuntes para una declaraci\u00F3n de fe\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022L\u00EDvida luz\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Materia memorable\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Juicios sumarios\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los narradores ante el p\u00FAblico\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El uso de la palabra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cartas a Ricardo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sobre cultura femenina\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La novela mexicana contempor\u00E1nea\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El eterno femenino\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Hasta no verte Jes\u00FAs m\u00EDo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La noche de Tlatelolco\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Querido Diego, te abraza Quiela\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La flor de lis\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tin\u00EDsima\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nada, nadie. Las voces del temblor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La piel del cielo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El tren pasa primero\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Leonora\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El universo o nada\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Amanecer en el Z\u00F3calo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La vendedora de nubes\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022De noche vienes\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Lilus Kikus\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El ni\u00F1o\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tlapaler\u00EDa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Todo empez\u00F3 el domingo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las soldaderas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La herida de Paulina\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Boda en Chimalistac\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las venas abiertas de Am\u00E9rica Latina\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Memoria del fuego\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los nacimientos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las caras y las m\u00E1scaras\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El siglo del viento\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El libro de los abrazos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022D\u00EDas y noches de amor y de guerra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Patas arriba: la escuela del mundo al rev\u00E9s\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Espejos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mujeres\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Bocas del tiempo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los hijos de los d\u00EDas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El f\u00FAtbol a sol y sombra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Amares\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Palabras andantes\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ser como ellos y otros art\u00EDculos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Vagamundo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La canci\u00F3n de nosotros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022China 1964\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Guatemala: ensayo general de la violencia pol\u00EDtica\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La tregua\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Gracias por el fuego\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Primavera con una esquina rota\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La borra del caf\u00E9\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Andamios\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Qui\u00E9n de nosotros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La muerte y otras sorpresas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Montevideanos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Con y sin nostalgia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Geograf\u00EDas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Inventario\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poemas de la oficina\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poemas de otros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El amor, las mujeres y la vida\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La vida ese par\u00E9ntesis\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Rinc\u00F3n de haikus\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Viento del exilio\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cotidianas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Letras de emergencia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Despistes y franquezas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuentos de amor de locura y de muerte\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuentos de la selva\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los desterrados\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Anaconda\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El salvaje\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El crimen del otro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuentos de amor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La gallina degollada y otros cuentos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El almohad\u00F3n de plumas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022A la deriva\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La insolaci\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El hijo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los mens\u00FA\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El hombre muerto\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La miel silvestre\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La guerra de los yacar\u00E9s\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El paso del Yabebir\u00ED\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La tortuga gigante\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La gama ciega\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las medias de los flamencos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El dinosaurio\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La oveja negra y dem\u00E1s f\u00E1bulas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La letra e\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Movimiento perpetuo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Lo dem\u00E1s es silencio\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Viaje al centro de la f\u00E1bula\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La vaca\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La palabra m\u00E1gica\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los buscadores de oro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cocina de la escritura\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Antolog\u00EDa personal\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022P\u00E1jaros de Hispanoam\u00E9rica\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Literatura y vida\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La letra e: fragmentos de un diario\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Monterroso por Monterroso\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La f\u00E1bula del escritor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cultura en Guatemala\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El eclipse\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mister Taylor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El concierto\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El t\u00FAnel\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sobre h\u00E9roes y tumbas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Abadd\u00F3n el exterminador\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Uno y el universo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Hombres y engranajes\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Heterodoxia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El escritor y sus fantasmas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Apolog\u00EDas y rechazos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Antes del fin\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La resistencia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Espa\u00F1a en los diarios de mi vejez\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tres aproximaciones a la literatura de nuestro tiempo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tango, discusi\u00F3n y clave\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Significado de Pedro Henr\u00EDquez Ure\u00F1a\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Carta a un joven escritor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Di\u00E1logos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Claves pol\u00EDticas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El otro rostro del peronismo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Uno y el universo: ensayos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El drag\u00F3n y la princesa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00A1\u00C9cue-Yamba-O!\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El reino de este mundo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los pasos perdidos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El acoso\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Concierto barroco\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El recurso del m\u00E9todo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La consagraci\u00F3n de la primavera\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La aprendiz de bruja\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Guerra del tiempo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Viaje a la semilla\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El derecho de asilo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El camino de Santiago\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Semejante a la noche\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los fugitivos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El arpa y la sombra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La m\u00FAsica en Cuba\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tientos y diferencias\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Visi\u00F3n de Am\u00E9rica\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El amor a la libertad\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Do\u00F1a B\u00E1rbara\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cantaclaro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Canaima\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pobre negro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sobre la misma tierra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Reinaldo Solar\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La trepadora\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El forastero\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los inmigrantes\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El \u00FAltimo patriota\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El milagro del a\u00F1o\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los aventureros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El motor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La rebeli\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pataruco\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El piano viejo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La esfinge\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los delitos de un juez\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La brizna de paja en el viento\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El torbellino\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Gabriela, clavo y canela\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Do\u00F1a Flor y sus dos maridos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Capitanes de la arena\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tieta de Agreste\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tereza Batista cansada de guerra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los pastores de la noche\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Dona Flor e Seus Dois Maridos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mar muerto\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cacao\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Jubiab\u00E1\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sudor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tierras del sin fin\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022San Jorge de los Ilh\u00E9us\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los coroneles y sus bandos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tocaia Grande\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La desaparici\u00F3n de la santa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tienda de los milagros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Uniforme, frac y camis\u00F3n de dormir\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Navegaci\u00F3n de cabotaje\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los viejos marineros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cerca del coraz\u00F3n salvaje\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La pasi\u00F3n seg\u00FAn G. H.\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La hora de la estrella\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Un aprendizaje o el libro de los placeres\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Agua viva\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La manzana en la oscuridad\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La ciudad sitiada\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La l\u00E1mpara\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La ara\u00F1a\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Un soplo de vida\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Lazos de familia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La legi\u00F3n extranjera\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Felicidad clandestina\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Silencio\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022D\u00F3nde estuviste de noche\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Para no olvidar\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La v\u00EDa crucis del cuerpo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Un aliento de vida\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Descubrimientos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cr\u00F3nicas para j\u00F3venes de esp\u00EDritu\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Desolaci\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ternura\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tala\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Lagar\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poema de Chile\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sonetos de la muerte\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Lecturas para mujeres\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nubes blancas y breve descripci\u00F3n de Chile\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Recados contando a Chile\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Motivos de San Francisco\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Antolog\u00EDa mayor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Canto que amabas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La oraci\u00F3n de la maestra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El ni\u00F1o solo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La maestra rural\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Todas \u00EDbamos a ser reinas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Piececitos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Dame la mano\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pan\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Altazor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Temblor de cielo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ecuatorial\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poemas \u00E1rticos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El espejo de agua\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022M\u00EDo Cid Campeador\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cagliostro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pap\u00E1 o el diario de Alicia Mir\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La pr\u00F3xima\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ver y palpar\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Automne r\u00E9gulier\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00DAltimos poemas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ciudadano del olvido\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tout \u00E0 coup\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Saisons choisies\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Vientos contrarios\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Manifestes\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Finis Britannia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tres novelas ejemplares\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los heraldos negros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Trilce\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poemas humanos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Espa\u00F1a, aparta de m\u00ED este c\u00E1liz\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Escalas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Fabla salvaje\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El tungsteno\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Paco Yunque\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Rusia en 1931\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Rusia ante el segundo plan quinquenal\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Contra el secreto profesional\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El arte y la revoluci\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Lock-out\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Hacia el reino de los Sciris\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Colacho Hermanos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La piedra cansada\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poemas en prosa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poemas p\u00F3stumos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los desgraciados\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022N\u00F3mina de huesos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El pozo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tierra de nadie\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Para esta noche\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La vida breve\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los adioses\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tantas veces Pedro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La cara de la desgracia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El astillero\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Juntacad\u00E1veres\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La muerte y la ni\u00F1a\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Dejemos hablar al viento\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuando entonces\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los habitantes\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tiempo de abrazar\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los ni\u00F1os en el bosque\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tan triste como ella\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Jacob y el otro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La novia robada\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El infierno tan temido\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Un sue\u00F1o realizado\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022D\u00EDas de guardar\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Amor perdido\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Entrada libre\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Aires de familia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los rituales del caos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Salvador Novo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Escenas de pudor y liviandad\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Im\u00E1genes de la tradici\u00F3n viva\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los mil y un velorios\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022No sin nosotros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Apocalipstick\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Que se abra esa puerta\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Historia m\u00EDnima de la cultura mexicana\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El Estado laico y sus malquerientes\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Rituales del caos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nuevo catecismo para indios remisos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022A ustedes les consta\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Por mi madre, bohemios\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Frida Kahlo: una vida, una obra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La poes\u00EDa mexicana del siglo XX\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La inquietud del rosal\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El dulce da\u00F1o\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Irremediablemente\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Languidez\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ocre\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mundo de siete pozos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mascarilla y tr\u00E9bol\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poemas de amor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Antolog\u00EDa po\u00E9tica\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La loba\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022T\u00FA me quieres blanca\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Peso ancestral\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Hombre peque\u00F1ito\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Voy a dormir\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuadrados y \u00E1ngulos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Dolor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Versos a la tristeza de Buenos Aires\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Un l\u00E1piz\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pudiera ser\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Bien pudiera ser\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El libro blanco\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cantos de la ma\u00F1ana\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los c\u00E1lices vac\u00EDos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El rosario de Eros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los astros del abismo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Correspondencia sexual\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La alborada\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Explosi\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00CDntima\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Lo inefable\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Serpentina\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El intruso\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Fiera de amor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mis \u00EDdolos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nocturno\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Visi\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Otra estirpe\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Desde lejos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ismaelillo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Versos sencillos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Versos libres\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Versos de La Edad de Oro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La Edad de Oro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nuestra Am\u00E9rica\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Amistad funesta\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Luc\u00EDa Jerez\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Escenas norteamericanas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Escenas europeas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Escenas latinoamericanas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El presidio pol\u00EDtico en Cuba\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La Rep\u00FAblica Espa\u00F1ola ante la Revoluci\u00F3n Cubana\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Guatemala\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los poetas de la guerra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Abdala\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Amor con amor se paga\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Patria\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La ni\u00F1a de Guatemala\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Jos\u00E9 Mart\u00ED: poes\u00EDa completa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Azul...\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Prosas profanas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cantos de vida y esperanza\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los raros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El canto errante\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poema del oto\u00F1o y otros poemas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Canto a la Argentina y otros poemas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tierras solares\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Peregrinaciones\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La caravana pasa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Opiniones\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Historia de mis libros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Autobiograf\u00EDa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Letras\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Espa\u00F1a contempor\u00E1nea\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El oro de Mallorca\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El viaje a Nicaragua e intermezzo tropical\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ep\u00EDstolas y poemas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Abrojos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La Regenta\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Su \u00FAnico hijo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuesta abajo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Do\u00F1a Berta\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pip\u00E1\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Adi\u00F3s, Cordera\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El Se\u00F1or\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Boro\u00F1a\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cambio de luz\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Supercher\u00EDa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuervo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La conversi\u00F3n de Chiripa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuentos morales\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El gallo de S\u00F3crates\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Solos de Clar\u00EDn\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Serm\u00F3n perdido\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ensayos y revistas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mezclilla\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nueva campa\u00F1a\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Apolo en Pafos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El \u00E1rbol de la ciencia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Zalaca\u00EDn el aventurero\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La busca\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Mala hierba\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Aurora roja\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las inquietudes de Shanti And\u00EDa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Camino de perfecci\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La dama errante\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La ciudad de la niebla\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El mundo es ans\u00ED\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las tragedias grotescas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022C\u00E9sar o nada\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La sensualidad pervertida\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El cura de Monle\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La nave de los locos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las noches del Buen Retiro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El hotel del Cisne\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los pilotos de altura\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Memorias de un hombre de acci\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Luces de bohemia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Tirano Banderas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sonata de oto\u00F1o\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sonata de est\u00EDo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sonata de primavera\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sonata de invierno\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Divinas palabras\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Comedias b\u00E1rbaras\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022\u00C1guila de blas\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Romance de lobos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cara de plata\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El marqu\u00E9s de Bradom\u00EDn\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los cuernos de don Friolera\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Las galas del difunto\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La hija del capit\u00E1n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Farsa y licencia de la reina castiza\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Farsa italiana de la enamorada del rey\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Farsa de la cabeza del drag\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Jard\u00EDn umbr\u00EDo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Corte de amor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los pazos de Ulloa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La madre naturaleza\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Insolaci\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Morri\u00F1a\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La tribuna\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Una cristiana\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La prueba\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Memorias de un solter\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El cisne de Vilamorta\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Un viaje de novios\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El saludo de las brujas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La quimera\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Dulce due\u00F1o\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La sirena negra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Misterio\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuentos de la tierra\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuentos sacroprofanos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cuentos de Marineda\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La piedra angular\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Do\u00F1a Milagros\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Platero y yo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Diario de un poeta reci\u00E9n casado\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Eternidades\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Piedra y cielo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Poes\u00EDa en verso\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Belleza\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La estaci\u00F3n total\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Animal de fondo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022En el otro costado\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Romances de Coral Gables\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022R\u00EDos que se van\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Arias tristes\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Jardines lejanos\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Pastorales\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Almas de violeta\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Ninfeas\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Melancol\u00EDa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Laberinto\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Sonetos espirituales\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Est\u00EDo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Cr\u00F3nica del desamor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La funci\u00F3n Delta\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Te tratar\u00E9 como a una reina\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Amado amo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Temblor\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Bella y oscura\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La hija del can\u00EDbal\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El coraz\u00F3n del t\u00E1rtaro\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La loca de la casa\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Historia del Rey Transparente\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Instrucciones para salvar el mundo\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022L\u00E1grimas en la lluvia\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La rid\u00EDcula idea de no volver a verte\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022El peso del coraz\u00F3n\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La carne\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Los tiempos del odio\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La buena suerte\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La desconocida\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022La mala leche\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  },
+  {
+    "CategoryName": "Popular",
+    "Query": "intitle:\u0022Nosotras. Historias de mujeres y algo m\u00E1s\u0022",
+    "StartIndex": 0,
+    "Exhausted": false
+  }
+]

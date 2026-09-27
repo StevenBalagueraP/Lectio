@@ -6,7 +6,7 @@ public static class BookSeedConfigs
 {
     public static readonly Dictionary<string, BookSeedCategoryConfig> FiccionRomance = new()
     {
-        ["Ficción"] = new(
+        ["Fiction"] = new(
             new[]
             {
                 "novela", "ficción literaria", "cuentos", "relatos cortos",
@@ -36,7 +36,7 @@ public static class BookSeedConfigs
 
     public static readonly Dictionary<string, BookSeedCategoryConfig> FantasiaTerror = new()
     {
-        ["Fantasía"] = new(
+        ["Fantasy"] = new(
             new[]
             {
                 "fantasía épica", "fantasía oscura", "alta fantasía", "fantasía juvenil",
@@ -68,7 +68,7 @@ public static class BookSeedConfigs
 
     public static readonly Dictionary<string, BookSeedCategoryConfig> MisterioAventura = new()
     {
-        ["Misterio"] = new(
+        ["Mystery"] = new(
             new[]
             {
                 "misterio", "novela de misterio", "novela negra", "thriller psicológico",
@@ -80,7 +80,7 @@ public static class BookSeedConfigs
             },
             500, 2000
         ),
-        ["Aventura"] = new(
+        ["Adventure"] = new(
         new[]
         {
             "aventuras", "novela de aventuras", "exploración novela", "piratas novela",
@@ -110,7 +110,7 @@ public static class BookSeedConfigs
 
     public static readonly Dictionary<string, BookSeedCategoryConfig> HistoriaCiencia = new()
     {
-        ["Historia"] = new(
+        ["History"] = new(
             new[]
             {
                 // Generales
@@ -148,7 +148,7 @@ public static class BookSeedConfigs
             },
             500, 2000
         ),
-        ["Ciencia"] = new(
+        ["Science"] = new(
             new[]
             {
                 // Generales
@@ -191,7 +191,7 @@ public static class BookSeedConfigs
 
     public static readonly Dictionary<string, BookSeedCategoryConfig> BiografiaPoesia = new()
     {
-        ["Biografía"] = new(
+        ["Biography"] = new(
             new[]
             {
                 // Originales
@@ -226,7 +226,7 @@ public static class BookSeedConfigs
             },
             500, 2000
         ),
-        ["Poesía"] = new(
+        ["Poetry"] = new(
             new[]
             {
                 // Originales
@@ -264,7 +264,7 @@ public static class BookSeedConfigs
 
     public static readonly Dictionary<string, BookSeedCategoryConfig> Autoayuda = new()
     {
-        ["Autoayuda"] = new(
+        ["Self-help"] = new(
             new[]
             {
                 "autoayuda", "desarrollo personal", "crecimiento personal", "inteligencia emocional",
@@ -281,7 +281,7 @@ public static class BookSeedConfigs
 
     public static readonly Dictionary<string, BookSeedCategoryConfig> EnsayoFilosofia = new()
     {
-        ["Ensayo"] = new(
+        ["Essay"] = new(
             new[]
             {
                 "ensayo", "ensayo literario", "ensayo filosófico", "ensayo político",
@@ -295,7 +295,7 @@ public static class BookSeedConfigs
             },
             500, 2000
         ),
-        ["Filosofía"] = new(
+        ["Philosophy"] = new(
             new[]
             {
                 "filosofía", "filosofía antigua", "filosofía griega", "filosofía moderna",
@@ -314,7 +314,7 @@ public static class BookSeedConfigs
 
     public static readonly Dictionary<string, BookSeedCategoryConfig> ComicsInfantil = new()
     {
-        ["Cómics"] = new(
+        ["Comics"] = new(
             new[]
             {
                 "cómic", "novela gráfica", "manga", "cómic de superhéroes", "cómic independiente",
@@ -328,7 +328,7 @@ public static class BookSeedConfigs
             },
             500, 2000
         ),
-        ["Infantil"] = new(
+        ["Children's"] = new(
             new[]
             {
                 "libros infantiles", "cuentos infantiles", "literatura infantil",
@@ -349,7 +349,7 @@ public static class BookSeedConfigs
 
     public static readonly Dictionary<string, BookSeedCategoryConfig> ViajesGastronomia = new()
     {
-        ["Viajes"] = new(
+        ["Travel"] = new(
             new[]
             {
                 "libros de viajes", "crónicas de viaje", "diario de viaje", "guías de viaje",
@@ -363,7 +363,7 @@ public static class BookSeedConfigs
             },
             500, 2000
         ),
-        ["Gastronomía"] = new(
+        ["Food & Cooking"] = new(
             new[]
             {
                 "gastronomía", "libros de cocina", "recetas de cocina", "cocina latinoamericana",
@@ -380,7 +380,7 @@ public static class BookSeedConfigs
 
     public static readonly Dictionary<string, BookSeedCategoryConfig> NegociosTecnologia = new()
     {
-        ["Negocios"] = new(
+        ["Business"] = new(
             new[]
             {
                 "negocios", "emprendimiento", "finanzas", "economía", "liderazgo empresarial",
@@ -394,7 +394,7 @@ public static class BookSeedConfigs
             },
             500, 2000
         ),
-        ["Tecnología"] = new(
+        ["Technology"] = new(
             new[]
             {
                 "tecnología", "programación", "inteligencia artificial", "desarrollo de software",
@@ -418,7 +418,7 @@ public static class BookSeedConfigs
         // Google Books la acote a coincidencias reales del título exacto -> se agota sola
         // en 1-2 páginas por título en vez de arrastrar cientos de resultados sueltos que
         // solo comparten alguna palabra, y así el MaxTarget no se llena con 2-3 títulos.
-        ["Populares"] = new(
+        ["Popular"] = new(
             new[]
             {
                 "intitle:\"Cien años de soledad\"",
