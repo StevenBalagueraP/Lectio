@@ -1,0 +1,117 @@
+.navbar {
+  background: var(--color-bg);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--spacing-xs);
+  border: 0;
+  background: none;
+}
+
+.menu span {
+  width: 22px;
+  height: 2px;
+  border-radius: var(--radius-full);
+  background: var(--color-text);
+}
+
+.brand {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-hover);
+  object-fit: cover;
+}
+
+.brandName {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.links {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.links a {
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: var(--color-primary);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.name {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    padding: var(--spacing-md) var(--spacing-xl);
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .brand,
+  .links {
+    display: flex;
+  }
+
+  .name {
+    font-size: var(--font-size-md);
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
+  }
+}

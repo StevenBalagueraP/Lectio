@@ -1,10 +1,5 @@
-function App() {
+import { HomePage } from './features/home/pages/HomePage'
 
-  return (
-    <>
-      <h1>Hello World!</h1>
-    </>
-  )
+export default function App() {
+  return <HomePage />
 }
-
-export default App
