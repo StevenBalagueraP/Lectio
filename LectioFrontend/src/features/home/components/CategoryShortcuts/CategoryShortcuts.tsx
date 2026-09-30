@@ -27,11 +27,15 @@ export function CategoryShortcuts({
   )
 
   const mobileColumns = Math.min(featured.length, MOBILE_VISIBLE_CATEGORIES) + 1
+  const desktopColumns = featured.length + 1
 
   const toggle = (id: number) => onSelect(id === selectedId ? undefined : id)
 
   return (
-    <div className={styles.row} style={{ '--cols': mobileColumns } as CSSProperties}>
+    <div
+      className={styles.row}
+      style={{ '--cols': mobileColumns, '--cols-desktop': desktopColumns } as CSSProperties}
+    >
       {featured.map((c, index) => (
         <button
           key={c.id}

@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
   padding: var(--spacing-md);
 }
@@ -94,7 +94,8 @@
 
 @media (min-width: 1024px) {
   .inner {
-    padding: var(--spacing-md) var(--spacing-xl);
+    max-width: none;
+    padding: var(--spacing-md) clamp(var(--spacing-xl), 4vw, 80px);
   }
 
   .menu {

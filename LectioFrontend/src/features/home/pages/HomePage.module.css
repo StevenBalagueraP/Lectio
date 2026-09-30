@@ -36,8 +36,8 @@
 @media (min-width: 1024px) {
   .main {
     gap: var(--spacing-xl);
-    max-width: 1200px;
-    padding: 0 var(--spacing-xl) var(--spacing-xl);
+    max-width: none;
+    padding: 0 clamp(var(--spacing-xl), 4vw, 80px) var(--spacing-xl);
   }
 
   .kicker {

@@ -48,20 +48,18 @@
 
 @media (min-width: 1024px) {
   .row {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(var(--cols-desktop), minmax(0, 1fr));
     gap: var(--spacing-md);
   }
 
-  .tile,
   .desktopOnly {
     display: flex;
-    flex: 0 0 80px;
   }
 
   .icon {
-    aspect-ratio: 1;
-    font-size: 34px;
+    aspect-ratio: auto;
+    height: clamp(72px, 7vw, 120px);
+    font-size: clamp(32px, 3vw, 52px);
   }
 
   .label {
