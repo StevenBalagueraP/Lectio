@@ -12,12 +12,13 @@
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: grid;
+  place-items: center;
   padding: var(--spacing-xs);
   border: 0;
   background: none;
+  color: var(--color-text);
+  font-size: 28px;
 }
 
 .menu span {

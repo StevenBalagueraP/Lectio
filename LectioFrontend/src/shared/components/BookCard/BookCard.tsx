@@ -2,6 +2,7 @@ import type { Book } from '../../../api/types/book'
 import { formatAuthors, toHttps } from '../../utils/book'
 import { RatingStars } from '../RatingStars/RatingStars'
 import styles from './BookCard.module.css'
+import { MdChevronRight, MdMenuBook } from 'react-icons/md'
 
 interface BookCardProps {
   book: Book
@@ -15,7 +16,7 @@ export function BookCard({ book, onOpen }: BookCardProps) {
         {book.imageUrl ? (
           <img src={toHttps(book.imageUrl)} alt={`Portada de ${book.title}`} loading="lazy" />
         ) : (
-          <div className={styles.placeholder}>📖</div>
+          <div className={styles.placeholder}><MdMenuBook /></div>
         )}
         <span className={styles.title}>{book.title}</span>
       </div>
@@ -30,11 +31,8 @@ export function BookCard({ book, onOpen }: BookCardProps) {
         type="button"
         className={styles.open}
         aria-label={`Ver detalle de ${book.title}`}
-        onClick={() => onOpen?.(book.id)}
-      >
-        <span className={styles.openArrow} aria-hidden="true">
-          ›
-        </span>
+        onClick={() => onOpen?.(book.id)}>
+        <MdChevronRight className={styles.openArrow} aria-hidden="true" />
         <span className={styles.openLabel}>See More</span>
       </button>
     </article>

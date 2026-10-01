@@ -1,9 +1,13 @@
 .stars {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   font-size: var(--font-size-sm);
   line-height: 1;
-  letter-spacing: 1px;
+}
+
+.base,
+.fill {
+  display: flex;
 }
 
 .base {
@@ -15,6 +19,9 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  white-space: nowrap;
   color: var(--color-secondary);
+}
+
+.stars svg {
+  flex: none;
 }

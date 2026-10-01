@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import { MdGridView } from 'react-icons/md'
 import type { Category } from '../../../../api/types/category'
 import {
   CATEGORY_ICONS,
@@ -26,9 +27,11 @@ export function CategoryShortcuts({
     (c): c is Category => Boolean(c),
   )
 
+  // Columnas = tiles visibles + "See more" (mobile muestra menos que desktop)
   const mobileColumns = Math.min(featured.length, MOBILE_VISIBLE_CATEGORIES) + 1
   const desktopColumns = featured.length + 1
 
+  // Click de nuevo sobre la categoría activa = quitar filtro
   const toggle = (id: number) => onSelect(id === selectedId ? undefined : id)
 
   return (
@@ -36,26 +39,34 @@ export function CategoryShortcuts({
       className={styles.row}
       style={{ '--cols': mobileColumns, '--cols-desktop': desktopColumns } as CSSProperties}
     >
-      {featured.map((c, index) => (
-        <button
-          key={c.id}
-          type="button"
-          aria-pressed={c.id === selectedId}
-          aria-label={c.name}
-          className={[
-            styles.tile,
-            index >= MOBILE_VISIBLE_CATEGORIES ? styles.desktopOnly : '',
-            c.id === selectedId ? styles.selected : '',
-          ].join(' ')}
-          onClick={() => toggle(c.id)}
-        >
-          <span className={styles.icon}>{CATEGORY_ICONS[c.name] ?? DEFAULT_CATEGORY_ICON}</span>
-          <span className={styles.label}>{CATEGORY_LABELS[c.name] ?? c.name}</span>
-        </button>
-      ))}
+      {featured.map((c, index) => {
+        const Icon = CATEGORY_ICONS[c.name] ?? DEFAULT_CATEGORY_ICON
+
+        return (
+          <button
+            key={c.id}
+            type="button"
+            aria-pressed={c.id === selectedId}
+            aria-label={c.name}
+            className={[
+              styles.tile,
+              index >= MOBILE_VISIBLE_CATEGORIES ? styles.desktopOnly : '',
+              c.id === selectedId ? styles.selected : '',
+            ].join(' ')}
+            onClick={() => toggle(c.id)}
+          >
+            <span className={styles.icon}>
+              <Icon aria-hidden="true" />
+            </span>
+            <span className={styles.label}>{CATEGORY_LABELS[c.name] ?? c.name}</span>
+          </button>
+        )
+      })}
 
       <button type="button" className={styles.tile} onClick={onSeeMore}>
-        <span className={styles.icon}>▦</span>
+        <span className={styles.icon}>
+          <MdGridView aria-hidden="true" />
+        </span>
         <span className={styles.label}>See more</span>
       </button>
     </div>

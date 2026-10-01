@@ -1,4 +1,5 @@
 import styles from './Navbar.module.css'
+import { MdMenu } from 'react-icons/md'
 
 interface NavbarProps {
   userName?: string
@@ -17,9 +18,7 @@ export function Navbar({ userName = 'User', avatarUrl, onMenuClick }: NavbarProp
     <header className={styles.navbar}>
       <div className={styles.inner}>
         <button type="button" className={styles.menu} aria-label="Abrir menú" onClick={onMenuClick}>
-          <span />
-          <span />
-          <span />
+          <MdMenu />
         </button>
 
         <div className={styles.brand}>
