@@ -24,6 +24,7 @@ using System.Text;
 using Microsoft.OpenApi;
 
 
+const string FrontendCorsPolicy = "Frontend";
 var builder = WebApplication.CreateBuilder(args);
 
 var jwtSection = builder.Configuration.GetSection(JwtSettings.SectionName);
@@ -82,6 +83,15 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddHttpClient<GoogleBooksApiClient>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(FrontendCorsPolicy, policy =>
+        policy
+            .WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
+
 
 builder.Services.AddScoped<SeedProgressStore>();
 builder.Services.AddScoped<GoogleBooksSeederService>();
@@ -114,6 +124,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(FrontendCorsPolicy);
 app.UseExceptionHandling(); 
 app.UseHttpsRedirection();
 
