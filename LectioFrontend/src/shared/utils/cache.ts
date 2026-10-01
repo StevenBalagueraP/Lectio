@@ -8,32 +8,35 @@ const STORAGE_PREFIX = 'lectio:cache:'
 const memory = new Map<string, Entry<unknown>>()
 const inflight = new Map<string, Promise<unknown>>()
 
-export function readCache<T>(key: string, persist = false): T | undefined {
-  const now = Date.now()
-
-  const hit = memory.get(key)
-  if (hit) {
-    if (hit.expiresAt > now) return hit.data as T
-    memory.delete(key)
-  }
+function readEntry<T>(key: string, persist: boolean): Entry<T> | undefined {
+  const hit = memory.get(key) as Entry<T> | undefined
+  if (hit) return hit
 
   if (persist) {
     try {
       const raw = localStorage.getItem(STORAGE_PREFIX + key)
       if (raw) {
         const entry = JSON.parse(raw) as Entry<T>
-        if (entry.expiresAt > now) {
-          memory.set(key, entry)
-          return entry.data
-        }
-        localStorage.removeItem(STORAGE_PREFIX + key)
+        memory.set(key, entry)
+        return entry
       }
     } catch {
-      // localStorage no disponible o JSON corrupto: se ignora y se vuelve a pedir
+      // localStorage no disponible o JSON corrupto: se ignora
     }
   }
 
   return undefined
+}
+
+/** Devuelve el dato solo si sigue vigente. */
+export function readCache<T>(key: string, persist = false): T | undefined {
+  const entry = readEntry<T>(key, persist)
+  return entry && entry.expiresAt > Date.now() ? entry.data : undefined
+}
+
+/** Devuelve el dato aunque haya expirado (para cuando el backend no responde). */
+export function readStale<T>(key: string, persist = false): T | undefined {
+  return readEntry<T>(key, persist)?.data
 }
 
 export function writeCache<T>(key: string, data: T, ttl: number, persist = false) {
@@ -58,6 +61,7 @@ export function invalidateCache(key: string) {
   }
 }
 
+/** Una sola petición en vuelo por key; al terminar guarda el resultado en cache. */
 export function fetchCached<T>(
   key: string,
   fetcher: () => Promise<T>,

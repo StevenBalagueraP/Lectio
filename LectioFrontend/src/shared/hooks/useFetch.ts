@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fetchCached, readCache } from '../utils/cache'
+import { fetchCached, readCache, readStale } from '../utils/cache'
 
 interface State<T> {
   key: string
@@ -42,6 +42,14 @@ export function useFetch<T>(
       })
       .catch((err: unknown) => {
         if (controller.signal.aborted) return
+
+        // Si el backend falla pero hay una copia guardada (aunque vencida), la mostramos
+        const stale = ttl > 0 ? readStale<T>(key, persist) : undefined
+        if (stale !== undefined) {
+          setState({ key, data: stale })
+          return
+        }
+
         setState({ key, error: err instanceof Error ? err.message : 'Error desconocido' })
       })
 
