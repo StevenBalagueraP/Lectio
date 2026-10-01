@@ -1,0 +1,27 @@
+.stars {
+  position: relative;
+  display: inline-flex;
+  font-size: var(--font-size-sm);
+  line-height: 1;
+}
+
+.base,
+.fill {
+  display: flex;
+}
+
+.base {
+  color: var(--color-disabled);
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: var(--color-secondary);
+}
+
+.stars svg {
+  flex: none;
+}

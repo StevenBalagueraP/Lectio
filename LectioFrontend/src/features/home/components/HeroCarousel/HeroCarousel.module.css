@@ -1,0 +1,238 @@
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+.track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border-radius: var(--radius-md);
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 200px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: #111;
+  scroll-snap-align: start;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(14px);
+  transform: scale(1.2);
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-dark);
+}
+
+.cover {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  width: auto;
+  height: calc(100% - 52px);
+  border-radius: 4px;
+  box-shadow: var(--shadow-lg);
+  transform: translateX(-50%);
+}
+
+.badge {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--spacing-sm);
+  overflow: hidden;
+  background: var(--overlay-dark);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-disabled);
+}
+
+.dotActive {
+  background: var(--color-primary);
+}
+
+.skeleton {
+  height: 200px;
+  border-radius: var(--radius-md);
+  background: var(--color-disabled);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.media {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: #111;
+}
+
+.mediaCaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--overlay-dark);
+  color: var(--color-text-inverse);
+}
+
+.mediaTitle {
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ratingPill {
+  flex: none;
+  padding: 2px var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.by {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.description {
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.action {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.action:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.action:disabled {
+  background: var(--color-disabled);
+  box-shadow: none;
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+  .slide,
+  .skeleton {
+    height: 280px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: var(--spacing-lg);
+  }
+
+  .skeleton {
+    height: 320px;
+  }
+}
