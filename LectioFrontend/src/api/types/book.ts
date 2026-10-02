@@ -5,12 +5,16 @@ export interface Author {
   name: string
 }
 
-export interface Book {
+/** Lo mínimo que necesita una card (es lo que devuelve el buscador). */
+export interface BookSummary {
   id: number
   title: string
-  description: string | null
   imageUrl: string | null
   rating: { stars: number } | null
   authors: Author[]
   categories: Category[]
+}
+
+export interface Book extends BookSummary {
+  description: string | null
 }

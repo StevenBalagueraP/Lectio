@@ -9,14 +9,18 @@ interface State<T> {
 
 interface UseFetchOptions {
   enabled?: boolean
+  /** Milisegundos que se guarda la respuesta en cache. 0 = sin cache. */
   ttl?: number
+  /** Además de memoria, guarda en localStorage (sobrevive a recargas). */
   persist?: boolean
+  /** Mientras carga una key nueva, sigue devolviendo la data anterior. */
+  keepPrevious?: boolean
 }
 
 export function useFetch<T>(
   key: string,
   fetcher: (signal: AbortSignal) => Promise<T>,
-  { enabled = true, ttl = 0, persist = false }: UseFetchOptions = {},
+  { enabled = true, ttl = 0, persist = false, keepPrevious = false }: UseFetchOptions = {},
 ) {
   const [state, setState] = useState<State<T>>({ key: '' })
 
@@ -27,6 +31,8 @@ export function useFetch<T>(
 
     const controller = new AbortController()
 
+    // Con cache la petición es compartida, así que no se cancela con el componente:
+    // `controller` solo sirve para ignorar el resultado si ya se desmontó.
     const request =
       ttl > 0
         ? fetchCached(key, () => fetcher(new AbortController().signal), ttl, persist)
@@ -39,6 +45,7 @@ export function useFetch<T>(
       .catch((err: unknown) => {
         if (controller.signal.aborted) return
 
+        // Si el backend falla pero hay una copia guardada (aunque vencida), la mostramos
         const stale = ttl > 0 ? readStale<T>(key, persist) : undefined
         if (stale !== undefined) {
           setState({ key, data: stale })
@@ -59,7 +66,7 @@ export function useFetch<T>(
   const isCurrent = state.key === key
 
   return {
-    data: isCurrent ? state.data : undefined,
+    data: isCurrent || keepPrevious ? state.data : undefined,
     error: isCurrent ? state.error : undefined,
     loading: enabled && !isCurrent,
   }
