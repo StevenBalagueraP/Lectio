@@ -1,0 +1,45 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  transition: opacity 0.15s ease;
+}
+
+/* Mientras llegan datos nuevos, la grilla anterior queda atenuada */
+.stale {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.skeleton {
+  aspect-ratio: 3 / 5;
+  border-radius: var(--radius-md);
+  background: var(--color-disabled);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.message {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--spacing-lg);
+  }
+}

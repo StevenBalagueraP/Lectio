@@ -1,11 +1,11 @@
-import type { Book } from '../../../api/types/book'
+import type { BookSummary } from '../../../api/types/book'
 import { formatAuthors, toHttps } from '../../utils/book'
 import { RatingStars } from '../RatingStars/RatingStars'
 import styles from './BookCard.module.css'
 import { MdChevronRight, MdMenuBook } from 'react-icons/md'
 
 interface BookCardProps {
-  book: Book
+  book: BookSummary
   onOpen?: (bookId: number) => void
 }
 

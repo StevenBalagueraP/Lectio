@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router'
-import { BookList } from '../components/BookList/BookList'
+import { BookGrid } from '../../../shared/components/BookGrid/BookGrid'
 import { CategoryShortcuts } from '../components/CategoryShortcuts/CategoryShortcuts'
 import { HeroCarousel } from '../components/HeroCarousel/HeroCarousel'
 import { useCategories } from '../../../shared/hooks/useCategories'
@@ -49,10 +49,11 @@ export function HomePage() {
         />
       </section>
 
-      <BookList
+      <BookGrid
         books={list.data}
         loading={list.loading}
         error={list.error}
+        emptyMessage="No hay libros en esta categoría todavía."
         onOpen={handleOpen}
       />
     </main>

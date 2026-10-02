@@ -50,5 +50,10 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
         builder.HasIndex(b => b.Isbn)
             .IsUnique()
             .HasDatabaseName("IX_Book_Isbn");
+        
+        builder.HasIndex(b => b.Title)
+        .HasMethod("gin")
+        .HasOperators("gin_trgm_ops")
+        .HasDatabaseName("IX_Book_Title_Trgm");
     }
 }
