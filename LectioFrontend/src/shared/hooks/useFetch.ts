@@ -13,12 +13,14 @@ interface UseFetchOptions {
   ttl?: number
   /** Además de memoria, guarda en localStorage (sobrevive a recargas). */
   persist?: boolean
+  /** Mientras carga una key nueva, sigue devolviendo la data anterior. */
+  keepPrevious?: boolean
 }
 
 export function useFetch<T>(
   key: string,
   fetcher: (signal: AbortSignal) => Promise<T>,
-  { enabled = true, ttl = 0, persist = false }: UseFetchOptions = {},
+  { enabled = true, ttl = 0, persist = false, keepPrevious = false }: UseFetchOptions = {},
 ) {
   const [state, setState] = useState<State<T>>({ key: '' })
 
@@ -64,7 +66,7 @@ export function useFetch<T>(
   const isCurrent = state.key === key
 
   return {
-    data: isCurrent ? state.data : undefined,
+    data: isCurrent || keepPrevious ? state.data : undefined,
     error: isCurrent ? state.error : undefined,
     loading: enabled && !isCurrent,
   }
