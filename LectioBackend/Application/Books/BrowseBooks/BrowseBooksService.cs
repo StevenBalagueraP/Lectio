@@ -19,50 +19,76 @@ public class BrowseBooksService : IBrowseBooksService
     }
 
     public async Task<BrowseBooksResponseDto> GetBooksAsync(
-        string? search,
-        IReadOnlyCollection<int>? categoryIds,
-        int page,
-        int pageSize,
-        CancellationToken cancellationToken)
+    string? search,
+    IReadOnlyCollection<int>? categoryIds,
+    int page,
+    int pageSize,
+    CancellationToken cancellationToken)
+{
+    ValidatePaging(page, pageSize);
+
+    var normalizedCategoryIds = NormalizeCategoryIds(categoryIds);
+
+    if (normalizedCategoryIds.Count > 0)
     {
-        ValidatePaging(page, pageSize);
+        await EnsureCategoriesExistAsync(normalizedCategoryIds, cancellationToken);
+    }
 
-        var normalizedCategoryIds = NormalizeCategoryIds(categoryIds);
+    var query = BuildFilteredQuery(search, normalizedCategoryIds);
 
-        if (normalizedCategoryIds.Count > 0)
+    var totalCount = await query.CountAsync(cancellationToken);
+
+    var rows = await query
+        .OrderBy(book => book.Title)
+        .ThenBy(book => book.BookId) // desempate: títulos repetidos no deben saltarse ni duplicarse entre páginas
+        .Skip((page - 1) * pageSize)
+        .Take(pageSize)
+        .Select(book => new
         {
-            await EnsureCategoriesExistAsync(normalizedCategoryIds, cancellationToken);
+            book.BookId,
+            book.Title,
+            book.ImageLink,
+            book.AverageRating,
+            Authors = _context.BookAuthors
+                .Where(bookAuthor => bookAuthor.BookId == book.BookId)
+                .OrderBy(bookAuthor => bookAuthor.AuthorId)
+                .Select(bookAuthor => new { bookAuthor.AuthorId, bookAuthor.Author.AuthorName })
+                .ToList(),
+            Categories = _context.BookCategories
+                .Where(bookCategory => bookCategory.BookId == book.BookId)
+                .OrderBy(bookCategory => bookCategory.CategoryId)
+                .Select(bookCategory => new { bookCategory.CategoryId, bookCategory.Category.CategoryName })
+                .ToList()
+        })
+        .ToListAsync(cancellationToken);
+
+    var data = rows
+        .Select(row => new BookSummaryDto
+        {
+            Id = row.BookId,
+            Title = row.Title,
+            ImageUrl = row.ImageLink,
+            Rating = new BookRatingDto { Stars = row.AverageRating },
+            Authors = row.Authors
+                .Select(author => new BookAuthorSummaryDto { Id = author.AuthorId, Name = author.AuthorName })
+                .ToList(),
+            Categories = row.Categories
+                .Select(category => new BookCategorySummaryDto { Id = category.CategoryId, Name = category.CategoryName })
+                .ToList()
+        })
+        .ToList();
+
+    return new BrowseBooksResponseDto
+    {
+        Data = data,
+        Pagination = new PaginationDto
+        {
+            Page = page,
+            PageSize = pageSize,
+            TotalCount = totalCount,
+            TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize)
         }
-
-        var query = BuildFilteredQuery(search, normalizedCategoryIds);
-
-        var totalCount = await query.CountAsync(cancellationToken);
-
-        var books = await query
-            .OrderBy(book => book.Title)
-            .Skip((page - 1) * pageSize)
-            .Take(pageSize)
-            .ToListAsync(cancellationToken);
-
-        var bookIds = books.Select(book => book.BookId).ToList();
-        var authorsByBookId = await GetAuthorsByBookIdAsync(bookIds, cancellationToken);
-        var categoriesByBookId = await GetCategoriesByBookIdAsync(bookIds, cancellationToken);
-
-        var data = books
-            .Select(book => MapToDto(book, authorsByBookId, categoriesByBookId))
-            .ToList();
-
-        return new BrowseBooksResponseDto
-        {
-            Data = data,
-            Pagination = new PaginationDto
-            {
-                Page = page,
-                PageSize = pageSize,
-                TotalCount = totalCount,
-                TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize)
-            }
-        };
+    };
     }
 
     private static void ValidatePaging(int page, int pageSize)

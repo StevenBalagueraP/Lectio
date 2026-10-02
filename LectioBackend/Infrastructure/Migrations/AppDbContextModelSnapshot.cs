@@ -20,6 +20,7 @@ namespace LectioBackend.Migrations
                 .HasAnnotation("ProductVersion", "10.0.12")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
+            NpgsqlModelBuilderExtensions.HasPostgresExtension(modelBuilder, "pg_trgm");
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("Lectio.Api.Domain.Entities.Author", b =>
@@ -112,7 +113,10 @@ namespace LectioBackend.Migrations
                         .HasDatabaseName("IX_Book_PublishedDate");
 
                     b.HasIndex("Title")
-                        .HasDatabaseName("IX_Book_Title");
+                        .HasDatabaseName("IX_Book_Title_Trgm");
+
+                    NpgsqlIndexBuilderExtensions.HasMethod(b.HasIndex("Title"), "gin");
+                    NpgsqlIndexBuilderExtensions.HasOperators(b.HasIndex("Title"), new[] { "gin_trgm_ops" });
 
                     b.ToTable("Books");
                 });
