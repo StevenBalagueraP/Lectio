@@ -3,6 +3,7 @@ using Lectio.Api.Domain.Entities;
 using Lectio.Api.Domain.Exceptions;
 using Lectio.Api.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Lectio.Api.Application.Books.TopRatedBooks.Dtos;
 
 namespace Lectio.Api.Application.Books.BookDetails;
 
@@ -30,10 +31,10 @@ public class BookDetailService : IBookDetailService
             .AsNoTracking()
             .Where(bookAuthor => bookAuthor.BookId == bookId)
             .OrderBy(bookAuthor => bookAuthor.AuthorId)
-            .Select(bookAuthor => new BookAuthorDetailDto
+            .Select(bookAuthor => new BookAuthorSummaryDto
             {
-                IdAutor = bookAuthor.AuthorId,
-                NombreAutor = bookAuthor.Author.AuthorName
+                Id = bookAuthor.AuthorId,
+                Name = bookAuthor.Author.AuthorName
             })
             .ToListAsync(cancellationToken);
 
@@ -41,24 +42,25 @@ public class BookDetailService : IBookDetailService
             .AsNoTracking()
             .Where(bookCategory => bookCategory.BookId == bookId)
             .OrderBy(bookCategory => bookCategory.CategoryId)
-            .Select(bookCategory => new BookCategoryDetailDto
+            .Select(bookCategory => new BookCategorySummaryDto
             {
-                IdCategoria = bookCategory.CategoryId,
-                NombreCategoria = bookCategory.Category.CategoryName
+                Id = bookCategory.CategoryId,
+                Name = bookCategory.Category.CategoryName
             })
             .ToListAsync(cancellationToken);
 
         return new BookDetailDto
         {
-            IdBook = book.BookId,
-            Titulo = book.Title,
-            Imagen = book.ImageLink,
-            Descripcion = book.Description,
-            NumeroPaginas = book.PageCount, 
-            AnoPublicacion = book.PublishedDate?.Year,
-            Lenguaje = book.Language,
-            Autores = authors,
-            Categorias = categories
+            Id = book.BookId,
+            Title = book.Title,
+            ImageUrl = book.ImageLink,
+            Description = book.Description,
+            PageCount = book.PageCount,
+            Publisher = book.PublisherName,
+            PublishedYear = book.PublishedDate?.Year,
+            Language = book.Language,
+            Authors = authors,
+            Categories = categories
         };
     }
 }
