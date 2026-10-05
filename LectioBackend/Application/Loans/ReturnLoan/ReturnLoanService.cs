@@ -1,3 +1,4 @@
+using Lectio.Api.Application.Loans;
 using Lectio.Api.Application.Loans.ReturnLoan.Dtos;
 using Lectio.Api.Domain.Entities;
 using Lectio.Api.Domain.Exceptions;
@@ -24,7 +25,7 @@ public class ReturnLoanService : IReturnLoanService
 
         var activeLoan = await _context.Loans
             .Include(loan => loan.Book)
-            .FirstOrDefaultAsync(loan => loan.BookId == bookId && loan.ReturnDate == null, cancellationToken);
+            .FirstOrDefaultAsync(LoanQueries.IsActiveForBook(bookId), cancellationToken);
 
         if (activeLoan is null)
         {
