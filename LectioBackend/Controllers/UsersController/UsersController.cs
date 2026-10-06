@@ -23,7 +23,6 @@ public class UsersController : ControllerBase
     private readonly IUserLoansService _userLoansService;
     private readonly ICreateLoanService _createLoanService;
     private readonly IReturnLoanService _returnLoanService;
-    private readonly ILoanStatusService _loanStatusService;
     private readonly IUpsertRatingService _upsertRatingService;
 
     public UsersController(
@@ -36,7 +35,6 @@ public class UsersController : ControllerBase
         _userLoansService = userLoansService;
         _createLoanService = createLoanService;
         _returnLoanService = returnLoanService;
-        _loanStatusService = loanStatusService;
         _upsertRatingService = upsertRatingService;
     }
 
@@ -99,25 +97,6 @@ public class UsersController : ControllerBase
         }
 
         var response = await _returnLoanService.ReturnLoanAsync(userId, bookId, cancellationToken);
-        return Ok(response);
-    }
-
-    [HttpGet("{userId:int}/books/{bookId:int}/loan-status")]
-    [ProducesResponseType(typeof(BookLoanStatusResponseDto), StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-    [ProducesResponseType(StatusCodes.Status403Forbidden)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<BookLoanStatusResponseDto>> GetLoanStatus(
-        int userId,
-        int bookId,
-        CancellationToken cancellationToken)
-    {
-        if (!IsSelfOrAdmin(userId))
-        {
-            return Forbid();
-        }
-
-        var response = await _loanStatusService.GetLoanStatusAsync(userId, bookId, cancellationToken);
         return Ok(response);
     }
 

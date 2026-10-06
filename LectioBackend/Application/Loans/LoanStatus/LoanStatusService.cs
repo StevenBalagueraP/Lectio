@@ -12,6 +12,7 @@ public class LoanStatusService : ILoanStatusService
     private const string Available = "Available";
     private const string BorrowedByYou = "BorrowedByYou";
     private const string Unavailable = "Unavailable";
+    private const string LoginRequired = "LoginRequired"; // <- nueva
 
     private readonly AppDbContext _context;
 
@@ -20,13 +21,28 @@ public class LoanStatusService : ILoanStatusService
         _context = context;
     }
 
+
     public async Task<BookLoanStatusResponseDto> GetLoanStatusAsync(
-        int userId,
+        int? userId,                                      
         int bookId,
         CancellationToken cancellationToken)
     {
-        await EnsureUserExistsAsync(userId, cancellationToken);
         await EnsureBookExistsAsync(bookId, cancellationToken);
+
+        if (userId is null)
+        {
+            return new BookLoanStatusResponseDto
+            {
+                BookId = bookId,
+                UserId = null,
+                Status = LoginRequired,
+                LoanId = null,
+                DueDate = null
+            };
+        }
+
+        var currentUserId = userId.Value;
+        await EnsureUserExistsAsync(currentUserId, cancellationToken);
 
         var activeLoan = await _context.Loans
             .AsNoTracking()
@@ -44,19 +60,19 @@ public class LoanStatusService : ILoanStatusService
             return new BookLoanStatusResponseDto
             {
                 BookId = bookId,
-                UserId = userId,
+                UserId = currentUserId,
                 Status = Available,
                 LoanId = null,
                 DueDate = null
             };
         }
 
-        if (activeLoan.UserId == userId)
+        if (activeLoan.UserId == currentUserId)
         {
             return new BookLoanStatusResponseDto
             {
                 BookId = bookId,
-                UserId = userId,
+                UserId = currentUserId,
                 Status = BorrowedByYou,
                 LoanId = activeLoan.LoanId,
                 DueDate = activeLoan.DueDate
@@ -66,12 +82,12 @@ public class LoanStatusService : ILoanStatusService
         return new BookLoanStatusResponseDto
         {
             BookId = bookId,
-            UserId = userId,
+            UserId = currentUserId,
             Status = Unavailable,
             LoanId = null,
             DueDate = null
         };
-    }
+        }
 
     private async Task EnsureUserExistsAsync(int userId, CancellationToken cancellationToken)
     {
