@@ -122,3 +122,41 @@
     height: 44px;
   }
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background: none;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(var(--overlay-dark), transparent);
+  pointer-events: none;
+}
+
+.overlay .menu,
+.overlay .name {
+  color: var(--color-text-inverse);
+}
+
+@media (min-width: 1024px) {
+  .overlay {
+    position: static;
+    background: var(--color-bg);
+  }
+
+  .overlay::before {
+    display: none;
+  }
+
+  .overlay .name {
+    color: var(--color-text);
+  }
+}
