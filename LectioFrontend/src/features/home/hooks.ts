@@ -1,7 +1,7 @@
 import { getTopRatedBooks } from '../../api/endpoints/books'
 import { useFetch } from '../../shared/hooks/useFetch'
 
-const TOP_RATED_TTL = 2 * 60 * 1000 // 2 minutos
+const TOP_RATED_TTL = 2 * 60 * 1000 
 
 export function useTopRatedBooks(categoryId?: number, enabled = true) {
   return useFetch(

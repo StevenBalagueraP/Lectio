@@ -38,7 +38,6 @@ export function CategoriesPage() {
   const navigate = useNavigate()
   const [params, setParams] = useSearchParams()
 
-  // El estado de la búsqueda vive en la URL: ?q=vikingo&categories=4,6&page=2
   const search = params.get('q') ?? ''
   const page = Math.max(1, parseInt(params.get('page') ?? '', 10) || 1)
   const categoryIds = parseIds(params.get('categories'))
@@ -52,7 +51,6 @@ export function CategoriesPage() {
   const books = results.data?.data
   const pagination = results.data?.pagination
 
-  // `replace` evita llenar el historial con cada tecla o filtro
   const updateParams = (changes: ParamChanges, replace = true) => {
     setParams(
       (prev) => {

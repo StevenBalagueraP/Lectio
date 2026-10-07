@@ -9,7 +9,6 @@ interface PaginationProps {
 
 type PageItem = number | 'start-ellipsis' | 'end-ellipsis'
 
-// Siempre incluye la primera y la última página
 function getPageItems(page: number, total: number): PageItem[] {
   if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1)
   if (page <= 4) return [1, 2, 3, 4, 5, 'end-ellipsis', total]

@@ -1,0 +1,33 @@
+.text {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.clamped {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: var(--lines);
+  -webkit-box-orient: vertical;
+}
+
+.toggle {
+  margin-top: var(--spacing-sm);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.toggle:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

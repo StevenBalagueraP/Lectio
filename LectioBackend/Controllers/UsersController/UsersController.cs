@@ -1,6 +1,8 @@
 using System.Security.Claims;
 using Lectio.Api.Application.Loans.CreateLoan;
 using Lectio.Api.Application.Loans.CreateLoan.Dtos;
+using Lectio.Api.Application.Loans.LoanStatus;
+using Lectio.Api.Application.Loans.LoanStatus.Dtos;
 using Lectio.Api.Application.Loans.ReturnLoan;
 using Lectio.Api.Application.Loans.ReturnLoan.Dtos;
 using Lectio.Api.Application.Loans.UserLoans;
@@ -27,6 +29,7 @@ public class UsersController : ControllerBase
         IUserLoansService userLoansService,
         ICreateLoanService createLoanService,
         IReturnLoanService returnLoanService,
+        ILoanStatusService loanStatusService,
         IUpsertRatingService upsertRatingService)
     {
         _userLoansService = userLoansService;
@@ -96,6 +99,7 @@ public class UsersController : ControllerBase
         var response = await _returnLoanService.ReturnLoanAsync(userId, bookId, cancellationToken);
         return Ok(response);
     }
+
     [HttpPost("{userId:int}/ratings")]
     [ProducesResponseType(typeof(RatingResponseDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

@@ -1,8 +1,15 @@
 import { http } from '../http'
-import type { Book, BookSummary } from '../types/book'
+import type { Book, BookDetail, BookSummary } from '../types/book'
 import type { ApiResponse, PagedResponse } from '../types/common'
+import type { BookLoanStatus } from '../types/loan'
+import type { BookRatings } from '../types/rating'
 
 const BOOKS_PATH = '/api/books'
+
+export interface BookRatingsParams {
+  page: number
+  pageSize: number
+}
 
 export interface BookSearchParams {
   search: string
@@ -28,4 +35,21 @@ export function searchBooks(
   query.set('pageSize', String(pageSize))
 
   return http<PagedResponse<BookSummary>>(`${BOOKS_PATH}?${query.toString()}`, signal)
+}
+
+export function getBookById(bookId: number, signal?: AbortSignal) {
+  return http<BookDetail>(`${BOOKS_PATH}/${bookId}`, signal)
+}
+
+export function getBookLoanStatus(bookId: number, signal?: AbortSignal) {
+  return http<BookLoanStatus>(`${BOOKS_PATH}/${bookId}/loan-status`, signal, { auth: true })
+}
+
+export function getBookRatings(
+  bookId: number,
+  { page, pageSize }: BookRatingsParams,
+  signal?: AbortSignal,
+) {
+  const query = new URLSearchParams({ page: String(page), pageSize: String(pageSize) })
+  return http<BookRatings>(`${BOOKS_PATH}/${bookId}/ratings?${query.toString()}`, signal)
 }

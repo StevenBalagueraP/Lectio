@@ -20,8 +20,7 @@ import {
   MdSelfImprovement,
 } from 'react-icons/md'
 
-// Los nombres deben coincidir exactamente con los de /api/categories.
-// Las primeras MOBILE_VISIBLE_CATEGORIES se ven en mobile; todas se ven en desktop.
+
 export const FEATURED_CATEGORIES = [
   'Fiction',
   'Romance',
@@ -37,7 +36,6 @@ export const MOBILE_VISIBLE_CATEGORIES = 4
 
 export const DEFAULT_CATEGORY_ICON: IconType = MdMenuBook
 
-// Etiquetas más cortas para los tiles (si no hay entrada, se usa el nombre del API)
 export const CATEGORY_LABELS: Record<string, string> = {
   Technology: 'Tech',
 }

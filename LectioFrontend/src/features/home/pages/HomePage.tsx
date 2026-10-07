@@ -12,10 +12,9 @@ export function HomePage() {
   const [selectedCategoryId, setSelectedCategoryId] = useState<number>()
 
   const categories = useCategories()
-  const mostVisited = useTopRatedBooks() // sin categoryId
+  const mostVisited = useTopRatedBooks() 
   const byCategory = useTopRatedBooks(selectedCategoryId, selectedCategoryId !== undefined)
 
-  // Sin categoría seleccionada reutilizamos la data del hero (evita un segundo request)
   const list = selectedCategoryId === undefined ? mostVisited : byCategory
 
   const handleOpen = (bookId: number) => navigate(`/books/${bookId}`)
