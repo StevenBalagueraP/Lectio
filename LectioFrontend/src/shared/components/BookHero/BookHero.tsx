@@ -1,5 +1,5 @@
 import { MdChevronLeft, MdMenuBook } from 'react-icons/md'
-import { toHttps } from '../../../../shared/utils/book'
+import { toHttps } from '../../utils/book'
 import styles from './BookHero.module.css'
 
 interface BookHeroProps {
@@ -7,9 +7,13 @@ interface BookHeroProps {
   category?: string
   imageUrl: string | null
   onBack: () => void
+  /** Nivel del título: 1 por defecto; 2 cuando la página ya tiene su propio <h1>. */
+  headingLevel?: 1 | 2
 }
 
-export function BookHero({ title, category, imageUrl, onBack }: BookHeroProps) {
+export function BookHero({ title, category, imageUrl, onBack, headingLevel = 1 }: BookHeroProps) {
+  const Heading = headingLevel === 1 ? 'h1' : 'h2'
+
   return (
     <section className={styles.hero}>
       {imageUrl ? (
@@ -25,7 +29,7 @@ export function BookHero({ title, category, imageUrl, onBack }: BookHeroProps) {
       </button>
 
       <div className={styles.caption}>
-        <h1 className={styles.title}>{title}</h1>
+        <Heading className={styles.title}>{title}</Heading>
         {category && <p className={styles.category}>{category}</p>}
       </div>
     </section>

@@ -1,5 +1,5 @@
 import type { LoanStatus } from '../../../../api/types/loan'
-import styles from './LoanButton.module.css'
+import { Button } from '../../../../shared/components/Button/Button'
 
 interface LoanButtonProps {
   status?: LoanStatus
@@ -32,14 +32,13 @@ export function LoanButton({ status, loading = false, hasError = false, onAction
   const state = getState(status, loading, hasError)
 
   return (
-    <button
-      type="button"
-      className={styles.button}
+    <Button
+      block
       disabled={state.disabled}
       aria-busy={loading}
       onClick={() => status && onAction?.(status)}
     >
       {state.label}
-    </button>
+    </Button>
   )
 }

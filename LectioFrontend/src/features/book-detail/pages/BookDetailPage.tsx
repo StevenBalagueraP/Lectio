@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router'
+import type { LoanStatus } from '../../../api/types/loan'
+import { BookHero } from '../../../shared/components/BookHero/BookHero'
 import { Skeleton } from '../../../shared/components/Skeleton/Skeleton'
-import { BookHero } from '../components/BookHero/BookHero'
+import { useBookDetail } from '../../../shared/hooks/useBookDetail'
+import { useBookLoanStatus } from '../../../shared/hooks/useBookLoanStatus'
+import { useGoBack } from '../../../shared/hooks/useGoBack'
 import { BookInfoList } from '../components/BookInfoList/BookInfoList'
 import { BookTabs } from '../components/BookTabs/BookTabs'
+import { ExpandableText } from '../components/ExpandableText/ExpandableText'
 import { LoanButton } from '../components/LoanButton/LoanButton'
 import { DEFAULT_DESCRIPTION, getPanelId, getTabId, type BookTabId } from '../constants'
-import { useBookDetail, useBookLoanStatus } from '../hooks'
-import { ExpandableText } from '../components/ExpandableText/ExpandableText'
 import styles from './BookDetailPage.module.css'
 
 export function BookDetailPage() {
@@ -20,10 +23,17 @@ export function BookDetailPage() {
 
   const book = useBookDetail(id, validId)
   const loan = useBookLoanStatus(id, validId)
+  const handleBack = useGoBack('/')
 
-  const handleBack = () => {
-    if (window.history.state?.idx > 0) navigate(-1)
-    else navigate('/')
+  // Reviews es una pantalla aparte (/books/:bookId/reviews), no un panel de esta página
+  const handleTabChange = (next: BookTabId) => {
+    if (next === 'reviews') navigate(`/books/${id}/reviews`)
+    else setTab(next)
+  }
+
+  // El login aún no existe en el front: va a su página provisional
+  const handleLoanAction = (status: LoanStatus) => {
+    if (status === 'LoginRequired') navigate('/login')
   }
 
   if (book.loading) {
@@ -66,12 +76,11 @@ export function BookDetailPage() {
       />
 
       <div className={styles.content}>
-        <BookTabs active={tab} onChange={setTab} />
+        <BookTabs active={tab} onChange={handleTabChange} />
 
         <div role="tabpanel" id={getPanelId(tab)} aria-labelledby={getTabId(tab)}>
           {tab === 'summary' && <ExpandableText text={`"${summary}"`} />}
           {tab === 'basic-info' && <BookInfoList book={detail} />}
-          {tab === 'reviews' && <p className={styles.message}>Reviews are coming soon.</p>}
         </div>
 
         <div className={styles.actions}>
@@ -79,6 +88,7 @@ export function BookDetailPage() {
             status={loan.data?.status}
             loading={loan.loading}
             hasError={Boolean(loan.error)}
+            onAction={handleLoanAction}
           />
         </div>
       </div>

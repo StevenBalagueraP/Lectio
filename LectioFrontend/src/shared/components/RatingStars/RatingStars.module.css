@@ -5,6 +5,10 @@
   line-height: 1;
 }
 
+.lg {
+  font-size: var(--font-size-lg);
+}
+
 .base,
 .fill {
   display: flex;
