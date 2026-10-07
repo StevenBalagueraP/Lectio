@@ -15,7 +15,6 @@ export function ReviewCard({ review }: ReviewCardProps) {
         <span className={styles.avatar} aria-hidden="true">
           <MdPerson />
         </span>
-        {/* El backend no expone nombres, solo el id del autor */}
         <p className={styles.name}>{review.fullName}</p>
       </div>
 

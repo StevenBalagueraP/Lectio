@@ -2,17 +2,11 @@ import { env } from '../config/env'
 import { getAccessToken } from './token'
 
 interface HttpOptions {
-  /** Envía `Authorization: Bearer <JWT>` si hay un token guardado. */
   auth?: boolean
   method?: 'GET' | 'POST'
-  /** Se envía como JSON (agrega `Content-Type: application/json`). */
   body?: unknown
 }
 
-/**
- * Error de una respuesta no-2xx. `message` conserva el texto genérico de siempre;
- * `serverMessage` es el `detail` que manda el backend (null en 401/403, que vienen sin cuerpo).
- */
 export class ApiError extends Error {
   status: number
   serverMessage: string | null
@@ -25,7 +19,6 @@ export class ApiError extends Error {
   }
 }
 
-// El backend responde problem+json ({ detail }) o ValidationProblemDetails ({ errors })
 async function readErrorDetail(res: Response): Promise<string | null> {
   try {
     const body: unknown = await res.json()

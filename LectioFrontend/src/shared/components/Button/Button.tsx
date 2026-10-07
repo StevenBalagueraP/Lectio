@@ -3,7 +3,6 @@ import styles from './Button.module.css'
 
 interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className'> {
   variant?: 'primary' | 'secondary'
-  /** Ocupa todo el ancho disponible hasta 260px (como los botones verdes del mockup). */
   block?: boolean
 }
 

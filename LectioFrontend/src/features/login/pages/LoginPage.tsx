@@ -1,8 +1,6 @@
 import { Link } from 'react-router'
 import styles from './LoginPage.module.css'
 
-// Página provisional: el login/registro aún no existe en el front.
-// Aquí llegan los botones que exigen sesión (Borrow, Add Review).
 export function LoginPage() {
   return (
     <main className={styles.main}>

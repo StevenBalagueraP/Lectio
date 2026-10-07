@@ -7,7 +7,6 @@ interface BookHeroProps {
   category?: string
   imageUrl: string | null
   onBack: () => void
-  /** Nivel del título: 1 por defecto; 2 cuando la página ya tiene su propio <h1>. */
   headingLevel?: 1 | 2
 }
 

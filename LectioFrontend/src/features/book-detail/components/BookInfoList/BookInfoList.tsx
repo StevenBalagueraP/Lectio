@@ -27,7 +27,6 @@ export function BookInfoList({ book }: BookInfoListProps) {
       value: joinNames(book.authors),
     },
     { icon: MdApartment, label: 'Editorial', value: book.publisher ?? UNKNOWN },
-    // El backend solo guarda el año de publicación, no la fecha completa
     { icon: MdCalendarMonth, label: 'Publication', value: book.publishedYear?.toString() ?? UNKNOWN },
     { icon: MdLayers, label: 'Pages', value: book.pageCount?.toString() ?? UNKNOWN },
     { icon: MdLocalOffer, label: 'Categories', value: joinNames(book.categories) },
