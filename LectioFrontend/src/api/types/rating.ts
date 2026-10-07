@@ -1,6 +1,7 @@
 /** Una reseña dentro de GET /api/books/{id}/ratings. El backend no devuelve el nombre del autor, solo `idUser`. */
 export interface BookRatingUser {
   idUser: number
+  fullName: string
   comment: string | null
   rating: number
   createdAt: string
