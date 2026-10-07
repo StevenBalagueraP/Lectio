@@ -43,6 +43,7 @@ public class BookRatingsService : IBookRatingsService
             .Select(rating => new BookRatingUserDto
             {
                 IdUser = rating.UserId,
+                FullName = rating.User.FullName,
                 Comment = rating.Comment,
                 Rating = rating.Stars, 
                 UpdatedAt = rating.UpdatedAt,

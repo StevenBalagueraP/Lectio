@@ -1,6 +1,7 @@
 using Lectio.Api.Application.Auth;
 using Lectio.Api.Application.Auth.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace Lectio.Api.Controllers.AuthController;
 
@@ -18,6 +19,7 @@ public class AuthController : ControllerBase
     [HttpPost("register")]
     [ProducesResponseType(typeof(AuthResponseDto), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [EnableRateLimiting("auth")]
     [ProducesResponseType(StatusCodes.Status409Conflict)]
     public async Task<ActionResult<AuthResponseDto>> Register(
         [FromBody] RegisterRequestDto request,
@@ -30,6 +32,7 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     [ProducesResponseType(typeof(AuthResponseDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [EnableRateLimiting("auth")]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public async Task<ActionResult<AuthResponseDto>> Login(
         [FromBody] LoginRequestDto request,

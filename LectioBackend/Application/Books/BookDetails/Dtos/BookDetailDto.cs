@@ -1,14 +1,17 @@
+using Lectio.Api.Application.Books.TopRatedBooks.Dtos;
+
 namespace Lectio.Api.Application.Books.BookDetails.Dtos;
 
 public class BookDetailDto
 {
-    public int IdBook { get; init; }
-    public string Titulo { get; init; } = string.Empty;
-    public string? Imagen { get; init; }
-    public string? Descripcion { get; init; }
-    public int? NumeroPaginas { get; init; }
-    public int? AnoPublicacion { get; init; }
-    public string? Lenguaje { get; init; }
-    public IReadOnlyList<BookAuthorDetailDto> Autores { get; init; } = Array.Empty<BookAuthorDetailDto>();
-    public IReadOnlyList<BookCategoryDetailDto> Categorias { get; init; } = Array.Empty<BookCategoryDetailDto>();
+    public int Id { get; init; }
+    public string Title { get; init; } = string.Empty;
+    public string? ImageUrl { get; init; }
+    public string? Description { get; init; }
+    public int? PageCount { get; init; }
+    public int? PublishedYear { get; init; }
+    public string? Publisher { get; init; }
+    public string? Language { get; init; }
+    public IReadOnlyList<BookAuthorSummaryDto> Authors { get; init; } = Array.Empty<BookAuthorSummaryDto>();
+    public IReadOnlyList<BookCategorySummaryDto> Categories { get; init; } = Array.Empty<BookCategorySummaryDto>();
 }

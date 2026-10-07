@@ -14,6 +14,7 @@ using Lectio.Api.Application.Books.BookDetails;
 using Lectio.Api.Application.Books.BookRatings;
 using Lectio.Api.Application.Loans.UserLoans;
 using Lectio.Api.Application.Loans.CreateLoan;
+using Lectio.Api.Application.Loans.LoanStatus;
 using Lectio.Api.Application.Loans.ReturnLoan;
 using Lectio.Api.Application.Ratings.UpsertRating;
 using Lectio.Api.Middlewares;
@@ -22,6 +23,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi;
+using System.Threading.RateLimiting;
+using Microsoft.AspNetCore.HttpOverrides;
 
 
 const string FrontendCorsPolicy = "Frontend";
@@ -85,13 +88,15 @@ builder.Services.AddHttpClient<GoogleBooksApiClient>();
 
 builder.Services.AddCors(options =>
 {
+    var origins = builder.Configuration.GetSection("Cors:Origins").Get<string[]>()
+                  ?? new[] { "http://localhost:5173" };
+
     options.AddPolicy(FrontendCorsPolicy, policy =>
         policy
-            .WithOrigins("http://localhost:5173")
+            .WithOrigins(origins)
             .AllowAnyHeader()
             .AllowAnyMethod());
 });
-
 
 builder.Services.AddScoped<SeedProgressStore>();
 builder.Services.AddScoped<GoogleBooksSeederService>();
@@ -111,12 +116,46 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserLoansService, UserLoansService>();
 builder.Services.AddScoped<ICreateLoanService, CreateLoanService>();
 builder.Services.AddScoped<IReturnLoanService, ReturnLoanService>();
+builder.Services.AddScoped<ILoanStatusService, LoanStatusService>();
 builder.Services.AddScoped<IUpsertRatingService, UpsertRatingService>();
 builder.Services.AddScoped<ICategoryTranslationService, CategoryTranslationService>();
+
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+    options.KnownIPNetworks.Clear();  
+    options.KnownProxies.Clear();
+});
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+
+    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(context =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            _ => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = 100,
+                Window = TimeSpan.FromMinutes(1),
+                QueueLimit = 0
+            }));
+
+    options.AddPolicy("auth", context =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            _ => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = 5,
+                Window = TimeSpan.FromMinutes(1),
+                QueueLimit = 0
+            }));
+});
 
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+app.UseForwardedHeaders();
 
 if (app.Environment.IsDevelopment())
 {
@@ -125,6 +164,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors(FrontendCorsPolicy);
+app.UseRateLimiter();  
 app.UseExceptionHandling(); 
 app.UseHttpsRedirection();
 

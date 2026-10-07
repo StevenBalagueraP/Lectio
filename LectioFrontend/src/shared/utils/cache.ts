@@ -21,20 +21,18 @@ function readEntry<T>(key: string, persist: boolean): Entry<T> | undefined {
         return entry
       }
     } catch {
-      // localStorage no disponible o JSON corrupto: se ignora
+      // localStorage no disponible
     }
   }
 
   return undefined
 }
 
-/** Devuelve el dato solo si sigue vigente. */
 export function readCache<T>(key: string, persist = false): T | undefined {
   const entry = readEntry<T>(key, persist)
   return entry && entry.expiresAt > Date.now() ? entry.data : undefined
 }
 
-/** Devuelve el dato aunque haya expirado (para cuando el backend no responde). */
 export function readStale<T>(key: string, persist = false): T | undefined {
   return readEntry<T>(key, persist)?.data
 }
@@ -61,7 +59,6 @@ export function invalidateCache(key: string) {
   }
 }
 
-/** Una sola petición en vuelo por key; al terminar guarda el resultado en cache. */
 export function fetchCached<T>(
   key: string,
   fetcher: () => Promise<T>,

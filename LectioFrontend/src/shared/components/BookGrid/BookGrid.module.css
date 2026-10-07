@@ -5,7 +5,6 @@
   transition: opacity 0.15s ease;
 }
 
-/* Mientras llegan datos nuevos, la grilla anterior queda atenuada */
 .stale {
   opacity: 0.5;
   pointer-events: none;

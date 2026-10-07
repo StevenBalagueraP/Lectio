@@ -1,0 +1,28 @@
+.tabs {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.tab {
+  padding: var(--spacing-xs) 0;
+  border: 0;
+  background: none;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+}
+
+.tab:hover {
+  color: var(--color-primary);
+}
+
+.tabActive,
+.tabActive:hover {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
