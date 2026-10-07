@@ -5,8 +5,14 @@ using Lectio.Api.Application.Books.BrowseBooks.Dtos;
 using Lectio.Api.Application.Books.TopRatedBooks;
 using Lectio.Api.Application.Books.TopRatedBooks.Dtos;
 using Lectio.Api.Application.Books.BookRatings.Dtos;
+using Lectio.Api.Application.Loans.LoanStatus;
+using Lectio.Api.Application.Loans.LoanStatus.Dtos;
 using Lectio.Api.Application.Books.BookRatings;
 using Microsoft.AspNetCore.Mvc;
+
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.JsonWebTokens;
 
 namespace Lectio.Api.Controllers.BooksController;
 
@@ -18,17 +24,20 @@ public class BooksController : ControllerBase
     private readonly IBrowseBooksService _browseBooksService;
     private readonly IBookDetailService _bookDetailService;
     private readonly IBookRatingsService _bookRatingsService;
+    private readonly ILoanStatusService _loanStatusService;
 
     public BooksController(
         ITopRatedBooksService topRatedBooksService,
         IBrowseBooksService browseBooksService,
         IBookDetailService bookDetailService,
-        IBookRatingsService bookRatingsService)
+        IBookRatingsService bookRatingsService,
+        ILoanStatusService loanStatusService)
     {
         _topRatedBooksService = topRatedBooksService;
         _browseBooksService = browseBooksService;
         _bookDetailService = bookDetailService;
         _bookRatingsService = bookRatingsService;
+        _loanStatusService = loanStatusService;
     }
 
     [HttpGet]
@@ -79,4 +88,25 @@ public class BooksController : ControllerBase
         var response = await _bookRatingsService.GetBookRatingsAsync(id, page, pageSize, cancellationToken);
         return Ok(response);
     }
+
+    [HttpGet("{bookId:int}/loan-status")]
+    [AllowAnonymous]
+    [ProducesResponseType(typeof(BookLoanStatusResponseDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<BookLoanStatusResponseDto>> GetLoanStatus(
+        int bookId,
+        CancellationToken cancellationToken)
+    {
+        int? userId = null;
+
+        if (User.Identity?.IsAuthenticated == true &&
+            int.TryParse(User.FindFirstValue(JwtRegisteredClaimNames.Sub), out var id))
+        {
+            userId = id;
+        }
+
+        var response = await _loanStatusService.GetLoanStatusAsync(userId, bookId, cancellationToken);
+        return Ok(response);
+    }
 }
+

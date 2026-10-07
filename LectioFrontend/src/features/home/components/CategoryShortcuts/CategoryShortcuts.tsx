@@ -27,11 +27,9 @@ export function CategoryShortcuts({
     (c): c is Category => Boolean(c),
   )
 
-  // Columnas = tiles visibles + "See more" (mobile muestra menos que desktop)
   const mobileColumns = Math.min(featured.length, MOBILE_VISIBLE_CATEGORIES) + 1
   const desktopColumns = featured.length + 1
 
-  // Click de nuevo sobre la categoría activa = quitar filtro
   const toggle = (id: number) => onSelect(id === selectedId ? undefined : id)
 
   return (

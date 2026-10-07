@@ -8,16 +8,17 @@ import { NAV_ITEMS } from './navItems'
 interface NavbarProps {
   userName?: string
   avatarUrl?: string
+  overlay?: boolean
 }
 
 const DESKTOP_LINKS = NAV_ITEMS.filter((item) => !item.mobileOnly)
 
-export function Navbar({ userName = 'User', avatarUrl }: NavbarProps) {
+export function Navbar({ userName = 'User', avatarUrl, overlay = false }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const closeMenu = useCallback(() => setMenuOpen(false), [])
 
   return (
-    <header className={styles.navbar}>
+    <header className={`${styles.navbar} ${overlay ? styles.overlay : ''}`}>
       <div className={styles.inner}>
         <button
           type="button"

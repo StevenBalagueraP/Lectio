@@ -1,8 +1,10 @@
+using Lectio.Api.Application.Loans;
 using Lectio.Api.Application.Loans.CreateLoan.Dtos;
 using Lectio.Api.Domain.Entities;
 using Lectio.Api.Domain.Exceptions;
 using Lectio.Api.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Npgsql;
 
 namespace Lectio.Api.Application.Loans.CreateLoan;
 
@@ -34,7 +36,7 @@ public class CreateLoanService : ICreateLoanService
 
         var hasActiveLoan = await _context.Loans
             .AsNoTracking()
-            .AnyAsync(loan => loan.BookId == request.BookId && loan.ReturnDate == null, cancellationToken);
+            .AnyAsync(LoanQueries.IsActiveForBook(request.BookId), cancellationToken);
 
         if (hasActiveLoan || !book.IsAvailable)
         {
@@ -58,7 +60,7 @@ public class CreateLoanService : ICreateLoanService
         {
             await _context.SaveChangesAsync(cancellationToken);
         }
-        catch (DbUpdateException)
+        catch (DbUpdateException exception) when (IsActiveLoanUniqueViolation(exception))
         {
             throw new ConflictException("This book is currently on loan and is not available until it is returned.");
         }
@@ -80,6 +82,13 @@ public class CreateLoanService : ICreateLoanService
         {
             throw new BadRequestException("dueDate must be after checkoutDate.");
         }
+    }
+
+    private static bool IsActiveLoanUniqueViolation(DbUpdateException exception)
+    {
+        return exception.InnerException is PostgresException postgresException
+            && postgresException.SqlState == PostgresErrorCodes.UniqueViolation
+            && postgresException.ConstraintName == "IX_Loan_BookId_Active";
     }
 
     private async Task EnsureUserExistsAsync(int userId, CancellationToken cancellationToken)

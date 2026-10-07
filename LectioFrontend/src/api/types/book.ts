@@ -5,7 +5,6 @@ export interface Author {
   name: string
 }
 
-/** Lo mínimo que necesita una card (es lo que devuelve el buscador). */
 export interface BookSummary {
   id: number
   title: string
@@ -17,4 +16,17 @@ export interface BookSummary {
 
 export interface Book extends BookSummary {
   description: string | null
+}
+
+export interface BookDetail {
+  id: number
+  title: string
+  imageUrl: string | null
+  description: string | null
+  pageCount: number | null
+  publishedYear: number | null
+  publisher: string | null
+  language: string | null
+  authors: Author[]
+  categories: Category[]
 }
