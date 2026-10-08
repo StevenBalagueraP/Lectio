@@ -7,6 +7,7 @@ export interface BookRatingUser {
   updatedAt: string
 }
 
+/** Respuesta de GET /api/books/{id}/ratings (sin envoltorio `data` ni objeto `pagination`). */
 export interface BookRatings {
   averageRating: number
   numberOfRatings: number
@@ -19,6 +20,7 @@ export interface CreateRatingBody {
   comment: string | null
 }
 
+/** Respuesta de POST /api/users/{userId}/ratings (200 tanto al crear como al actualizar). */
 export interface RatingResponse {
   message: string
   ratingId: number

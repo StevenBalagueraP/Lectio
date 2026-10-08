@@ -44,9 +44,9 @@ export function BookReviewsPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const handleAddReview = () => {
+    const handleAddReview = () => {
     if (!isLoggedIn) {
-      navigate('/login') // El login aún no existe en el front: va a su página provisional
+      navigate('/login', { state: { from: `/books/${id}/reviews` } }) // Al iniciar sesión vuelve a esta pantalla
       return
     }
     setNotice(null)
