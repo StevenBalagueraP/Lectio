@@ -5,6 +5,8 @@ import { CategoriesPage } from '../features/categories/pages/CategoriesPage'
 import { HistoryPage } from '../features/history/pages/HistoryPage'
 import { HomePage } from '../features/home/pages/HomePage'
 import { LoginPage } from '../features/login/pages/LoginPage'
+import { ProfilePage } from '../features/profile/pages/ProfilePage'
+import { RegisterPage } from '../features/register/pages/RegisterPage'
 import { AppLayout } from './AppLayout'
 
 export const router = createBrowserRouter([
@@ -17,6 +19,8 @@ export const router = createBrowserRouter([
       { path: '/books/:bookId', element: <BookDetailPage /> },
       { path: '/books/:bookId/reviews', element: <BookReviewsPage /> },
       { path: '/login', element: <LoginPage /> },
+      { path: '/register', element: <RegisterPage /> },
+      { path: '/profile', element: <ProfilePage /> },
     ],
   },
 ])

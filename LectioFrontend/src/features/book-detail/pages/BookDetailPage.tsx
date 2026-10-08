@@ -33,7 +33,7 @@ export function BookDetailPage() {
 
   // El login aún no existe en el front: va a su página provisional
   const handleLoanAction = (status: LoanStatus) => {
-    if (status === 'LoginRequired') navigate('/login')
+    if (status === 'LoginRequired') navigate('/login', { state: { from: `/books/${id}` } })
   }
 
   if (book.loading) {
