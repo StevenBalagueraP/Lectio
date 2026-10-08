@@ -13,5 +13,5 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', to: '/', icon: MdHome },
   { label: 'History', to: '/history', icon: MdHistory },
   { label: 'Categories', to: '/categories', icon: MdCategory },
-  { label: 'Profile', to: '/profile', icon: MdPerson, mobileOnly: true, disabled: true },
+  { label: 'Profile', to: '/profile', icon: MdPerson, mobileOnly: true},
 ]
