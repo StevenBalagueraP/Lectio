@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router'
 import type { LoanStatus } from '../../../api/types/loan'
+import { returnLoan } from '../../../api/endpoints/loans'
 import { BookHero } from '../../../shared/components/BookHero/BookHero'
+import { ConfirmDialog } from '../../../shared/components/ConfirmDialog/ConfirmDialog'
 import { Skeleton } from '../../../shared/components/Skeleton/Skeleton'
 import { useBookDetail } from '../../../shared/hooks/useBookDetail'
 import { useBookLoanStatus } from '../../../shared/hooks/useBookLoanStatus'
 import { useGoBack } from '../../../shared/hooks/useGoBack'
+import { getLoanErrorMessage } from '../../loan/utils'
 import { BookInfoList } from '../components/BookInfoList/BookInfoList'
 import { BookTabs } from '../components/BookTabs/BookTabs'
 import { ExpandableText } from '../components/ExpandableText/ExpandableText'
@@ -20,20 +23,46 @@ export function BookDetailPage() {
   const validId = Number.isInteger(id) && id > 0
 
   const [tab, setTab] = useState<BookTabId>('summary')
+  const [deliverOpen, setDeliverOpen] = useState(false)
+  const [deliverSubmitting, setDeliverSubmitting] = useState(false)
+  const [deliverError, setDeliverError] = useState<string | null>(null)
+  const [deliverNotice, setDeliverNotice] = useState<string | null>(null)
+  const [loanVersion, setLoanVersion] = useState(0)
 
   const book = useBookDetail(id, validId)
-  const loan = useBookLoanStatus(id, validId)
+  const loan = useBookLoanStatus(id, validId, loanVersion)
   const handleBack = useGoBack('/')
 
-  // Reviews es una pantalla aparte (/books/:bookId/reviews), no un panel de esta página
+  // Reviews is a separate screen (/books/:bookId/reviews), not a panel on this page
   const handleTabChange = (next: BookTabId) => {
     if (next === 'reviews') navigate(`/books/${id}/reviews`)
     else setTab(next)
   }
 
-  // El login aún no existe en el front: va a su página provisional
   const handleLoanAction = (status: LoanStatus) => {
     if (status === 'LoginRequired') navigate('/login', { state: { from: `/books/${id}` } })
+    else if (status === 'Available') navigate(`/books/${id}/loan`)
+    else if (status === 'BorrowedByYou') {
+      setDeliverError(null)
+      setDeliverNotice(null)
+      setDeliverOpen(true)
+    }
+  }
+
+  const handleDeliver = async () => {
+    if (!loan.data?.userId) return
+    setDeliverSubmitting(true)
+    setDeliverError(null)
+    try {
+      const res = await returnLoan(loan.data.userId, id)
+      setDeliverOpen(false)
+      setDeliverNotice(res.message)
+      setLoanVersion((v) => v + 1)
+    } catch (error) {
+      setDeliverError(getLoanErrorMessage(error))
+    } finally {
+      setDeliverSubmitting(false)
+    }
   }
 
   if (book.loading) {
@@ -91,7 +120,33 @@ export function BookDetailPage() {
             onAction={handleLoanAction}
           />
         </div>
+
+        {deliverNotice && (
+          <p role="status" className={styles.notice}>{deliverNotice}</p>
+        )}
       </div>
+
+      <ConfirmDialog
+        open={deliverOpen}
+        title="Return book"
+        submitting={deliverSubmitting}
+        error={deliverError}
+        confirmLabel="Deliver"
+        onConfirm={handleDeliver}
+        onCancel={() => setDeliverOpen(false)}
+      >
+        <p><strong>{detail.title}</strong></p>
+        {detail.authors.length > 0 && (
+          <p>{detail.authors.map((a) => a.name).join(', ')}</p>
+        )}
+        {detail.categories.length > 0 && (
+          <p>{detail.categories.map((c) => c.name).join(', ')}</p>
+        )}
+        {loan.data?.dueDate && (
+          <p>Due: {new Date(loan.data.dueDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        )}
+        <p>Are you sure you want to deliver this book?</p>
+      </ConfirmDialog>
     </main>
   )
 }
