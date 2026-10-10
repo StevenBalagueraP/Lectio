@@ -65,7 +65,7 @@ export function CategoryShortcuts({
         <span className={styles.icon}>
           <MdGridView aria-hidden="true" />
         </span>
-        <span className={styles.label}>See more</span>
+        <span className={styles.label}>See all</span>
       </button>
     </div>
   )

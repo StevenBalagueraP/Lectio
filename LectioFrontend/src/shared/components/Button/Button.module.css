@@ -31,6 +31,16 @@
   background: var(--color-primary-light);
 }
 
+.danger {
+  background: var(--color-error);
+  box-shadow: var(--shadow-md);
+  color: var(--color-text-inverse);
+}
+
+.danger:hover:not(:disabled) {
+  background: var(--color-error-hover);
+}
+
 .button:disabled {
   border-color: transparent;
   background: var(--color-disabled);

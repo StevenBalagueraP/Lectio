@@ -38,6 +38,7 @@ export const DEFAULT_CATEGORY_ICON: IconType = MdMenuBook
 
 export const CATEGORY_LABELS: Record<string, string> = {
   Technology: 'Tech',
+  Romance: 'Love',
 }
 
 export const CATEGORY_ICONS: Record<string, IconType> = {
