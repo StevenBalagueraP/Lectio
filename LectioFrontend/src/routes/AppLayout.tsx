@@ -5,7 +5,9 @@ import { useSession } from '../shared/hooks/useSession'
 export function AppLayout() {
   const user = useSession()
 
-  const overlayNavbar = useMatch('/books/:bookId') !== null
+  const overlayBookDetail = useMatch('/books/:bookId')
+  const overlayLoan = useMatch('/books/:bookId/loan')
+  const overlayNavbar = overlayBookDetail !== null || overlayLoan !== null
 
   return (
     <>

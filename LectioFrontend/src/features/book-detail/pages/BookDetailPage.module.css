@@ -24,6 +24,13 @@
   justify-content: center;
 }
 
+.notice {
+  margin: 0;
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
 .state {
   display: flex;
   flex-direction: column;

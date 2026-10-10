@@ -6,4 +6,5 @@ public class LoanBookSummaryDto
     public string Title { get; init; } = string.Empty;
     public string? ImageUrl { get; init; }
     public decimal AverageRating { get; init; }
+    public List<AuthorSummaryDto> Authors { get; init; } = new();
 }

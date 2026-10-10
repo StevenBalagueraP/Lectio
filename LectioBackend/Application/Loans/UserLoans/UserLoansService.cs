@@ -19,69 +19,79 @@ public class UserLoansService : IUserLoansService
     }
 
     public async Task<UserLoansResponseDto> GetUserLoansAsync(
-        int userId,
-        int page,
-        int pageSize,
-        CancellationToken cancellationToken)
-    {
-        ValidatePaging(page, pageSize);
-        await EnsureUserExistsAsync(userId, cancellationToken);
+    int userId,
+    int page,
+    int pageSize,
+    CancellationToken cancellationToken)
+{
+    ValidatePaging(page, pageSize);
+    await EnsureUserExistsAsync(userId, cancellationToken);
 
-        var query = _context.Loans
-            .AsNoTracking()
-            .Where(loan => loan.UserId == userId);
+    var query = _context.Loans
+        .AsNoTracking()
+        .Where(loan => loan.UserId == userId);
 
-        var totalCount = await query.CountAsync(cancellationToken);
+    var totalCount = await query.CountAsync(cancellationToken);
 
-        var loans = await query
-            .OrderByDescending(loan => loan.CheckoutDate)
-            .Skip((page - 1) * pageSize)
-            .Take(pageSize)
-            .Select(loan => new
-            {
-                loan.LoanId,
-                loan.CheckoutDate,
-                loan.DueDate,
-                loan.ReturnDate,
-                loan.Book.BookId,
-                loan.Book.Title,
-                loan.Book.ImageLink,
-                loan.Book.AverageRating
-            })
-            .ToListAsync(cancellationToken);
-
-        var now = DateTime.UtcNow;
-
-        var data = loans
-            .Select(loan => new UserLoanDto
-            {
-                Id = loan.LoanId,
-                Book = new LoanBookSummaryDto
-                {
-                    Id = loan.BookId,
-                    Title = loan.Title,
-                    ImageUrl = loan.ImageLink,
-                    AverageRating = loan.AverageRating
-                },
-                CheckoutDate = loan.CheckoutDate,
-                DueDate = loan.DueDate,
-                ReturnDate = loan.ReturnDate,
-                Status = ResolveStatus(loan.ReturnDate, loan.DueDate, now)
-            })
-            .ToList();
-
-        return new UserLoansResponseDto
+    var loans = await query
+        .OrderByDescending(loan => loan.CheckoutDate)
+        .Skip((page - 1) * pageSize)
+        .Take(pageSize)
+        .Select(loan => new
         {
-            Data = data,
-            Pagination = new PaginationDto
+            loan.LoanId,
+            loan.CheckoutDate,
+            loan.DueDate,
+            loan.ReturnDate,
+            loan.Book.BookId,
+            loan.Book.Title,
+            loan.Book.ImageLink,
+            loan.Book.AverageRating,
+            Authors = _context.BookAuthors
+                .Where(bookAuthor => bookAuthor.BookId == loan.Book.BookId)
+                .OrderBy(bookAuthor => bookAuthor.AuthorId)
+                .Select(bookAuthor => new AuthorSummaryDto
+                {
+                    Id = bookAuthor.Author.AuthorId,
+                    Name = bookAuthor.Author.AuthorName
+                })
+                .ToList()
+        })
+        .ToListAsync(cancellationToken);
+
+    var now = DateTime.UtcNow;
+
+    var data = loans
+        .Select(loan => new UserLoanDto
+        {
+            Id = loan.LoanId,
+            Book = new LoanBookSummaryDto
             {
-                Page = page,
-                PageSize = pageSize,
-                TotalCount = totalCount,
-                TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize)
-            }
-        };
-    }
+                Id = loan.BookId,
+                Title = loan.Title,
+                ImageUrl = loan.ImageLink,
+                AverageRating = loan.AverageRating,
+                Authors = loan.Authors
+            },
+            CheckoutDate = loan.CheckoutDate,
+            DueDate = loan.DueDate,
+            ReturnDate = loan.ReturnDate,
+            Status = ResolveStatus(loan.ReturnDate, loan.DueDate, now)
+        })
+        .ToList();
+
+    return new UserLoansResponseDto
+    {
+        Data = data,
+        Pagination = new PaginationDto
+        {
+            Page = page,
+            PageSize = pageSize,
+            TotalCount = totalCount,
+            TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize)
+        }
+    };
+}
 
     private static void ValidatePaging(int page, int pageSize)
     {
