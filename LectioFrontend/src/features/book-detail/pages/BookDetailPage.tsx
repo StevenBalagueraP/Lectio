@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router'
+import { useEffect, useState } from 'react'
+import { Link, useLocation, useNavigate, useParams } from 'react-router'
 import type { LoanStatus } from '../../../api/types/loan'
 import { returnLoan } from '../../../api/endpoints/loans'
 import { BookHero } from '../../../shared/components/BookHero/BookHero'
@@ -16,14 +16,23 @@ import { LoanButton } from '../components/LoanButton/LoanButton'
 import { DEFAULT_DESCRIPTION, getPanelId, getTabId, type BookTabId } from '../constants'
 import styles from './BookDetailPage.module.css'
 
+interface LocationState {
+  openReturnDialog?: boolean
+}
+
 export function BookDetailPage() {
   const navigate = useNavigate()
+  const location = useLocation()
   const { bookId } = useParams()
   const id = Number(bookId)
   const validId = Number.isInteger(id) && id > 0
 
+  // Derive initial dialog state directly from location.state (no setState in useEffect)
+  const locationState = location.state as LocationState | null
+  const fromHistory = locationState?.openReturnDialog === true
+
   const [tab, setTab] = useState<BookTabId>('summary')
-  const [deliverOpen, setDeliverOpen] = useState(false)
+  const [deliverOpen, setDeliverOpen] = useState(fromHistory)
   const [deliverSubmitting, setDeliverSubmitting] = useState(false)
   const [deliverError, setDeliverError] = useState<string | null>(null)
   const [deliverNotice, setDeliverNotice] = useState<string | null>(null)
@@ -32,6 +41,15 @@ export function BookDetailPage() {
   const book = useBookDetail(id, validId)
   const loan = useBookLoanStatus(id, validId, loanVersion)
   const handleBack = useGoBack('/')
+
+  // Clear the navigation state once so reloading or pressing back does not reopen the dialog
+  useEffect(() => {
+    if (fromHistory) {
+      navigate(location.pathname, { replace: true, state: null })
+    }
+    // Only run once on mount — `fromHistory` is derived from the initial render's location.state
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   // Reviews is a separate screen (/books/:bookId/reviews), not a panel on this page
   const handleTabChange = (next: BookTabId) => {
@@ -95,6 +113,9 @@ export function BookDetailPage() {
   const detail = book.data
   const summary = detail.description?.trim() || DEFAULT_DESCRIPTION
 
+  // Only allow delivery when loan-status confirms BorrowedByYou (has the right dueDate)
+  const canDeliver = loan.data?.status === 'BorrowedByYou'
+
   return (
     <main className={styles.main}>
       <BookHero
@@ -127,7 +148,7 @@ export function BookDetailPage() {
       </div>
 
       <ConfirmDialog
-        open={deliverOpen}
+        open={deliverOpen && canDeliver}
         title="Return book"
         submitting={deliverSubmitting}
         error={deliverError}

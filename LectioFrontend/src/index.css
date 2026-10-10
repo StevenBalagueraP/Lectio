@@ -19,6 +19,7 @@
   /* === ESTADOS === */
   --color-success: #236A34;  /* estado positivo (ej: badge "Active") */
   --color-error: #FF1226;    /* estado negativo (ej: badge "Expired") */
+  --color-error-hover: #CC0E1E; /* hover del rojo de error (ej: botón danger) */
   --color-warning: #F59E0B;  /* advertencias futuras, aún sin uso */
   --color-info: #3B82F6;     /* mensajes informativos futuros, aún sin uso */
 

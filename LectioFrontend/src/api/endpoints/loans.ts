@@ -1,4 +1,6 @@
 import { http } from '../http'
+import type { PagedResponse } from '../types/common'
+import type { UserLoan } from '../types/loan'
 
 export interface CreateLoanBody {
   bookId: number
@@ -36,5 +38,22 @@ export function returnLoan(userId: number, bookId: number, signal?: AbortSignal)
     `/api/users/${userId}/loans/${bookId}/return`,
     signal,
     { auth: true, method: 'POST' },
+  )
+}
+
+export interface GetUserLoansParams {
+  page: number
+  pageSize: number
+}
+
+export function getUserLoans(
+  userId: number,
+  { page, pageSize }: GetUserLoansParams,
+  signal?: AbortSignal,
+): Promise<PagedResponse<UserLoan>> {
+  return http<PagedResponse<UserLoan>>(
+    `/api/users/${userId}/loans?page=${page}&pageSize=${pageSize}`,
+    signal,
+    { auth: true },
   )
 }
