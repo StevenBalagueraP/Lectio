@@ -70,7 +70,7 @@ describe('Pagination (unit)', () => {
   })
 
   it('shows end-ellipsis when on an early page of a long list', () => {
-    const { container } = render(<Pagination page={2} totalPages={20} onChange={jest.fn()} />)
+    render(<Pagination page={2} totalPages={20} onChange={jest.fn()} />)
     // Ellipsis is rendered as a span (aria-hidden), not a button
     const buttons = screen.getAllByRole('button')
     // Should not have all 20 page buttons
