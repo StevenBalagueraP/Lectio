@@ -1,3 +1,4 @@
 obj
 bin
 .env
+appsettings.Development.json
