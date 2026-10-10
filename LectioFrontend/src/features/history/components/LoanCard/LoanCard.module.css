@@ -77,6 +77,7 @@
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
   line-height: 1.5;
+  text-align: center;
 }
 
 .statusActive {
@@ -85,6 +86,7 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
+  text-align: center;
 }
 
 .statusOverdue {
@@ -93,6 +95,7 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-error);
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
