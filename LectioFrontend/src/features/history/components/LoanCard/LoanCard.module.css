@@ -98,6 +98,14 @@
   text-align: center;
 }
 
+/* Empuja el botón al fondo: las tarjetas de una fila tienen la misma altura (grid stretch) */
+.actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}
+
 @media (min-width: 1024px) {
   .cover {
     aspect-ratio: 3 / 4;

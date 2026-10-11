@@ -61,24 +61,30 @@ export function LoanCard({ loan, onReturn, onRate }: LoanCardProps) {
       <div className={styles.dates}>
         <p className={styles.date}>Borrowed: {formatShortDate(loan.checkoutDate)}</p>
         <p className={styles.date}>Due Date: {formatShortDate(loan.dueDate)}</p>
+        {loan.status === 'Returned' && loan.returnDate && (
+          <p className={styles.date}>Returned: {formatShortDate(loan.returnDate)}</p>
+        )}
       </div>
 
       <StatusLine loan={loan} />
 
-      {loan.status === 'Returned' ? (
-        <Button block onClick={() => onRate(book.id)} aria-label={`Rate ${book.title}`}>
-          Rate
-        </Button>
-      ) : (
-        <Button
-          block
-          variant={loan.status === 'Overdue' ? 'danger' : 'primary'}
-          onClick={() => onReturn(book.id)}
-          aria-label={`Return ${book.title}`}
-        >
-          Return
-        </Button>
-      )}
+      {/* El botón siempre queda pegado al fondo de la tarjeta, así todos se alinean en la fila */}
+      <div className={styles.actions}>
+        {loan.status === 'Returned' ? (
+          <Button block onClick={() => onRate(book.id)} aria-label={`Rate ${book.title}`}>
+            Rate
+          </Button>
+        ) : (
+          <Button
+            block
+            variant={loan.status === 'Overdue' ? 'danger' : 'primary'}
+            onClick={() => onReturn(book.id)}
+            aria-label={`Return ${book.title}`}
+          >
+            Return
+          </Button>
+        )}
+      </div>
     </article>
   )
 }

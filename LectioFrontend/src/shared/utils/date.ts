@@ -1,17 +1,14 @@
-// Formats a date string (ISO or date-only) as a short locale date in en-US.
-// The year is omitted if it matches the current year.
-// Examples: "Sep 25" (current year), "Sep 25, 2024" (past year).
-export function formatShortDate(dateString: string): string {
+// Formats a date string (ISO 8601) as "Mon Day" in en-US, without the year.
+// Examples: "Oct 10", "Jan 14".
+// Returns an empty string if the value is null, undefined, or an invalid date.
+export function formatShortDate(dateString: string | null | undefined): string {
+  if (!dateString) return ''
   const date = new Date(dateString)
   if (isNaN(date.getTime())) return ''
-
-  const now = new Date()
-  const includeYear = date.getFullYear() !== now.getFullYear()
 
   return date.toLocaleDateString('en-US', {
     month: 'short',
     day: 'numeric',
-    ...(includeYear ? { year: 'numeric' } : {}),
   })
 }
 
