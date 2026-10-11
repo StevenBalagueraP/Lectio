@@ -61,6 +61,9 @@ export function LoanCard({ loan, onReturn, onRate }: LoanCardProps) {
       <div className={styles.dates}>
         <p className={styles.date}>Borrowed: {formatShortDate(loan.checkoutDate)}</p>
         <p className={styles.date}>Due Date: {formatShortDate(loan.dueDate)}</p>
+        {loan.status === 'Returned' && loan.returnDate && (
+          <p className={styles.date}>Returned: {formatShortDate(loan.returnDate)}</p>
+        )}
       </div>
 
       <StatusLine loan={loan} />
