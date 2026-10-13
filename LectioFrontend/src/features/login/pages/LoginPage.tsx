@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent, type FormEvent } from 'react'
+import { useState, type ChangeEvent, type SubmitEvent } from 'react'
 import { Link, Navigate, useLocation } from 'react-router'
 import { login } from '../../../api/endpoints/auth'
 import { saveSession } from '../../../api/token'
@@ -26,7 +26,7 @@ export function LoginPage() {
     setErrors((current) => ({ ...current, [field]: undefined }))
   }
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault()
     if (submitting) return
 

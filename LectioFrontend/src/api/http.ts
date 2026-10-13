@@ -11,10 +11,8 @@ import type { AuthResponse } from './types/auth'
 const REFRESH_PATH = '/api/auth/refresh'
 
 interface HttpOptions {
-  /** Envía `Authorization: Bearer <JWT>`; si el token venció (o responde 401) lo renueva con el refresh token. */
   auth?: boolean
   method?: 'GET' | 'POST'
-  /** Se envía como JSON (agrega `Content-Type: application/json`). */
   body?: unknown
 }
 
@@ -40,7 +38,6 @@ export class ApiError extends Error {
   }
 }
 
-// El backend responde problem+json ({ detail }) o ValidationProblemDetails ({ errors })
 async function readErrorDetail(res: Response): Promise<string | null> {
   try {
     const body: unknown = await res.json()
@@ -94,7 +91,7 @@ async function doRefresh(): Promise<boolean> {
   const run = async () => {
     const current = getRefreshToken()
     if (current === null) return false
-    if (current !== used) return true // otra pestaña ya lo renovó mientras esperábamos el lock
+    if (current !== used) return true 
 
     try {
       const res = await send(REFRESH_PATH, undefined, {
@@ -107,11 +104,10 @@ async function doRefresh(): Promise<boolean> {
         saveSession((await res.json()) as AuthResponse)
         return true
       }
-      // 400/401: el refresh token ya no sirve (vencido, usado o revocado) → sesión terminada
       if (res.status === 400 || res.status === 401) clearSession()
       return false
     } catch {
-      return false // sin red: no se cierra la sesión, se puede reintentar luego
+      return false
     }
   }
 
@@ -139,7 +135,6 @@ export async function http<T>(
     token: auth ? await getValidAccessToken() : null,
   })
 
-  // 401 con auth: renovar una vez y reintentar una vez
   if (res.status === 401 && auth && getRefreshToken() !== null && (await refreshTokens())) {
     res = await send(path, signal, { method, body, token: getAccessToken() })
   }
