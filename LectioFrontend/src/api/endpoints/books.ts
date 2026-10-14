@@ -41,17 +41,14 @@ export function searchBooks(
   return http<PagedResponse<BookSummary>>(`${BOOKS_PATH}?${query.toString()}`, signal)
 }
 
-// Detalle y estado de préstamo devuelven el objeto directo (sin `{ data }`)
 export function getBookById(bookId: number, signal?: AbortSignal) {
   return http<BookDetail>(`${BOOKS_PATH}/${bookId}`, signal)
 }
 
-// No exige JWT, pero con token el backend devuelve el estado según el usuario
 export function getBookLoanStatus(bookId: number, signal?: AbortSignal) {
   return http<BookLoanStatus>(`${BOOKS_PATH}/${bookId}/loan-status`, signal, { auth: true })
 }
 
-// Reseñas más recientes primero. No trae `pagination`: el total de páginas sale de `numberOfRatings`
 export function getBookRatings(
   bookId: number,
   { page, pageSize }: BookRatingsParams,
