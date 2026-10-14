@@ -1,0 +1,1 @@
+export type BookFilter = 'TopRated' | 'Available' | 'Newest' | 'Oldest' | 'Longest' | 'Shortest'

@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react'
 import { MdSearch } from 'react-icons/md'
 import { useNavigate, useSearchParams } from 'react-router'
+import type { BookFilter } from '../../../api/types/bookFilter'
 import { BookGrid } from '../../../shared/components/BookGrid/BookGrid'
 import { Pagination } from '../../../shared/components/Pagination/Pagination'
 import { useCategories } from '../../../shared/hooks/useCategories'
 import { useDebouncedValue } from '../../../shared/hooks/useDebouncedValue'
+import { parseBookFilters } from '../bookFilters'
+import { BookFilterSelect } from '../components/BookFilterSelect/BookFilterSelect'
 import { CategoryFilter } from '../components/CategoryFilter/CategoryFilter'
 import { useBookSearch } from '../hooks'
 import styles from './CategoriesPage.module.css'
@@ -14,6 +17,7 @@ const PAGE_SIZE = 10
 interface ParamChanges {
   q?: string
   categories?: number[]
+  filters?: BookFilter[]
   page?: number
 }
 
@@ -41,12 +45,19 @@ export function CategoriesPage() {
   const search = params.get('q') ?? ''
   const page = Math.max(1, parseInt(params.get('page') ?? '', 10) || 1)
   const categoryIds = parseIds(params.get('categories'))
+  const bookFilters = parseBookFilters(params.get('filters'))
 
   const [text, setText] = useState(search)
   const debouncedText = useDebouncedValue(text.trim(), 400)
 
   const categories = useCategories()
-  const results = useBookSearch({ search, categoryIds, page, pageSize: PAGE_SIZE })
+  const results = useBookSearch({
+    search,
+    categoryIds,
+    filters: bookFilters,
+    page,
+    pageSize: PAGE_SIZE,
+  })
 
   const books = results.data?.data
   const pagination = results.data?.pagination
@@ -58,6 +69,9 @@ export function CategoriesPage() {
         if (changes.q !== undefined) setOrDelete(next, 'q', changes.q)
         if (changes.categories !== undefined) {
           setOrDelete(next, 'categories', changes.categories.join(','))
+        }
+        if (changes.filters !== undefined) {
+          setOrDelete(next, 'filters', changes.filters.join(','))
         }
         if (changes.page !== undefined) {
           setOrDelete(next, 'page', changes.page > 1 ? String(changes.page) : '')
@@ -74,6 +88,8 @@ export function CategoriesPage() {
   }, [debouncedText])
 
   const handleCategories = (ids: number[]) => updateParams({ categories: ids, page: 1 })
+
+  const handleBookFilters = (filters: BookFilter[]) => updateParams({ filters, page: 1 })
 
   const handlePage = (next: number) => {
     updateParams({ page: next }, false)
@@ -108,6 +124,8 @@ export function CategoriesPage() {
           onChange={handleCategories}
           loading={categories.loading}
         />
+
+        <BookFilterSelect selected={bookFilters} onChange={handleBookFilters} />
       </div>
 
       {pagination && (

@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter, Route, Routes } from 'react-router'
 import type { BookSummary } from '../../../api/types/book'
@@ -6,7 +6,13 @@ import type { Category } from '../../../api/types/category'
 import { emptyResponse, jsonResponse, mockFetch } from '../../../test/mockFetch'
 import { CategoriesPage } from './CategoriesPage'
 
-let pageCounter = 100 
+// Prueba de integración: la página real + router real + hooks reales (useBookSearch, useFetch, cache, http).
+// Solo se simula `fetch`.
+//
+// El cache de useFetch/useBookSearch vive en memoria a nivel de módulo.
+// Cada prueba usa una querystring distinta (page=<n>) para evitar colisiones de clave.
+
+let pageCounter = 100 // número de página alto para no colisionar con otros suites
 
 const CATEGORIES: Category[] = [
   { id: 1, name: 'Fiction' },
@@ -50,6 +56,15 @@ function mockApi({
   })
 }
 
+type FetchMock = ReturnType<typeof mockApi>
+
+function booksUrls(fetchMock: FetchMock) {
+  return fetchMock.mock.calls
+    .map(([input]) => String(input))
+    .filter((url) => url.includes('/api/books'))
+}
+
+/** Each test uses a unique starting page so the cache key is always fresh. */
 function renderPage() {
   const page = pageCounter++
   const user = userEvent.setup()
@@ -102,13 +117,62 @@ describe('CategoriesPage (integration)', () => {
     mockApi()
     const { user } = renderPage()
 
+    // Wait for the component to fully load first
     await screen.findByText('Clean Code')
 
+    // The dropdown button has an accessible name from the "Filter by category" label
     await user.click(screen.getByRole('button', { name: /filter by category/i }))
 
     expect(screen.getByRole('checkbox', { name: 'Fiction' })).toBeInTheDocument()
     expect(screen.getByRole('checkbox', { name: 'Science' })).toBeInTheDocument()
     expect(screen.getByRole('checkbox', { name: 'History' })).toBeInTheDocument()
+  })
+
+  it('opens the sort and filter dropdown and lists all options', async () => {
+    mockApi()
+    const { user } = renderPage()
+
+    await screen.findByText('Clean Code')
+    await user.click(screen.getByRole('button', { name: /sort and filter/i }))
+
+    expect(screen.getByRole('checkbox', { name: 'Top rated' })).toBeInTheDocument()
+    expect(screen.getByRole('checkbox', { name: 'Available only' })).toBeInTheDocument()
+    expect(screen.getByRole('checkbox', { name: 'Newest first' })).toBeInTheDocument()
+    expect(screen.getByRole('checkbox', { name: 'Oldest first' })).toBeInTheDocument()
+    expect(screen.getByRole('checkbox', { name: 'Longest first' })).toBeInTheDocument()
+    expect(screen.getByRole('checkbox', { name: 'Shortest first' })).toBeInTheDocument()
+  })
+
+  it('sends the selected filters to the API in selection order', async () => {
+    const fetchMock = mockApi()
+    const { user } = renderPage()
+
+    await screen.findByText('Clean Code')
+    await user.click(screen.getByRole('button', { name: /sort and filter/i }))
+    await user.click(screen.getByRole('checkbox', { name: 'Top rated' }))
+    await user.click(screen.getByRole('checkbox', { name: 'Oldest first' }))
+
+    await waitFor(() => {
+      const urls = booksUrls(fetchMock)
+      expect(urls[urls.length - 1]).toContain('filter=TopRated&filter=Oldest')
+    })
+  })
+
+  it('replaces the opposite option instead of sending both', async () => {
+    const fetchMock = mockApi()
+    const { user } = renderPage()
+
+    await screen.findByText('Clean Code')
+    await user.click(screen.getByRole('button', { name: /sort and filter/i }))
+    await user.click(screen.getByRole('checkbox', { name: 'Newest first' }))
+    await user.click(screen.getByRole('checkbox', { name: 'Oldest first' }))
+
+    await waitFor(() => {
+      const urls = booksUrls(fetchMock)
+      const last = urls[urls.length - 1]
+      expect(last).toContain('filter=Oldest')
+      expect(last).not.toContain('filter=Newest')
+    })
   })
 
   it('navigates to the book detail page when "Ver detalle" is clicked', async () => {
