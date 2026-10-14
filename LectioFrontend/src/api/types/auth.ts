@@ -6,7 +6,6 @@ export interface AuthUser {
   role: 'user' | 'admin'
 }
 
-/** Respuesta de register, login y refresh (sin envoltorio `data`). `expiresIn` va en segundos. */
 export interface AuthResponse {
   accessToken: string
   refreshToken: string

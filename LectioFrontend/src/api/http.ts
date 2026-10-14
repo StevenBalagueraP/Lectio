@@ -22,10 +22,6 @@ interface SendOptions {
   token: string | null
 }
 
-/**
- * Error de una respuesta no-2xx. `message` conserva el texto genérico de siempre;
- * `serverMessage` es el `detail` que manda el backend (null en 401/403, que vienen sin cuerpo).
- */
 export class ApiError extends Error {
   status: number
   serverMessage: string | null
@@ -70,11 +66,6 @@ function send(path: string, signal: AbortSignal | undefined, { method, body, tok
   })
 }
 
-// --- Renovación de sesión -------------------------------------------------------------
-// El refresh token es de un solo uso: si se gasta dos veces el backend cierra TODAS las
-// sesiones del usuario. Por eso hay una sola renovación en curso (las demás esperan su
-// resultado) y un lock entre pestañas.
-
 let refreshing: Promise<boolean> | null = null
 
 function refreshTokens(): Promise<boolean> {
@@ -114,7 +105,6 @@ async function doRefresh(): Promise<boolean> {
   return navigator.locks ? navigator.locks.request('lectio:refresh', run) : run()
 }
 
-// Antes de una petición con auth: si el access token venció (o falta) y hay refresh token, renueva
 async function getValidAccessToken(): Promise<string | null> {
   const token = getAccessToken()
   if (getRefreshToken() !== null && (token === null || isAccessTokenExpired())) {

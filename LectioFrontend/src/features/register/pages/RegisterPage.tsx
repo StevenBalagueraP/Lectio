@@ -23,7 +23,6 @@ export function RegisterPage() {
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [submitting, setSubmitting] = useState(false)
 
-  // El registro también inicia sesión: con sesión se vuelve a donde venía el usuario
   if (user) return <Navigate to={getRedirectTarget(location.state)} replace />
 
   const handleChange = (field: keyof RegisterValues) => (event: ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +47,7 @@ export function RegisterPage() {
         password: values.password,
         phone: values.phone.trim() || null,
       })
-      saveSession(auth) // useSession cambia y el <Navigate> de arriba redirige
+      saveSession(auth) 
     } catch (error) {
       setSubmitError(getApiErrorMessage(error, 'Something went wrong. Please try again.'))
     } finally {

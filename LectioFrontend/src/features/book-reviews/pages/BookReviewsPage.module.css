@@ -3,7 +3,6 @@
   flex-direction: column;
 }
 
-/* El libro solo se muestra en desktop */
 .hero {
   display: none;
 }
@@ -80,12 +79,10 @@
   color: var(--color-error);
 }
 
-/* Mientras llega la página siguiente, la anterior queda atenuada */
 .stale {
   opacity: 0.5;
 }
 
-/* Error / no encontrado */
 .state {
   display: flex;
   flex-direction: column;
@@ -150,7 +147,6 @@
     padding: 0;
   }
 
-  /* El botón volver ya está sobre la portada */
   .back {
     display: none;
   }

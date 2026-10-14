@@ -27,7 +27,6 @@ export function BookDetailPage() {
   const id = Number(bookId)
   const validId = Number.isInteger(id) && id > 0
 
-  // Derive initial dialog state directly from location.state (no setState in useEffect)
   const locationState = location.state as LocationState | null
   const fromHistory = locationState?.openReturnDialog === true
 
@@ -42,16 +41,13 @@ export function BookDetailPage() {
   const loan = useBookLoanStatus(id, validId, loanVersion)
   const handleBack = useGoBack('/')
 
-  // Clear the navigation state once so reloading or pressing back does not reopen the dialog
   useEffect(() => {
     if (fromHistory) {
       navigate(location.pathname, { replace: true, state: null })
     }
-    // Only run once on mount — `fromHistory` is derived from the initial render's location.state
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Reviews is a separate screen (/books/:bookId/reviews), not a panel on this page
   const handleTabChange = (next: BookTabId) => {
     if (next === 'reviews') navigate(`/books/${id}/reviews`)
     else setTab(next)
@@ -113,7 +109,6 @@ export function BookDetailPage() {
   const detail = book.data
   const summary = detail.description?.trim() || DEFAULT_DESCRIPTION
 
-  // Only allow delivery when loan-status confirms BorrowedByYou (has the right dueDate)
   const canDeliver = loan.data?.status === 'BorrowedByYou'
 
   return (

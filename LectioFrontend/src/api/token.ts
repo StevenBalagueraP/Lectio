@@ -5,7 +5,6 @@ const REFRESH_TOKEN_KEY = 'lectio:refreshToken'
 const EXPIRES_AT_KEY = 'lectio:accessTokenExpiresAt'
 const USER_KEY = 'lectio:user'
 
-// Se refresca un poco antes de que el access token (15 min) venza de verdad
 const EXPIRY_MARGIN_MS = 30 * 1000
 
 const listeners = new Set<() => void>()
@@ -39,13 +38,11 @@ export function getRefreshToken(): string | null {
   return read(REFRESH_TOKEN_KEY)
 }
 
-// Un token sin fecha guardada (ej: pegado a mano en DevTools) se considera vigente
 export function isAccessTokenExpired(): boolean {
   const expiresAt = Number(read(EXPIRES_AT_KEY))
   return expiresAt > 0 && Date.now() >= expiresAt - EXPIRY_MARGIN_MS
 }
 
-/** Guarda lo que devuelven login, register y refresh. El refresh token anterior queda reemplazado. */
 export function saveSession(auth: AuthResponse) {
   write(ACCESS_TOKEN_KEY, auth.accessToken)
   write(REFRESH_TOKEN_KEY, auth.refreshToken)
@@ -62,7 +59,6 @@ export function clearSession() {
   notify()
 }
 
-// useSyncExternalStore exige que el snapshot sea el mismo objeto mientras nada cambie
 let cachedRaw: string | null = null
 let cachedUser: AuthUser | null = null
 
@@ -84,7 +80,6 @@ function parseUser(raw: string | null): AuthUser | null {
   }
 }
 
-/** Avisa de cambios de sesión en esta pestaña y en las demás (evento `storage`). */
 export function subscribeSession(listener: () => void) {
   listeners.add(listener)
   window.addEventListener('storage', listener)

@@ -8,7 +8,6 @@ export interface BookLoanStatus {
   dueDate: string | null
 }
 
-// Status of a user's loan entry (distinct from LoanStatus which is per-book availability)
 export type UserLoanStatus = 'Active' | 'Overdue' | 'Returned'
 
 export interface LoanBookSummary {

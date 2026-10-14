@@ -14,7 +14,6 @@ export function HistoryPage() {
 
   const page = Math.max(1, parseInt(params.get('page') ?? '', 10) || 1)
 
-  // All hooks must be called before any early return
   const loans = useUserLoans(user?.id ?? 0, page, Boolean(user))
 
   if (!user) {

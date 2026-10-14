@@ -6,10 +6,6 @@ import type { BookRatings } from '../../../api/types/rating'
 import { emptyResponse, jsonResponse, mockFetch } from '../../../test/mockFetch'
 import { BookReviewsPage } from './BookReviewsPage'
 
-// Prueba de integración: la página real + router real + hooks reales (useFetch, cache, http).
-// Lo único simulado es `fetch`, que responde según la URL y el método.
-//
-// El cache de useFetch vive a nivel de módulo, así que cada prueba usa un bookId distinto.
 let nextBookId = 200
 
 const makeBook = (id: number): BookDetail => ({
@@ -46,7 +42,6 @@ interface ApiOptions {
   postResponse?: Response
 }
 
-/** Simula el backend. Devuelve el mock para poder inspeccionar las llamadas. */
 function mockApi(bookId: number, { userId = 5, ratingsAfterPost, postResponse }: ApiOptions = {}) {
   let posted = false
 

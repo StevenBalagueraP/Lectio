@@ -14,7 +14,7 @@ export function useLogout() {
     } catch {
       // Sin red o con error del backend igual se cierra la sesión local
     } finally {
-      clearSession() // useSession cambia a null y ProfilePage redirige a /login
+      clearSession() 
     }
   }, [])
 

@@ -1,8 +1,6 @@
 import { isValidEmail } from '../../shared/utils/validation'
 import { validateLogin } from '../../features/login/utils'
 
-// ─── isValidEmail ─────────────────────────────────────────────────────────────
-
 describe('isValidEmail (unit)', () => {
   it('returns true for a standard email address', () => {
     expect(isValidEmail('user@example.com')).toBe(true)
@@ -33,12 +31,10 @@ describe('isValidEmail (unit)', () => {
   })
 
   it('ignores leading/trailing whitespace when validating', () => {
-    // The implementation trims before testing, so padded valid emails pass.
     expect(isValidEmail('  user@example.com  ')).toBe(true)
   })
 })
 
-// ─── validateLogin ────────────────────────────────────────────────────────────
 
 describe('validateLogin (unit)', () => {
   it('returns an empty object for valid credentials', () => {
@@ -70,7 +66,6 @@ describe('validateLogin (unit)', () => {
 
   it('accepts an email with leading/trailing spaces (trimmed internally by isValidEmail)', () => {
     const errors = validateLogin({ email: '  user@example.com  ', password: '1234' })
-    // isValidEmail trims, so no email error expected
     expect(errors.email).toBeUndefined()
   })
 })

@@ -11,10 +11,8 @@ namespace Lectio.Api.Application.Auth;
 
 public class AuthService : IAuthService
 {
-    // BCrypt only uses the first 72 bytes of the password.
     private const int MaxPasswordBytes = 72;
 
-    // Used to keep login timing similar when the email does not exist.
     private static readonly string DummyPasswordHash = BCrypt.Net.BCrypt.HashPassword(Guid.NewGuid().ToString());
 
     private readonly AppDbContext _context;
@@ -43,7 +41,6 @@ public class AuthService : IAuthService
             throw new ConflictException("Email is already registered.");
         }
 
-        // Role is never taken from the request: new accounts always start with the entity default ("user").
         var user = new User
         {
             FullName = request.FullName.Trim(),
@@ -98,8 +95,6 @@ public class AuthService : IAuthService
 
         if (stored.RevokedAt is not null)
         {
-            // A token that was already rotated is being used again: it may have been stolen.
-            // Close every session of that user. (A token revoked by logout is just rejected.)
             if (stored.ReplacedByTokenHash is not null)
             {
                 await RevokeAllForUserAsync(stored.UserId, cancellationToken);
@@ -117,7 +112,6 @@ public class AuthService : IAuthService
         var newTokenHash = _tokenService.HashToken(newRefreshToken);
         var now = DateTime.UtcNow;
 
-        // Atomic claim: only one request can rotate a given token.
         var rotated = await _context.RefreshTokens
             .Where(t => t.RefreshTokenId == stored.RefreshTokenId && t.RevokedAt == null)
             .ExecuteUpdateAsync(setters => setters
@@ -141,7 +135,6 @@ public class AuthService : IAuthService
 
         await _context.SaveChangesAsync(cancellationToken);
 
-        // The user is read fresh from the DB, so a role change is reflected in the new access token.
         return BuildResponse(stored.User, newRefreshToken);
     }
 
@@ -159,7 +152,6 @@ public class AuthService : IAuthService
     {
         var now = DateTime.UtcNow;
 
-        // Housekeeping: expired tokens are useless, drop them.
         await _context.RefreshTokens
             .Where(t => t.UserId == user.UserId && t.ExpiresAt < now)
             .ExecuteDeleteAsync(cancellationToken);

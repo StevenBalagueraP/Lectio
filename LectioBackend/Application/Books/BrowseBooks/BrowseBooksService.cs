@@ -40,7 +40,7 @@ public class BrowseBooksService : IBrowseBooksService
 
     var rows = await query
         .OrderBy(book => book.Title)
-        .ThenBy(book => book.BookId) // desempate: títulos repetidos no deben saltarse ni duplicarse entre páginas
+        .ThenBy(book => book.BookId) 
         .Skip((page - 1) * pageSize)
         .Take(pageSize)
         .Select(book => new

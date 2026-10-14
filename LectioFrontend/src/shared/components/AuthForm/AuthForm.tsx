@@ -8,12 +8,9 @@ interface AuthFormProps {
   submitLabel: string
   submittingLabel: string
   submitting: boolean
-  /** Error del servidor (o de red) para mostrar sobre el botón. */
   error: string | null
   onSubmit: (event: SubmitEvent<HTMLFormElement>) => void
-  /** Enlace a la otra pantalla ("¿No tienes cuenta?"). */
   footer: ReactNode
-  /** Los campos (`TextField`). */
   children: ReactNode
 }
 
