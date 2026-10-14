@@ -9,7 +9,6 @@ export interface RegisterValues {
 
 export type RegisterErrors = Partial<Record<keyof RegisterValues, string>>
 
-// Mismas reglas que el backend: nombre 2-255, email válido, contraseña 8-72 (≤ 72 bytes) con letra y número
 export function validateRegister({ fullName, email, password }: RegisterValues): RegisterErrors {
   const errors: RegisterErrors = {}
 

@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent, type FormEvent } from 'react'
+import { useState, type ChangeEvent, type SubmitEvent } from 'react'
 import { Link, Navigate, useLocation } from 'react-router'
 import { login } from '../../../api/endpoints/auth'
 import { saveSession } from '../../../api/token'
@@ -18,7 +18,6 @@ export function LoginPage() {
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [submitting, setSubmitting] = useState(false)
 
-  // Con sesión (también justo después de iniciarla) se vuelve a donde venía el usuario
   if (user) return <Navigate to={getRedirectTarget(location.state)} replace />
 
   const handleChange = (field: keyof LoginValues) => (event: ChangeEvent<HTMLInputElement>) => {
@@ -26,7 +25,7 @@ export function LoginPage() {
     setErrors((current) => ({ ...current, [field]: undefined }))
   }
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault()
     if (submitting) return
 
@@ -38,7 +37,7 @@ export function LoginPage() {
     setSubmitError(null)
     try {
       const auth = await login({ email: values.email.trim(), password: values.password })
-      saveSession(auth) // useSession cambia y el <Navigate> de arriba redirige
+      saveSession(auth) 
     } catch (error) {
       setSubmitError(getApiErrorMessage(error, 'Something went wrong. Please try again.'))
     } finally {

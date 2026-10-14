@@ -4,9 +4,6 @@ import { MemoryRouter, Route, Routes } from 'react-router'
 import { emptyResponse, jsonResponse, mockFetch } from '../../../test/mockFetch'
 import { LoginPage } from './LoginPage'
 
-// Prueba de integración: la página real + router real + http real + hooks reales.
-// Solo se simula `fetch` (POST /api/auth/login).
-
 const AUTH_RESPONSE = {
   accessToken: 'acc-token-123',
   refreshToken: 'ref-token-456',
@@ -111,7 +108,6 @@ describe('LoginPage (integration)', () => {
   })
 
   it('shows "Logging in…" while the request is in flight', async () => {
-    // Use a promise that never resolves to keep the request pending
     let resolve!: (r: Response) => void
     const pending = new Promise<Response>((res) => { resolve = res })
     mockFetch(() => pending)
@@ -124,7 +120,6 @@ describe('LoginPage (integration)', () => {
 
     expect(await screen.findByRole('button', { name: 'Logging in…' })).toBeDisabled()
 
-    // Resolve so the component can clean up
     resolve(jsonResponse(AUTH_RESPONSE))
     await waitFor(() => expect(screen.queryByRole('button', { name: 'Logging in…' })).not.toBeInTheDocument())
   })

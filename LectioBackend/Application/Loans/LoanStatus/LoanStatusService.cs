@@ -12,7 +12,7 @@ public class LoanStatusService : ILoanStatusService
     private const string Available = "Available";
     private const string BorrowedByYou = "BorrowedByYou";
     private const string Unavailable = "Unavailable";
-    private const string LoginRequired = "LoginRequired"; // <- nueva
+    private const string LoginRequired = "LoginRequired";
 
     private readonly AppDbContext _context;
 

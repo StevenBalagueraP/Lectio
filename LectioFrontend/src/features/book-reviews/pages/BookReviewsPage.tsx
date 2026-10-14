@@ -35,7 +35,6 @@ export function BookReviewsPage() {
   const loan = useBookLoanStatus(id, validId)
   const ratings = useBookRatings(id, page, version, validId)
 
-  // Sin JWT el backend responde `userId: null` (status LoginRequired)
   const userId = loan.data?.userId ?? null
   const isLoggedIn = userId !== null
 
@@ -46,7 +45,7 @@ export function BookReviewsPage() {
 
     const handleAddReview = () => {
     if (!isLoggedIn) {
-      navigate('/login', { state: { from: `/books/${id}/reviews` } }) // Al iniciar sesión vuelve a esta pantalla
+      navigate('/login', { state: { from: `/books/${id}/reviews` } }) 
       return
     }
     setNotice(null)
@@ -64,7 +63,7 @@ export function BookReviewsPage() {
       setFormOpen(false)
       setNotice(res.message)
       setPage(1)
-      setVersion((current) => current + 1) // fuerza recargar la lista y el promedio
+      setVersion((current) => current + 1) 
     } catch (error) {
       setSubmitError(getSubmitErrorMessage(error))
     } finally {

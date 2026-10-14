@@ -6,13 +6,7 @@ import type { Category } from '../../../api/types/category'
 import { emptyResponse, jsonResponse, mockFetch } from '../../../test/mockFetch'
 import { CategoriesPage } from './CategoriesPage'
 
-// Prueba de integración: la página real + router real + hooks reales (useBookSearch, useFetch, cache, http).
-// Solo se simula `fetch`.
-//
-// El cache de useFetch/useBookSearch vive en memoria a nivel de módulo.
-// Cada prueba usa una querystring distinta (page=<n>) para evitar colisiones de clave.
-
-let pageCounter = 100 // número de página alto para no colisionar con otros suites
+let pageCounter = 100 
 
 const CATEGORIES: Category[] = [
   { id: 1, name: 'Fiction' },
@@ -56,7 +50,6 @@ function mockApi({
   })
 }
 
-/** Each test uses a unique starting page so the cache key is always fresh. */
 function renderPage() {
   const page = pageCounter++
   const user = userEvent.setup()
@@ -109,10 +102,8 @@ describe('CategoriesPage (integration)', () => {
     mockApi()
     const { user } = renderPage()
 
-    // Wait for the component to fully load first
     await screen.findByText('Clean Code')
 
-    // The dropdown button has an accessible name from the "Filter by category" label
     await user.click(screen.getByRole('button', { name: /filter by category/i }))
 
     expect(screen.getByRole('checkbox', { name: 'Fiction' })).toBeInTheDocument()

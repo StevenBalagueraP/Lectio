@@ -34,7 +34,6 @@ describe('RatingStars (unit)', () => {
 
   it('applies the lg class modifier when size="lg"', () => {
     const { container } = render(<RatingStars value={3} size="lg" />)
-    // identity-obj-proxy returns the class name as-is
     expect(container.firstChild).toHaveClass('lg')
   })
 

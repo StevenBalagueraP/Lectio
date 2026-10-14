@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "docs:files": "node scripts/generate-frontend-files.mjs",
+    "docs:check": "node scripts/check-frontend-context.mjs"
   },
   "dependencies": {
     "react": "^19.2.8",

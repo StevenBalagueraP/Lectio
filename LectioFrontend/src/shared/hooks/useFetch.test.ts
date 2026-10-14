@@ -1,7 +1,6 @@
 import { act, renderHook, waitFor } from '@testing-library/react'
 import { useFetch } from './useFetch'
 
-// Los keys son únicos por prueba porque el cache vive a nivel de módulo.
 describe('useFetch', () => {
   it('goes from loading to data', async () => {
     const fetcher = jest.fn().mockResolvedValue(['a', 'b'])
@@ -85,7 +84,7 @@ describe('useFetch', () => {
       expect(first.result.current.data).toBe('old')
       first.unmount()
 
-      jest.advanceTimersByTime(2000) // el cache vence
+      jest.advanceTimersByTime(2000) 
 
       const second = renderHook(() => useFetch('uf:stale', fetcher, { ttl: 1000 }))
       await act(async () => {})

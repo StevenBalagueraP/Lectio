@@ -1,2 +1,1 @@
-// Opciones del menú del perfil: por ahora solo se muestran, todavía no llevan a ninguna pantalla
 export const PROFILE_MENU = ['Booking History', 'My Info', 'Wishlist', 'Terms and Conditions'] as const

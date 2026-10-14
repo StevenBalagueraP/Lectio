@@ -98,7 +98,6 @@
   text-align: center;
 }
 
-/* Empuja el botón al fondo: las tarjetas de una fila tienen la misma altura (grid stretch) */
 .actions {
   display: flex;
   justify-content: center;

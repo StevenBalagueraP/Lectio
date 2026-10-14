@@ -1,4 +1,4 @@
-import type { FormEvent, ReactNode } from 'react'
+import type { ReactNode, SubmitEvent } from 'react'
 import { Button } from '../Button/Button'
 import styles from './AuthForm.module.css'
 
@@ -8,12 +8,9 @@ interface AuthFormProps {
   submitLabel: string
   submittingLabel: string
   submitting: boolean
-  /** Error del servidor (o de red) para mostrar sobre el botón. */
   error: string | null
-  onSubmit: (event: FormEvent<HTMLFormElement>) => void
-  /** Enlace a la otra pantalla ("¿No tienes cuenta?"). */
+  onSubmit: (event: SubmitEvent<HTMLFormElement>) => void
   footer: ReactNode
-  /** Los campos (`TextField`). */
   children: ReactNode
 }
 

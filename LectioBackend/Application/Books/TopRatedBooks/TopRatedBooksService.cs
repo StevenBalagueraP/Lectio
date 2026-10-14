@@ -65,8 +65,6 @@ public class TopRatedBooksService : ITopRatedBooksService
         }
     }
 
-    // Relies on IX_Book_AverageRating (DESC) for the ranking, and on IX_BookCategory_CategoryId
-    // for the category filter, both already defined on the schema.
     private IQueryable<Book> BuildTopRatedBooksQuery(int? categoryId)
     {
         var query = _context.Books
@@ -84,8 +82,6 @@ public class TopRatedBooksService : ITopRatedBooksService
             .ThenByDescending(book => book.RatingCount)
             .Take(TopBooksCount);
     }
-
-    // A book can have several authors; the response now exposes the full list.
     private async Task<Dictionary<int, List<BookAuthorSummaryDto>>> GetAuthorsByBookIdAsync(
         IReadOnlyCollection<int> bookIds,
         CancellationToken cancellationToken)
@@ -111,8 +107,6 @@ public class TopRatedBooksService : ITopRatedBooksService
                     .ToList());
     }
 
-    // A book can belong to several categories; the response now exposes the full list,
-    // regardless of the categoryId filter used to select the top books.
     private async Task<Dictionary<int, List<BookCategorySummaryDto>>> GetCategoriesByBookIdAsync(
         IReadOnlyCollection<int> bookIds,
         CancellationToken cancellationToken)

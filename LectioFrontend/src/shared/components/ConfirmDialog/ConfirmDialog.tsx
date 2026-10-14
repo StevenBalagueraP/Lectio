@@ -34,14 +34,12 @@ export function ConfirmDialog({
     if (!dialog) return
     if (open) {
       dialog.showModal()
-      // Focus the first button (Cancel) so Esc / Tab work intuitively
       actionsRef.current?.querySelector<HTMLButtonElement>('button')?.focus()
     } else {
       dialog.close()
     }
   }, [open])
 
-  // Intercept the native `cancel` event (fired by Esc) so we control state
   useEffect(() => {
     const dialog = dialogRef.current
     if (!dialog) return
@@ -53,7 +51,6 @@ export function ConfirmDialog({
     return () => dialog.removeEventListener('cancel', handleCancel)
   }, [onCancel])
 
-  // Basic focus trap: cycle between the two action buttons
   useEffect(() => {
     if (!open) return
     const dialog = dialogRef.current

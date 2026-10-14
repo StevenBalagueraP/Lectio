@@ -78,7 +78,6 @@
   text-align: center;
 }
 
-/* Skeleton states */
 .heroSkeleton {
   height: 300px;
 }
@@ -93,7 +92,6 @@
   border-radius: var(--radius-sm);
 }
 
-/* Error/empty state */
 .state {
   display: flex;
   flex-direction: column;

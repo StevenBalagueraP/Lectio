@@ -25,7 +25,6 @@ export function LoanPage() {
   const user = useSession()
   const handleBack = useGoBack(`/books/${id}`)
 
-  // Dates are fixed at mount time — not recalculated on re-render
   const [checkoutDate] = useState(() => new Date())
   const [dueDate] = useState(() => {
     const d = new Date()
@@ -37,18 +36,15 @@ export function LoanPage() {
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [notice, setNotice] = useState<string | null>(null)
 
-  // Hooks must be called before any early returns
   const book = useBookDetail(id, validId && user !== null)
   const loan = useBookLoanStatus(id, validId && user !== null)
 
-  // Redirect unauthenticated users to login; session is read from localStorage so it's synchronous
   useEffect(() => {
     if (user === null) {
       navigate('/login', { state: { from: `/books/${id}` }, replace: true })
     }
   }, [user, navigate, id])
 
-  // While redirecting, render nothing to avoid a flash of content
   if (user === null) return null
 
   if (book.loading) {

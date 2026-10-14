@@ -28,7 +28,6 @@ public class CategoryTranslationService : ICategoryTranslationService
         ["Negocios"] = "Business",
         ["Tecnología"] = "Technology",
         ["Populares"] = "Popular",
-        // "Romance" ya está en inglés en ambos idiomas, no necesita entrada
     };
 
     public CategoryTranslationService(AppDbContext context)

@@ -1,8 +1,6 @@
 import { act, renderHook, waitFor } from '@testing-library/react'
 import { useDebouncedValue } from './useDebouncedValue'
 
-// Prueba de integración: el hook real + los timers reales de jest (fake timers).
-// Verifica el ciclo completo: valor cambia → se aplaza → se confirma tras el delay.
 
 describe('useDebouncedValue (integration)', () => {
   beforeEach(() => {
@@ -25,7 +23,7 @@ describe('useDebouncedValue (integration)', () => {
 
     act(() => {
       rerender({ v: 'b' })
-      jest.advanceTimersByTime(300) // Still 100 ms short of the 400 ms delay
+      jest.advanceTimersByTime(300)
     })
 
     expect(result.current).toBe('a')
@@ -50,18 +48,15 @@ describe('useDebouncedValue (integration)', () => {
       initialProps: { v: 'a' },
     })
 
-    // Rapid succession of updates; each should restart the timer
     act(() => {
       rerender({ v: 'b' })
-      jest.advanceTimersByTime(200) // half-way through for 'b'
+      jest.advanceTimersByTime(200)
       rerender({ v: 'c' })
-      jest.advanceTimersByTime(200) // half-way through for 'c' (timer reset)
+      jest.advanceTimersByTime(200) 
     })
 
-    // Neither 'b' nor 'c' should have committed yet
     expect(result.current).toBe('a')
 
-    // Now let 'c' fully commit
     act(() => {
       jest.advanceTimersByTime(200)
     })
@@ -75,10 +70,7 @@ describe('useDebouncedValue (integration)', () => {
     })
 
     rerender({ v: 'updated' })
-    unmount() // Should cancel the pending timer
-
-    // No error should be thrown if the timer fires after unmount.
-    // This also implicitly tests that clearTimeout is called.
+    unmount() 
     expect(() => act(() => jest.runAllTimers())).not.toThrow()
   })
 
@@ -92,7 +84,7 @@ describe('useDebouncedValue (integration)', () => {
     act(() => {
       jest.advanceTimersByTime(999)
     })
-    expect(result.current).toBe('x') // not yet
+    expect(result.current).toBe('x') 
 
     act(() => {
       jest.advanceTimersByTime(1)

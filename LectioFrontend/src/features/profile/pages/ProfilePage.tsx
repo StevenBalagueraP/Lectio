@@ -10,7 +10,6 @@ export function ProfilePage() {
   const user = useSession()
   const { loggingOut, logout } = useLogout()
 
-  // Sin sesión no hay perfil. Tras cerrar sesión a propósito no se guarda `from` (no volver al perfil)
   if (!user) {
     return <Navigate to="/login" replace state={loggingOut ? undefined : { from: '/profile' }} />
   }

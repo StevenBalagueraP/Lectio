@@ -6,7 +6,6 @@ import styles from './Navbar.module.css'
 import { NAV_ITEMS } from './navItems'
 
 interface NavbarProps {
-  /** Nombre de quien tiene sesión. Sin él se muestra "Log in" y el acceso lleva a /login. */
   userName?: string
   avatarUrl?: string
   overlay?: boolean

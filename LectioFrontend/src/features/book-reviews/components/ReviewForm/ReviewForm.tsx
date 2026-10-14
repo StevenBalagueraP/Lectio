@@ -1,4 +1,4 @@
-import { useId, useState, type FormEvent } from 'react'
+import { useId, useState, type SubmitEvent } from 'react'
 import { MdStar } from 'react-icons/md'
 import { Button } from '../../../../shared/components/Button/Button'
 import { MAX_COMMENT_LENGTH, STAR_VALUES } from '../../constants'
@@ -22,7 +22,7 @@ export function ReviewForm({ submitting, error, onSubmit, onCancel }: ReviewForm
   const starsLabelId = useId()
   const commentId = useId()
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault()
     if (stars === 0 || submitting) return
     onSubmit({ stars, comment: comment.trim() })
