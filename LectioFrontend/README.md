@@ -102,7 +102,7 @@ The app reads a single environment variable. It is typed in `src/config/env.ts` 
 Create a `.env` file in the project root with the variable and your own value:
 
 ```bash
-VITE_API_URL=<your-value>
+VITE_API_URL=http://localhost:5031
 ```
 
 Use the variable name with a placeholder only; never commit real values. The `.env` file is ignored by Git (the rule lives in the repository root `.gitignore`).
