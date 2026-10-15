@@ -1,10 +1,11 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter, Route, Routes } from 'react-router'
 import type { BookSummary } from '../../../api/types/book'
 import type { Category } from '../../../api/types/category'
 import { emptyResponse, jsonResponse, mockFetch } from '../../../test/mockFetch'
 import { CategoriesPage } from './CategoriesPage'
+
 
 let pageCounter = 100 
 
@@ -48,6 +49,14 @@ function mockApi({
     }
     return emptyResponse(404)
   })
+}
+
+type FetchMock = ReturnType<typeof mockApi>
+
+function booksUrls(fetchMock: FetchMock) {
+  return fetchMock.mock.calls
+    .map(([input]) => String(input))
+    .filter((url) => url.includes('/api/books'))
 }
 
 function renderPage() {
@@ -109,6 +118,53 @@ describe('CategoriesPage (integration)', () => {
     expect(screen.getByRole('checkbox', { name: 'Fiction' })).toBeInTheDocument()
     expect(screen.getByRole('checkbox', { name: 'Science' })).toBeInTheDocument()
     expect(screen.getByRole('checkbox', { name: 'History' })).toBeInTheDocument()
+  })
+
+  it('opens the sort and filter dropdown and lists all options', async () => {
+    mockApi()
+    const { user } = renderPage()
+
+    await screen.findByText('Clean Code')
+    await user.click(screen.getByRole('button', { name: /sort and filter/i }))
+
+    expect(screen.getByRole('checkbox', { name: 'Top rated' })).toBeInTheDocument()
+    expect(screen.getByRole('checkbox', { name: 'Available only' })).toBeInTheDocument()
+    expect(screen.getByRole('checkbox', { name: 'Newest first' })).toBeInTheDocument()
+    expect(screen.getByRole('checkbox', { name: 'Oldest first' })).toBeInTheDocument()
+    expect(screen.getByRole('checkbox', { name: 'Longest first' })).toBeInTheDocument()
+    expect(screen.getByRole('checkbox', { name: 'Shortest first' })).toBeInTheDocument()
+  })
+
+  it('sends the selected filters to the API in selection order', async () => {
+    const fetchMock = mockApi()
+    const { user } = renderPage()
+
+    await screen.findByText('Clean Code')
+    await user.click(screen.getByRole('button', { name: /sort and filter/i }))
+    await user.click(screen.getByRole('checkbox', { name: 'Top rated' }))
+    await user.click(screen.getByRole('checkbox', { name: 'Oldest first' }))
+
+    await waitFor(() => {
+      const urls = booksUrls(fetchMock)
+      expect(urls[urls.length - 1]).toContain('filter=TopRated&filter=Oldest')
+    })
+  })
+
+  it('replaces the opposite option instead of sending both', async () => {
+    const fetchMock = mockApi()
+    const { user } = renderPage()
+
+    await screen.findByText('Clean Code')
+    await user.click(screen.getByRole('button', { name: /sort and filter/i }))
+    await user.click(screen.getByRole('checkbox', { name: 'Newest first' }))
+    await user.click(screen.getByRole('checkbox', { name: 'Oldest first' }))
+
+    await waitFor(() => {
+      const urls = booksUrls(fetchMock)
+      const last = urls[urls.length - 1]
+      expect(last).toContain('filter=Oldest')
+      expect(last).not.toContain('filter=Newest')
+    })
   })
 
   it('navigates to the book detail page when "Ver detalle" is clicked', async () => {

@@ -40,6 +40,11 @@ public class BooksController : ControllerBase
         _loanStatusService = loanStatusService;
     }
 
+    /// <summary>
+    /// Catálogo paginado. Parámetro opcional y repetible <c>filter</c>
+    /// (?filter=TopRated&amp;filter=Oldest): TopRated | Available | Newest | Oldest | Longest | Shortest.
+    /// El orden en que llegan define la prioridad del ordenamiento.
+    /// </summary>
     [HttpGet]
     [ProducesResponseType(typeof(BrowseBooksResponseDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -47,11 +52,12 @@ public class BooksController : ControllerBase
     public async Task<ActionResult<BrowseBooksResponseDto>> GetBooks(
         [FromQuery] string? search,
         [FromQuery] int[]? categoryIds,
+        [FromQuery(Name = "filter")] BookFilter[]? filters,
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 10,
         CancellationToken cancellationToken = default)
     {
-        var response = await _browseBooksService.GetBooksAsync(search, categoryIds, page, pageSize, cancellationToken);
+        var response = await _browseBooksService.GetBooksAsync(search, categoryIds, filters, page, pageSize, cancellationToken);
         return Ok(response);
     }
 
@@ -75,6 +81,7 @@ public class BooksController : ControllerBase
         var response = await _bookDetailService.GetBookDetailAsync(id, cancellationToken);
         return Ok(response);
     }
+
     [HttpGet("{id:int}/ratings")]
     [ProducesResponseType(typeof(BookRatingsResponseDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -109,4 +116,3 @@ public class BooksController : ControllerBase
         return Ok(response);
     }
 }
-

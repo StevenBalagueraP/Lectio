@@ -1,213 +1,298 @@
-# Testing with Jest + React Testing Library (LectioFrontend)
+# Lectio
 
-## 1. Install the dev dependencies
+> A university library app: browse the catalogue, borrow and return books, follow your loan history and publish reviews.
 
-```bash
-npm install --save-dev jest jest-environment-jsdom @types/jest \
-  @testing-library/react @testing-library/dom @testing-library/jest-dom @testing-library/user-event \
-  babel-jest @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript identity-obj-proxy
-```
+**Lectio** is the final project of the university course **Desarrollo Web** (Jala University). It is made of two parts that live in the same repository (`https://github.com/StevenBalagueraP/Lectio`):
 
-## 2. Copy the files from the zip (keeping the same paths)
+| Part | What it is | Stack |
+| --- | --- | --- |
+| **LectioBackend** | REST API: catalogue, authentication, loans and ratings | ASP.NET Core (`net10.0`), EF Core, PostgreSQL on Supabase |
+| **LectioFrontend** | Single-page web client that consumes the API | React 19, TypeScript, Vite |
 
-- `jest.config.cjs` and `jest.babel-import-meta.cjs` → project root
-- `src/test/*` → test utilities (polyfills, mocks, `mockFetch`)
-- `*.test.ts(x)` → next to each component, hook, or page they test
+Every screen of the frontend is backed by a real endpoint of the API: the catalogue, the book detail, the loan status, the loans and the ratings never come from static data.
 
-## 3. Small changes to existing files
+## Table of Contents
 
-**package.json** → add these to `"scripts"`:
+- [Design (Figma)](#design-figma)
+- [Features](#features)
+- [Repository Structure](#repository-structure)
+- [Technologies](#technologies)
+- [Installation and Running](#installation-and-running)
+- [Architecture](#architecture)
+- [Authentication](#authentication)
+- [Database Model](#database-model)
+- [Testing](#testing)
+- [How to Contribute](#how-to-contribute)
+- [License](#license)
 
-```json
-"test": "jest",
-"test:watch": "jest --watch",
-"test:coverage": "jest --coverage"
-```
+## Design (Figma)
 
-**tsconfig.app.json** → in `compilerOptions`, replace `"types"` with:
+The UI mock-ups live in Figma:
 
-```json
-"types": ["vite/client", "node", "jest", "@testing-library/jest-dom"],
-```
+https://www.figma.com/design/VWf8Ie1JsaLGxFNFHw4pIY/Web-Development---Book-store-Mock-ups?node-id=0-1&p=f&t=aDfMx0cy5LG7kPe2-0
 
-**eslint.config.js** → `globalIgnores(['dist', 'coverage'])`
+## Features
 
-**.gitignore** → add a `coverage` line
+A reader can:
 
-## 4. Run the tests
+- See the top-rated books and browse the catalogue by title and category, with filters and pagination kept in the URL.
+- Open the detail of a book and read its summary, basic info and reviews.
+- Borrow and return books, and follow the loan history in "My Library".
+- Read and publish reviews (rating from 1 to 5 and an optional comment).
+- Register, log in, see the profile and log out.
 
-```bash
-npm test
-npm run test:coverage
-```
+| Path | Screen | Needs a session |
+| --- | --- | --- |
+| `/` | Home: hero carousel, category shortcuts and top-rated books | No |
+| `/categories` | Catalogue: search, category and book filters, pagination | No |
+| `/books/:bookId` | Book detail | Only to borrow or return |
+| `/books/:bookId/loan` | Borrow: review the checkout and due dates and confirm | Yes |
+| `/books/:bookId/reviews` | Reviews: average rating, review list and review form | Only to publish |
+| `/history` | "My Library": loans with their status; return or rate a book | Yes |
+| `/login` | Sign in with email and password | No |
+| `/register` | Create an account | No |
+| `/profile` | User name, menu and log out | Yes |
 
-## What is tested
+When a signed-out user tries a protected action, the app sends them to `/login` and returns them to the original page after signing in.
 
-| File | Type | What it covers |
-|---|---|---|
-| `LoanButton.test.tsx` | Unit (component) | Label and state for each LoanStatus, loading, error, click |
-| `BookGrid.test.tsx` | Unit (component) | Error, skeletons, empty state, cards, https covers, onOpen, "stale" state |
-| `ReviewForm.test.tsx` | Unit (component) | Stars, validation, trimmed comment, counter, submit, cancel |
-| `useFetch.test.ts` | Unit (hook) | States, abort signal, de-duplication, TTL, expired data, `keepPrevious` |
-| `BookReviewsPage.test.tsx` | Integration | Page + router + hooks + cache + `http`, with only `fetch` mocked |
-
----
-
-# Test documentation
-
-This section describes what the test suite covers, how it is set up, and the latest results.
-
-## Overview
-
-The frontend tests use **Jest** as the test runner and **React Testing Library** to render components and interact with them the way a user would. There are five test suites with 50 tests in total:
-
-| Suite | Tests | Level |
-|---|---|---|
-| `LoanButton.test.tsx` | 9 | Component |
-| `BookGrid.test.tsx` | 9 | Component |
-| `ReviewForm.test.tsx` | 12 | Component |
-| `useFetch.test.ts` | 10 | Hook |
-| `BookReviewsPage.test.tsx` | 10 | Integration |
-
-The component and hook tests check one piece in isolation. The `BookReviewsPage` suite is different: it renders the real page with the router, hooks, cache, and HTTP layer all wired together, and only `fetch` is mocked. That makes it the closest thing to an end-to-end check in the suite without needing a browser or a running backend.
-
-## What each suite covers
-
-### LoanButton
-
-- Shows the correct label and enabled/disabled state for each loan status:
-  - `LoginRequired` → "Log in to borrow" (enabled)
-  - `Available` → "Borrow" (enabled)
-  - `BorrowedByYou` → "Deliver" (enabled)
-  - `Unavailable` → "Unavailable" (disabled)
-- Is disabled and marked as busy while the status is loading.
-- Shows "Status unavailable" when the request failed or when there is no status yet.
-- Calls `onAction` with the current status when clicked.
-- Does not call `onAction` when the button is disabled.
-
-### BookGrid
-
-- Shows only the error message, with no books, when there is an error.
-- Shows 4 skeleton cards by default while loading without data, and respects a custom `skeletonCount`.
-- Shows the default empty message when there are no books, and a custom message when one is provided.
-- Renders one card per book.
-- Upgrades cover URLs from `http` to `https`.
-- Calls `onOpen` with the book id when "See More" is pressed.
-- Keeps showing the previous books (dimmed) while a new page is loading.
-
-### ReviewForm
-
-- Starts with no rating selected and the Submit button disabled.
-- Selecting a rating enables Submit.
-- Submits the star rating together with the trimmed comment.
-- Allows an empty comment, since it is optional.
-- Does not submit without a rating, including when a submit event is fired directly to bypass the disabled button.
-- Ignores a submit event while a request is already in progress.
-- Updates the character counter and limits the comment to 1000 characters.
-- Disables the buttons and shows "Sending…" while submitting.
-- Shows the error message passed in through props, and renders no alert when there is none.
-- Calls `onCancel` when Cancel is pressed.
-
-### useFetch
-
-- Goes from loading to data.
-- Passes an `AbortSignal` to the fetcher.
-- Exposes the message of an error thrown by the fetcher, and falls back to a generic message when the rejection is not an `Error`.
-- Does not run the fetcher when `enabled` is `false`.
-- Shares a single in-flight request between hooks that use the same key (when `ttl > 0`).
-- Returns cached data while the TTL has not expired.
-- Falls back to stale data when a refetch fails.
-- Refetches when the key changes and hides the old data, unless `keepPrevious` is set.
-- Keeps the previous data while the next key loads when `keepPrevious` is `true`.
-
-### BookReviewsPage (integration)
-
-- Loads the book, the average rating, and the list of reviews.
-- Shows an error with a link back home when the book does not exist.
-- Shows a message when the book has no reviews yet.
-- Shows an alert when the reviews cannot be loaded.
-- Sends a logged-out user to `/login` when they press "Add Review".
-- Lets a logged-in user publish a review, then refreshes the list.
-- Sends a `null` comment when the user leaves the comment empty.
-- Shows the server's message inside the form when the backend rejects the review.
-- Asks the user to log in again when the session has expired (401).
-- Closes the form without sending anything when Cancel is pressed.
-
-## Test setup
-
-### Jest configuration (`jest.config.cjs`)
-
-- **Environment:** `jsdom`, so components can render as they would in a browser.
-- **Transform:** `babel-jest` with `@babel/preset-env`, `@babel/preset-react` (automatic runtime), and `@babel/preset-typescript`. The same transform also handles `react-router` and `@remix-run/*`, which are published as ESM only, so `transformIgnorePatterns` lets those packages through.
-- **Setup files:** `src/test/polyfills.ts` runs before each suite, and `src/test/setupTests.ts` runs after the test framework is installed.
-- **Module mapping:** CSS modules are mapped to `identity-obj-proxy`, plain CSS to a stub, and a few modules to mocks (see below).
-- **`clearMocks: true`**, so mock call history is reset between tests.
-
-### Test utilities (`src/test/`)
-
-| File | Purpose |
-|---|---|
-| `polyfills.ts` | Adds `TextEncoder` and `TextDecoder` to the global scope, which jsdom does not provide. |
-| `setupTests.ts` | Loads `@testing-library/jest-dom` for matchers like `toBeDisabled()` and `toBeInTheDocument()`. |
-| `styleMock.ts` | Empty stand-in for imported `.css` files. |
-| `cookieEsMock.ts` | Stand-in for `cookie-es`, which `react-router` imports but which only ships as `.mjs`. |
-| `envMock.ts` | Replaces `config/env.ts`, because Jest does not understand Vite's `import.meta.env`. |
-| `mockFetch.ts` | Helpers to fake `fetch`: `mockFetch(handler)`, `jsonResponse(body, status)`, and `emptyResponse(status)`. |
-
-`jest.babel-import-meta.cjs`, in the project root, is a small Babel plugin that rewrites `import.meta` to an object backed by `process.env`, so code written for Vite can run under Jest.
-
-## Results
-
-### Test run
+## Repository Structure
 
 ```text
-> lectiofrontend@0.0.0 test
-> jest
-
- PASS  src/features/book-detail/components/LoanButton/Loanbutton.test.tsx
- PASS  src/shared/components/BookGrid/Bookgrid.test.tsx
- PASS  src/features/book-reviews/components/ReviewForm/Reviewform.test.tsx
- PASS  src/shared/hooks/useFetch.test.ts
- PASS  src/features/book-reviews/pages/BookReviewsPage.test.tsx
-
-Test Suites: 5 passed, 5 total
-Tests:       50 passed, 50 total
-Snapshots:   0 total
-Time:        3.363 s
-Ran all test suites.
+Lectio/
+├── LectioBackend/
+│   ├── Application/       Use cases: business rules, services, DTOs and validation
+│   ├── Controllers/       HTTP layer (thin): /api/auth, /api/books, /api/categories, /api/users, /api/seed
+│   ├── Domain/            Entities and business-rule exceptions
+│   ├── Infrastructure/    AppDbContext, EF Core mappings, external clients and migrations
+│   ├── Middlewares/       Exception middleware (application/problem+json)
+│   └── Program.cs         DI, authentication, CORS, rate limiting and endpoints
+└── LectioFrontend/
+    ├── src/api/           http wrapper, endpoint modules per resource and API types
+    ├── src/config/        env.ts, the typed environment variables
+    ├── src/features/      One folder per screen (home, categories, book-detail, book-reviews, loan, history, login, register, profile)
+    ├── src/routes/        The router and AppLayout
+    ├── src/shared/        Components, hooks and utils reused across features
+    └── src/test/          Jest setup, the fetch mock and the module mocks
 ```
 
-All 5 suites and all 50 tests pass.
+## Technologies
 
-### Coverage
+### Backend
 
-Overall coverage from `npm run test:coverage`:
+| Technology | Purpose |
+| --- | --- |
+| .NET / ASP.NET Core Web API (`net10.0`) | Runtime, web framework and controllers |
+| Entity Framework Core + Npgsql | Data access (Code First) on PostgreSQL |
+| PostgreSQL on Supabase | Database, with Row Level Security enabled in the migrations |
+| JwtBearer + BCrypt.Net-Next | JWT authentication and password hashing |
+| Swashbuckle (Swagger UI) | Interactive API documentation at `/swagger` in Development |
+| Google Books API | Book data source, used only by the seeders |
+| Render | Backend deployment |
+
+### Frontend
+
+| Technology | Purpose |
+| --- | --- |
+| React 19 + TypeScript (strict) | UI with function components and hooks |
+| Vite 8 | Dev server and production build |
+| react-router 8 | Client-side routing with a data router |
+| CSS Modules + design tokens | Styling, with no CSS framework |
+| Own `fetch` wrapper + `useFetch` hook | Data fetching, with no Axios or React Query |
+| Jest + React Testing Library | Unit and integration tests |
+| Vercel | Frontend deployment (SPA fallback in `vercel.json`) |
+
+The frontend deliberately has no global state library (no Redux, Zustand or React Query), no Axios and no UI kit: the state lives in the URL, in local component state and in `useSession()`.
+
+## Installation and Running
+
+### Prerequisites
+
+- **Git**.
+- **.NET SDK 10** and a **PostgreSQL** database (the project is set up for Supabase) for the backend.
+- **Node.js** `^20.19.0 || >=22.12.0` and **npm** for the frontend.
+- A Google Books API key, only if you want to run the seeders.
+
+```bash
+git clone https://github.com/StevenBalagueraP/Lectio
+cd Lectio
+```
+
+### 1. Backend
+
+Set the required configuration with user-secrets (never commit real values):
+
+```bash
+cd LectioBackend
+dotnet user-secrets set "ConnectionStrings:DefaultConnection" "<your-connection-string>"
+dotnet user-secrets set "Jwt:Secret" "<your-random-secret-32-chars>"
+dotnet user-secrets set "GoogleBooks:ApiKey" "<your-google-books-key>"
+```
+
+Create the schema (the migrations also enable Row Level Security) and run the API:
+
+```bash
+dotnet tool install --global dotnet-ef
+dotnet ef database update
+dotnet run
+```
+
+The API listens on `http://localhost:5031` (and `https://localhost:7026`). In Development, Swagger UI is available at `/swagger`.
+
+Optional keys: `Jwt:Issuer`, `Jwt:Audience`, `Jwt:AccessTokenMinutes` (default 15), `Jwt:RefreshTokenDays` (default 7) and `Cors:Origins` (default `http://localhost:5173`).
+
+### 2. Frontend
+
+```bash
+cd LectioFrontend
+npm install
+```
+
+Create a `.env` file in the frontend root (it is ignored by Git):
+
+```bash
+VITE_API_URL=http://localhost:5031
+```
+
+| Variable | Purpose | Fallback when missing |
+| --- | --- | --- |
+| `VITE_API_URL` | Base URL of the Lectio REST API | `http://localhost:5031` |
+
+```bash
+npm run dev        # dev server on http://localhost:5173
+npm run build      # tsc -b + vite build, output in dist/
+npm run preview    # serve the production bundle locally
+npm run lint
+```
+
+The backend only accepts requests from the origins listed in `Cors:Origins`, so keep the frontend on `http://localhost:5173` (the Vite default) or update that setting.
+
+## Architecture
+
+```text
+Browser (React SPA)
+   │  Page -> feature hook -> useFetch (cache + TTL + AbortController) -> endpoint -> http.ts
+   │  HTTPS + JSON
+   ▼
+ASP.NET Core pipeline  (CORS, rate limiter, exception middleware, JWT bearer, authorization)
+   ▼
+Controller  ->  Service (Application/)  ->  AppDbContext (EF Core)  ->  PostgreSQL (Supabase)
+```
+
+- **Backend:** layered API. Controllers stay thin, business rules live in `Application/` services, and services use `AppDbContext` directly (no Repository or Unit of Work). A single exception middleware answers `application/problem+json`. Rate limiting is global, with a stricter policy for auth endpoints.
+- **Frontend:** client-side SPA. Every call goes through `http<T>()` in `src/api/`; no component calls `fetch` directly. `shared/` never imports from `features/`.
+
+## Authentication
+
+Authentication is hand-made (no ASP.NET Core Identity): a custom `User` table with BCrypt hashing, a JWT (HS256) access token and an opaque, single-use, rotating refresh token stored hashed in the database. The access token lasts **15 minutes** and the refresh token **7 days** (both configurable).
+
+| Method | Path | Request | Response |
+| --- | --- | --- | --- |
+| POST | `/api/auth/register` | `fullName`, `email`, `password`, `phone` (optional) | Token pair and user |
+| POST | `/api/auth/login` | `email`, `password` | Token pair and user |
+| POST | `/api/auth/refresh` | `refreshToken` | New token pair |
+| POST | `/api/auth/logout` | `refreshToken` | `204` |
+
+On the frontend, the tokens and the user are kept in `localStorage`. `http.ts` sends the access token on protected requests, renews the pair automatically when it is about to expire (30-second margin) or when a request fails with `401`, and retries the original request once. The renewal is serialized across tabs with the `lectio:refresh` lock, and logout always clears the local session, even if the request fails.
+
+Public endpoints: `/api/auth/*`, `/api/books/*`, `/api/categories` and `/health`. The `/api/users/*` endpoints (loans and ratings) require a valid JWT, and you can only act on your own user unless you hold the `admin` role.
+
+## Database Model
+
+| Table | Purpose |
+| --- | --- |
+| `Book`, `Author`, `BookAuthor` | Catalogue and its authors (many-to-many) |
+| `Category`, `BookCategory` | Categories and their books (many-to-many) |
+| `User` | Accounts with a role (`user` by default) |
+| `Loan` | Borrow and return of a book; only one active loan per book (unique index where `ReturnDate` is null) |
+| `Rating` | One rating per user and book, linked to a loan; keeps `Stars` and an optional `Comment` |
+| `RefreshToken` | Hashed, rotating refresh tokens per user |
+
+## Testing
+
+The frontend tests are **unit** and **integration** tests built with **Jest** and **React Testing Library**. Integration suites render the real page with the router, hooks, cache and HTTP layer wired together; only `fetch` is mocked, so no browser or running backend is needed.
+
+### How to run
+
+From the `LectioFrontend` folder:
+
+```bash
+npm test                 # run all suites
+npm run test:watch       # watch mode
+npm run test:coverage    # run with the coverage report
+```
+
+To filter by file or test name:
+
+```bash
+npm test -- Pagination
+npm test -- --testNamePattern="shows an error"
+```
+
+### Suites
+
+| Suite | Type | What it covers | Tests |
+| --- | --- | --- | --- |
+| `Bookgrid.test.tsx` | Unit | `BookGrid`: error, empty and loading states, one card per book, cover URL, `onOpen` | 9 |
+| `Pagination.test.tsx` | Unit | `Pagination`: hidden for one page, disabled arrows, `aria-current`, `onChange`, ellipsis | 11 |
+| `RatingStars.test.tsx` | Unit | `RatingStars`: accessible label, clamping to 0–5, decimals and the large size | 8 |
+| `useFetch.test.ts` | Unit | `useFetch`: loading to data, abort signal, error message, `enabled`, in-flight de-duplication, TTL and stale fallback | 10 |
+| `useDebouncedValue.test.ts` | Unit | `useDebouncedValue` with fake timers: initial value, delay, reset and cleanup | 6 |
+| `Loanbutton.test.tsx` | Unit | `LoanButton`: label and state per loan status, disabled while loading, error state and `onAction` | 9 |
+| `Reviewform.test.tsx` | Unit | `ReviewForm`: rating required, submit with stars and comment, character limit and `onCancel` | 12 |
+| `validation.test.ts` | Unit | `isValidEmail` and `validateLogin` | 14 |
+| `BookReviewsPage.test.tsx` | Integration | The reviews page with the real router and hooks; only `fetch` is mocked | 10 |
+| `CategoriesPage.test.tsx` | Integration | The catalogue page: list, count, error, empty state, filters and navigation | 10 |
+| `LoginPage.test.tsx` | Integration | The login form: fields, validation, 401, 500, success redirect and in-flight state | 8 |
+
+### Results
+
+A real run of `npm test` (2026-10):
+
+```text
+Test Suites: 11 passed, 11 total
+Tests:       107 passed, 107 total
+```
+
+Coverage from `npm run test:coverage`:
 
 | Statements | Branches | Functions | Lines |
-|---|---|---|---|
-| 69.29% | 68.46% | 73.52% | 72.84% |
+| --- | --- | --- | --- |
+| 80.35% | 72.68% | 81.03% | 84.26% |
 
-Coverage for the code the suites target directly:
+Coverage only measures the files that the tests load, because `jest.config.cjs` does not set `collectCoverageFrom`. The least covered part is the session renewal in `src/api/http.ts` (45.9% statements), followed by `src/api/token.ts` (78.26%).
 
-| File | Statements | Branches | Functions | Lines |
-|---|---|---|---|---|
-| `LoanButton.tsx` | 100% | 91.66% | 100% | 100% |
-| `BookGrid.tsx` | 100% | 100% | 100% | 100% |
-| `ReviewForm.tsx` | 100% | 100% | 100% | 100% |
-| `useFetch.ts` | 95.83% | 94.28% | 100% | 100% |
-| `BookReviewsPage.tsx` | 91.37% | 92.1% | 83.33% | 92.85% |
+### Setup notes
 
-Because the page test runs the real components underneath it, several other files are covered as a side effect, including `RatingSummary`, `ReviewCard`, `ReviewList`, `BookCard`, `Button`, `RatingStars`, and `useSession` (all at 100%).
+- **Environment:** `jsdom`, with `babel-jest` (`preset-env`, `preset-react` and `preset-typescript`).
+- **`fetch` is mocked** with the helpers in `src/test/mockFetch.ts` (`mockFetch`, `jsonResponse`, `emptyResponse`); `clearMocks: true` resets it between tests.
+- **`localStorage` is cleaned** after each test in `src/test/setupTests.ts`.
+- **CSS Modules** are mocked with `identity-obj-proxy`, `import.meta.env` is mapped to `src/test/envMock.ts` and `cookie-es` to `src/test/cookieEsMock.ts`, all in `jest.config.cjs`.
+- **Cache isolation:** `src/shared/utils/cache.ts` keeps a module-level `Map`, so integration suites use a unique cache key per test.
 
-## Known gaps
+## How to Contribute
 
-These areas have no dedicated tests yet and are only partly covered through the page test:
+1. Fork the repository, clone your fork and create a branch (`feature/...` or `fix/...`).
+2. Make the change following the existing conventions.
+3. Run the checks before opening a pull request:
 
-- `Pagination.tsx`: 13.33% statements
-- `api/endpoints/books.ts`: 31.25% statements
-- `api/token.ts`: 43.47% statements
-- `api/http.ts`: 45.9% statements
-- `useGoBack.ts`: 40% statements
-- `shared/utils/cache.ts`: 67.64% statements
+   ```bash
+   # Backend
+   dotnet build --nologo
 
-The next tests worth adding would be for `Pagination`, the token handling in `api/token.ts`, and the error paths in `api/http.ts`.
+   # Frontend
+   npm run build
+   npm run lint
+   npm test
+   ```
+
+4. Never commit secrets, `.env` values, tokens or passwords.
+5. Open a pull request explaining what changes and why. Discuss any new package (NuGet or npm) in the pull request, because both projects keep their dependency lists small.
+
+Conventions:
+
+- **Backend:** thin controllers, business rules in `Application/` services, DTOs validated with DataAnnotations, `async`/`await` with the `Async` suffix, nullable reference types enabled, UTC dates. Schema changes are new EF Core migrations. Identity, Repository/Unit of Work, MediatR and AutoMapper are deliberately not used.
+- **Frontend:** named exports with a local `interface NameProps`, one folder per component (`Name.tsx` + `Name.module.css`), `import type` for type-only imports, no `enum` or `namespace`, design tokens (`var(--...)`) instead of hard-coded colors, and API access only through `src/api/`.
+
+## License
+
+This project is licensed under the MIT license.

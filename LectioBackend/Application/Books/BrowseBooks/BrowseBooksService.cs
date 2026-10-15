@@ -4,6 +4,7 @@ using Lectio.Api.Domain.Entities;
 using Lectio.Api.Domain.Exceptions;
 using Lectio.Api.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace Lectio.Api.Application.Books.BrowseBooks;
 
@@ -19,76 +20,78 @@ public class BrowseBooksService : IBrowseBooksService
     }
 
     public async Task<BrowseBooksResponseDto> GetBooksAsync(
-    string? search,
-    IReadOnlyCollection<int>? categoryIds,
-    int page,
-    int pageSize,
-    CancellationToken cancellationToken)
-{
-    ValidatePaging(page, pageSize);
-
-    var normalizedCategoryIds = NormalizeCategoryIds(categoryIds);
-
-    if (normalizedCategoryIds.Count > 0)
+        string? search,
+        IReadOnlyCollection<int>? categoryIds,
+        IReadOnlyCollection<BookFilter>? filters,
+        int page,
+        int pageSize,
+        CancellationToken cancellationToken)
     {
-        await EnsureCategoriesExistAsync(normalizedCategoryIds, cancellationToken);
-    }
+        ValidatePaging(page, pageSize);
 
-    var query = BuildFilteredQuery(search, normalizedCategoryIds);
+        var normalizedCategoryIds = NormalizeCategoryIds(categoryIds);
 
-    var totalCount = await query.CountAsync(cancellationToken);
-
-    var rows = await query
-        .OrderBy(book => book.Title)
-        .ThenBy(book => book.BookId) 
-        .Skip((page - 1) * pageSize)
-        .Take(pageSize)
-        .Select(book => new
+        if (normalizedCategoryIds.Count > 0)
         {
-            book.BookId,
-            book.Title,
-            book.ImageLink,
-            book.AverageRating,
-            Authors = _context.BookAuthors
-                .Where(bookAuthor => bookAuthor.BookId == book.BookId)
-                .OrderBy(bookAuthor => bookAuthor.AuthorId)
-                .Select(bookAuthor => new { bookAuthor.AuthorId, bookAuthor.Author.AuthorName })
-                .ToList(),
-            Categories = _context.BookCategories
-                .Where(bookCategory => bookCategory.BookId == book.BookId)
-                .OrderBy(bookCategory => bookCategory.CategoryId)
-                .Select(bookCategory => new { bookCategory.CategoryId, bookCategory.Category.CategoryName })
-                .ToList()
-        })
-        .ToListAsync(cancellationToken);
-
-    var data = rows
-        .Select(row => new BookSummaryDto
-        {
-            Id = row.BookId,
-            Title = row.Title,
-            ImageUrl = row.ImageLink,
-            Rating = new BookRatingDto { Stars = row.AverageRating },
-            Authors = row.Authors
-                .Select(author => new BookAuthorSummaryDto { Id = author.AuthorId, Name = author.AuthorName })
-                .ToList(),
-            Categories = row.Categories
-                .Select(category => new BookCategorySummaryDto { Id = category.CategoryId, Name = category.CategoryName })
-                .ToList()
-        })
-        .ToList();
-
-    return new BrowseBooksResponseDto
-    {
-        Data = data,
-        Pagination = new PaginationDto
-        {
-            Page = page,
-            PageSize = pageSize,
-            TotalCount = totalCount,
-            TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize)
+            await EnsureCategoriesExistAsync(normalizedCategoryIds, cancellationToken);
         }
-    };
+
+        var normalizedFilters = NormalizeFilters(filters);
+
+        var query = BuildFilteredQuery(search, normalizedCategoryIds, normalizedFilters);
+
+        var totalCount = await query.CountAsync(cancellationToken);
+
+        var rows = await ApplyOrdering(query, normalizedFilters)
+            .ThenBy(book => book.BookId) // desempate: títulos repetidos no deben saltarse ni duplicarse entre páginas
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .Select(book => new
+            {
+                book.BookId,
+                book.Title,
+                book.ImageLink,
+                book.AverageRating,
+                Authors = _context.BookAuthors
+                    .Where(bookAuthor => bookAuthor.BookId == book.BookId)
+                    .OrderBy(bookAuthor => bookAuthor.AuthorId)
+                    .Select(bookAuthor => new { bookAuthor.AuthorId, bookAuthor.Author.AuthorName })
+                    .ToList(),
+                Categories = _context.BookCategories
+                    .Where(bookCategory => bookCategory.BookId == book.BookId)
+                    .OrderBy(bookCategory => bookCategory.CategoryId)
+                    .Select(bookCategory => new { bookCategory.CategoryId, bookCategory.Category.CategoryName })
+                    .ToList()
+            })
+            .ToListAsync(cancellationToken);
+
+        var data = rows
+            .Select(row => new BookSummaryDto
+            {
+                Id = row.BookId,
+                Title = row.Title,
+                ImageUrl = row.ImageLink,
+                Rating = new BookRatingDto { Stars = row.AverageRating },
+                Authors = row.Authors
+                    .Select(author => new BookAuthorSummaryDto { Id = author.AuthorId, Name = author.AuthorName })
+                    .ToList(),
+                Categories = row.Categories
+                    .Select(category => new BookCategorySummaryDto { Id = category.CategoryId, Name = category.CategoryName })
+                    .ToList()
+            })
+            .ToList();
+
+        return new BrowseBooksResponseDto
+        {
+            Data = data,
+            Pagination = new PaginationDto
+            {
+                Page = page,
+                PageSize = pageSize,
+                TotalCount = totalCount,
+                TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize)
+            }
+        };
     }
 
     private static void ValidatePaging(int page, int pageSize)
@@ -137,7 +140,10 @@ public class BrowseBooksService : IBrowseBooksService
         }
     }
 
-    private IQueryable<Book> BuildFilteredQuery(string? search, IReadOnlyCollection<int> categoryIds)
+    private IQueryable<Book> BuildFilteredQuery(
+        string? search,
+        IReadOnlyCollection<int> categoryIds,
+        IReadOnlyList<BookFilter> filters)
     {
         var query = _context.Books
             .AsNoTracking();
@@ -153,7 +159,103 @@ public class BrowseBooksService : IBrowseBooksService
                 .Any(bookCategory => bookCategory.BookId == book.BookId && categoryIds.Contains(bookCategory.CategoryId)));
         }
 
+        if (filters.Contains(BookFilter.Available))
+        {
+            query = query.Where(book => book.IsAvailable);
+        }
+
         return query;
+    }
+
+    /// <summary>
+    /// Quita duplicados (conservando el orden de llegada, que define la prioridad),
+    /// valida valores desconocidos y rechaza combinaciones contradictorias.
+    /// </summary>
+    private static List<BookFilter> NormalizeFilters(IReadOnlyCollection<BookFilter>? filters)
+    {
+        if (filters is null || filters.Count == 0)
+        {
+            return new List<BookFilter>();
+        }
+
+        var normalized = filters.Distinct().ToList();
+
+        if (normalized.Any(filter => !Enum.IsDefined(filter)))
+        {
+            throw new BadRequestException(
+                "filter must be one of: TopRated, Available, Newest, Oldest, Longest, Shortest.");
+        }
+
+        if (normalized.Contains(BookFilter.Newest) && normalized.Contains(BookFilter.Oldest))
+        {
+            throw new BadRequestException("filter cannot combine Newest with Oldest.");
+        }
+
+        if (normalized.Contains(BookFilter.Longest) && normalized.Contains(BookFilter.Shortest))
+        {
+            throw new BadRequestException("filter cannot combine Longest with Shortest.");
+        }
+
+        return normalized;
+    }
+
+    /// <summary>
+    /// Encadena los órdenes en el mismo orden en que llegaron (el primero es el principal).
+    /// Available no ordena, solo filtra. Para fecha y páginas, los null van siempre al final:
+    /// en PostgreSQL un DESC pondría los NULL primero, por eso se ordena antes por "IS NULL".
+    /// Siempre cierra con título y BookId. Sin criterios de orden, queda por título A→Z como antes.
+    /// </summary>
+    private static IOrderedQueryable<Book> ApplyOrdering(IQueryable<Book> query, IReadOnlyList<BookFilter> filters)
+    {
+        IOrderedQueryable<Book>? ordered = null;
+
+        foreach (var filter in filters)
+        {
+            switch (filter)
+            {
+                case BookFilter.TopRated:
+                    ordered = AddOrder(query, ordered, book => book.AverageRating, descending: true);
+                    break;
+
+                case BookFilter.Newest:
+                    ordered = AddOrder(query, ordered, book => book.PublishedDate == null, descending: false);
+                    ordered = AddOrder(query, ordered, book => book.PublishedDate, descending: true);
+                    break;
+
+                case BookFilter.Oldest:
+                    ordered = AddOrder(query, ordered, book => book.PublishedDate == null, descending: false);
+                    ordered = AddOrder(query, ordered, book => book.PublishedDate, descending: false);
+                    break;
+
+                case BookFilter.Longest:
+                    ordered = AddOrder(query, ordered, book => book.PageCount == null, descending: false);
+                    ordered = AddOrder(query, ordered, book => book.PageCount, descending: true);
+                    break;
+
+                case BookFilter.Shortest:
+                    ordered = AddOrder(query, ordered, book => book.PageCount == null, descending: false);
+                    ordered = AddOrder(query, ordered, book => book.PageCount, descending: false);
+                    break;
+            }
+        }
+
+        ordered = AddOrder(query, ordered, book => book.Title, descending: false);
+
+        return ordered;
+    }
+
+    private static IOrderedQueryable<Book> AddOrder<TKey>(
+        IQueryable<Book> query,
+        IOrderedQueryable<Book>? ordered,
+        Expression<Func<Book, TKey>> keySelector,
+        bool descending)
+    {
+        if (ordered is null)
+        {
+            return descending ? query.OrderByDescending(keySelector) : query.OrderBy(keySelector);
+        }
+
+        return descending ? ordered.ThenByDescending(keySelector) : ordered.ThenBy(keySelector);
     }
 
     private async Task<Dictionary<int, List<BookCategorySummaryDto>>> GetCategoriesByBookIdAsync(

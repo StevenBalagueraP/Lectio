@@ -66,21 +66,30 @@
 
 @media (min-width: 1024px) {
   .main {
+    /* 76px = alto del navbar en desktop (16px + 44px avatar + 16px) */
+    --navbar-height: 76px;
+
     display: grid;
-    grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    grid-template-rows: auto auto;
     grid-template-areas:
       'profile menu'
       'actions menu';
-    align-items: start;
+    align-items: stretch;
+    align-content: center;
     column-gap: var(--spacing-xl);
     row-gap: var(--spacing-lg);
-    padding: var(--spacing-xl) clamp(var(--spacing-xl), 4vw, 80px);
-    max-width: none;
+    min-height: calc(100vh - var(--navbar-height));
+    min-height: calc(100dvh - var(--navbar-height));
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
   }
 
   .profile {
     grid-area: profile;
-    padding: var(--spacing-xl);
+    justify-content: center;
+    padding: var(--spacing-xl) var(--spacing-lg);
     border-radius: var(--radius-md);
     background: var(--color-surface);
     box-shadow: var(--shadow-md);
@@ -88,10 +97,17 @@
 
   .menu {
     grid-area: menu;
+    display: flex;
+    flex-direction: column;
     padding: var(--spacing-md) var(--spacing-lg);
     border-radius: var(--radius-md);
     background: var(--color-surface);
     box-shadow: var(--shadow-md);
+  }
+
+  .item {
+    flex: 1;
+    padding-block: var(--spacing-lg);
   }
 
   .item:last-child {

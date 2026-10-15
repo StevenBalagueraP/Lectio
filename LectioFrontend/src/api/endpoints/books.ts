@@ -1,5 +1,6 @@
 import { http } from '../http'
 import type { Book, BookDetail, BookSummary } from '../types/book'
+import type { BookFilter } from '../types/bookFilter'
 import type { ApiResponse, PagedResponse } from '../types/common'
 import type { BookLoanStatus } from '../types/loan'
 import type { BookRatings } from '../types/rating'
@@ -14,6 +15,7 @@ export interface BookRatingsParams {
 export interface BookSearchParams {
   search: string
   categoryIds: number[]
+  filters: BookFilter[]
   page: number
   pageSize: number
 }
@@ -25,12 +27,14 @@ export async function getTopRatedBooks(categoryId?: number, signal?: AbortSignal
 }
 
 export function searchBooks(
-  { search, categoryIds, page, pageSize }: BookSearchParams,
+  { search, categoryIds, filters, page, pageSize }: BookSearchParams,
   signal?: AbortSignal,
 ) {
   const query = new URLSearchParams()
   if (search) query.set('search', search)
   categoryIds.forEach((id) => query.append('categoryIds', String(id)))
+  // El orden en que se añaden es la prioridad del ordenamiento en el backend
+  filters.forEach((filter) => query.append('filter', filter))
   query.set('page', String(page))
   query.set('pageSize', String(pageSize))
 
